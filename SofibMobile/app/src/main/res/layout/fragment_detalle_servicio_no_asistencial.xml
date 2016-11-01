@@ -1,0 +1,125 @@
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/detalle_cabecera"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Solicitud Numero"
+                android:id="@+id/txtNumeroSolicitud"
+                android:layout_marginTop="15dp"
+                android:layout_marginLeft="15dp"
+                android:textColor="@android:color/background_light"
+                android:textSize="@dimen/font_size_title"
+                android:textStyle="bold|italic"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Tipo Soliciutd"
+                android:id="@+id/txtTipoSolicitud"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="15dp"
+                android:textColor="@android:color/background_light"
+                android:textSize="@dimen/font_size_title"
+                android:textStyle="bold|italic"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Ciudad"
+                android:id="@+id/txtCiudad"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="5dp"
+                android:textColor="@android:color/background_light"
+                android:textSize="@dimen/font_size_title"
+                android:layout_marginBottom="15dp"
+                android:textStyle="bold|italic"/>
+        </LinearLayout>
+
+        <ScrollView
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:fillViewport="true">
+
+            <LinearLayout
+                android:id="@+id/detalle_solicitud_cuerpo"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@android:color/white"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/lbl_estado"
+                    android:textStyle="bold"
+                    android:textColor="@color/colorTextTitle"
+                    android:textSize="@dimen/font_size_subtitle"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="10dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="@string/lbl_estado"
+                    android:textSize="@dimen/font_size_text"
+                    android:id="@+id/txtEstado"
+                    android:layout_marginLeft="10dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/lbl_justificacion_cancelacion"
+                    android:textStyle="bold"
+                    android:textColor="@color/colorTextTitle"
+                    android:textSize="@dimen/font_size_subtitle"
+                    android:layout_marginTop="@dimen/margin_detail_text_top"
+                    android:layout_marginLeft="10dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="@string/lbl_justificacion_cancelacion"
+                    android:textSize="@dimen/font_size_text"
+                    android:id="@+id/txtJustificacionCancelacion"
+                    android:layout_marginLeft="10dp"/>
+
+
+
+            </LinearLayout>
+        </ScrollView>
+
+    </LinearLayout>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/btnDetalle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="30dp"
+        android:clickable="true"
+        app:layout_anchor="@id/detalle_cabecera"
+        app:layout_anchorGravity="bottom|right|end"
+        app:fabSize="normal"
+        android:baselineAlignBottom="false"
+        app:backgroundTint="@color/colorTextTitle"
+        android:src="@mipmap/icono_mas" />
+
+</android.support.design.widget.CoordinatorLayout>

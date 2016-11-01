@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/background_light">
+
+    <TableLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/background_light"
+        android:gravity="left"
+        android:shrinkColumns="1"
+        android:stretchColumns="1">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/lbl_concepto"
+                android:textStyle="bold"
+                android:textColor="@color/colorTextTitle"
+                android:textSize="@dimen/font_size_subtitle"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="10dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="@string/lbl_concepto"
+                android:textSize="@dimen/font_size_text"
+                android:id="@+id/txtConcepto"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/lbl_descripcion"
+                android:textStyle="bold"
+                android:textColor="@color/colorTextTitle"
+                android:textSize="@dimen/font_size_subtitle"
+                android:layout_marginLeft="10dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="@string/lbl_descripcion"
+                android:textSize="@dimen/font_size_text"
+                android:id="@+id/txtDescripcion"
+                android:layout_marginLeft="10dp"/>
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/lbl_cantidad"
+                android:textStyle="bold"
+                android:textColor="@color/colorTextTitle"
+                android:textSize="@dimen/font_size_subtitle"
+                android:layout_marginLeft="10dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="@string/lbl_cantidad"
+                android:textSize="@dimen/font_size_text"
+                android:id="@+id/txtCantidad"
+                android:layout_marginLeft="10dp"/>
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/lbl_valor"
+                android:textStyle="bold"
+                android:textColor="@color/colorTextTitle"
+                android:textSize="@dimen/font_size_subtitle"
+                android:layout_marginLeft="10dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="@string/lbl_valor"
+                android:textSize="@dimen/font_size_text"
+                android:id="@+id/txtValor"
+                android:layout_marginLeft="10dp" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/lbl_reliquidacion"
+                android:textStyle="bold"
+                android:textColor="@color/colorTextTitle"
+                android:textSize="@dimen/font_size_subtitle"
+                android:layout_marginLeft="10dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="@string/lbl_reliquidacion"
+                android:textSize="@dimen/font_size_text"
+                android:id="@+id/txtReliquidacion"
+                android:layout_marginLeft="10dp" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/lbl_subtotal"
+                android:textStyle="bold"
+                android:textColor="@color/colorTextTitle"
+                android:textSize="@dimen/font_size_subtitle"
+                android:layout_marginLeft="10dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="@string/lbl_subtotal"
+                android:textSize="@dimen/font_size_text"
+                android:id="@+id/txtSubTotal"
+                android:layout_marginLeft="10dp" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/lbl_trm"
+                android:textStyle="bold"
+                android:textColor="@color/colorTextTitle"
+                android:textSize="@dimen/font_size_subtitle"
+                android:layout_marginLeft="10dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="@string/lbl_trm"
+                android:textSize="@dimen/font_size_text"
+                android:id="@+id/txtTrm"
+                android:layout_marginLeft="10dp" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/lbl_total"
+                android:textStyle="bold"
+                android:textColor="@color/colorTextTitle"
+                android:textSize="@dimen/font_size_subtitle"
+                android:layout_marginLeft="10dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="@string/lbl_total"
+                android:textSize="@dimen/font_size_text"
+                android:id="@+id/txtTotal"
+                android:layout_marginLeft="10dp"
+                android:layout_marginBottom="15dp" />
+        </TableRow>
+
+    </TableLayout>
+</LinearLayout>

@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/menu_lateral_id">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:src="@drawable/fondo_lateral"
+        android:scaleType="centerCrop" />
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="bottom"
+        android:layout_gravity="left|bottom"
+        android:layout_marginBottom="20dp">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/solicitud_numero"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large.Inverse"
+                android:textStyle="bold"
+                android:layout_gravity="bottom"
+                android:layout_marginLeft="15dp"
+                android:textSize="15dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="805"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large.Inverse"
+                android:textStyle="bold"
+                android:layout_gravity="bottom"
+                android:layout_marginLeft="10dp"
+                android:id="@+id/txtNumeroSolicitudMenu"
+                android:textSize="15dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1151946203- César López "
+                android:textAppearance="@style/TextAppearance.AppCompat.Large.Inverse"
+                android:textStyle="bold"
+                android:layout_gravity="bottom"
+                android:layout_marginLeft="15dp"
+                android:id="@+id/txtUsuarioMenu"
+                android:textSize="15dp" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:id="@+id/imageView15"
+        android:layout_gravity="left|top"
+        android:src="@mipmap/ic_user"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="60dp" />
+
+</FrameLayout>

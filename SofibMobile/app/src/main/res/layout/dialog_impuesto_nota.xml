@@ -1,0 +1,240 @@
+<LinearLayout android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <ScrollView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:gravity="center"
+                android:background="@color/colorPrimary">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/lbl_impuesto"
+                    android:textStyle="bold"
+                    android:textColor="@color/color_select"
+                    android:textSize="@dimen/font_size_subtitle"/>
+
+            </LinearLayout>
+
+            <TableLayout
+                android:id="@+id/detalle_solicitud_cuerpo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/white"
+                android:orientation="vertical"
+                android:stretchColumns="1"
+                android:shrinkColumns="1">
+
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/lbl_proveedor"
+                        android:textStyle="bold"
+                        android:textColor="@color/colorTextTitle"
+                        android:textSize="@dimen/font_size_subtitle"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginLeft="10dp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:text="@string/lbl_proveedor"
+                        android:textSize="@dimen/font_size_text"
+                        android:id="@+id/txtProveedor"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="10dp" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/lbl_numero_orden_servicio"
+                        android:textStyle="bold"
+                        android:textColor="@color/colorTextTitle"
+                        android:textSize="@dimen/font_size_subtitle"
+                        android:layout_marginLeft="10dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:text="@string/lbl_numero_orden_servicio"
+                        android:textSize="@dimen/font_size_text"
+                        android:id="@+id/txtNumeroOrdenServicio"
+                        android:layout_marginLeft="10dp" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/lbl_servicio"
+                        android:textStyle="bold"
+                        android:textColor="@color/colorTextTitle"
+                        android:textSize="@dimen/font_size_subtitle"
+                        android:layout_marginLeft="10dp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:text="@string/lbl_servicio"
+                        android:textSize="@dimen/font_size_text"
+                        android:id="@+id/txtServicio"
+                        android:layout_marginLeft="10dp" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/lbl_fecha_inicio"
+                        android:textStyle="bold"
+                        android:textColor="@color/colorTextTitle"
+                        android:textSize="@dimen/font_size_subtitle"
+                        android:layout_marginLeft="10dp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:text="@string/lbl_fecha_inicio"
+                        android:textSize="@dimen/font_size_text"
+                        android:id="@+id/txtFechaInicio"
+                        android:layout_marginLeft="10dp" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/lbl_fecha_finalizacion"
+                        android:textStyle="bold"
+                        android:textColor="@color/colorTextTitle"
+                        android:textSize="@dimen/font_size_subtitle"
+                        android:layout_marginLeft="10dp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:text="@string/lbl_fecha_finalizacion"
+                        android:textSize="@dimen/font_size_text"
+                        android:id="@+id/txtFechaFinalizacion"
+                        android:layout_marginLeft="10dp" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/lbl_valor_servicio"
+                        android:textStyle="bold"
+                        android:textColor="@color/colorTextTitle"
+                        android:textSize="@dimen/font_size_subtitle"
+                        android:layout_marginLeft="10dp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:text="@string/lbl_valor_servicio"
+                        android:textSize="@dimen/font_size_text"
+                        android:id="@+id/txtValorServicio"
+                        android:layout_marginLeft="10dp" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/lbl_seguro_hotelero"
+                        android:textStyle="bold"
+                        android:textColor="@color/colorTextTitle"
+                        android:textSize="@dimen/font_size_subtitle"
+                        android:layout_marginLeft="10dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:text="@string/lbl_seguro_hotelero"
+                        android:textSize="@dimen/font_size_text"
+                        android:id="@+id/txtSeguroHotelero"
+                        android:layout_marginLeft="10dp" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/lbl_valor_nota"
+                        android:textStyle="bold"
+                        android:textColor="@color/colorTextTitle"
+                        android:textSize="@dimen/font_size_subtitle"
+                        android:layout_marginLeft="10dp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:text="@string/lbl_valor_nota"
+                        android:textSize="@dimen/font_size_text"
+                        android:id="@+id/txtValorNota"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginBottom="15dp" />
+                </TableRow>
+
+            </TableLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

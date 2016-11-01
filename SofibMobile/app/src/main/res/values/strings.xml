@@ -1,0 +1,362 @@
+<resources>
+    <string name="app_name">Sofib Mobile</string>
+    <string name="hola_mundo">Hola Mundo!!</string>
+
+    <string name="lbl_seleccionar_estado">Seleccionar Estado</string>
+    <string name="lbl_seleccionar_convenio">Seleccionar Convenio</string>
+    <string name="lbl_seleccionar_ciudad_ini">Seleccionar Ciudad Inicial</string>
+    <string name="lbl_seleccionar_ciudad_act">Seleccionar Ciudad Actual</string>
+    <string name="lbl_seleccionar_ciudad_tipo_servicio">Seleccionar Tipo Servicio</string>
+    <string name="lbl_seleccionar_ciudad_tipo_registro">Seleccionar Tipo Registro</string>
+    <string name="lbl_seleccionar_ciudad">Seleccionar Ciudad</string>
+
+
+    <string name="lbl_sin_resultados">No se han encontrado datos</string>
+
+
+    <!-- Solicitud de aprobación  -->
+    <string name="lbl_hint_nombre">Nombre</string>
+    <string-array name="convenio_array">
+        <item>Seleccionar Convenio</item>
+        <item>UTILITY SERVICES - Cali</item>
+        <item>123123 - Cali</item>
+    </string-array>
+
+    <string-array name="estado_array">
+        <item>Seleccionar Estado</item>
+        <item>Pendiente</item>
+        <item>Aceptado</item>
+        <item>Rechazado</item>
+    </string-array>
+
+    <string-array name="ciudad_inicial_array">
+        <item>Seleccionar Ciudad Inicial</item>
+        <item>Cali</item>
+        <item>Bogota</item>
+        <item>Medellin</item>
+    </string-array>
+
+    <string-array name="ciudad_actual_array">
+        <item>Seleccionar Ciudad Actual</item>
+        <item>Pasto</item>
+        <item>Bucaramanga</item>
+        <item>Manizales</item>
+    </string-array>
+
+    <string-array name="traslado_array">
+        <item>Seleccionar Trasladado</item>
+        <item>Si</item>
+        <item>No</item>
+    </string-array>
+
+    <string-array name="opciones_informes_medicos">
+        <item>Ver Detalle</item>
+        <item>Descargar PDF en Español</item>
+        <item>Descargar PDF en Ingles</item>
+    </string-array>
+
+    <string-array name="opcionesIdiomaArray">
+        <item>Ingles</item>
+        <item>Español</item>
+        <item>Cancelar</item>
+    </string-array>
+
+    <string name="lbl_nombre_paciente">Nombre Paciente</string>
+    <string name="lbl_titulo_consulta_solicitud_aprobacion"> Solicitudes </string>
+    <string name="lbl_titulo_solicitud_aprobacion"> Búsqueda Avanzada </string>
+    <string name="lbl_titulo_bitacora"> Búsqueda de Bitacoras </string>
+    <string name="lbl_buscar">Buscar</string>
+
+    <string name="lbl_consultar_info_medica">Consultar Información Médica</string>
+    <string name="lbl_consultar_info_logistica">Consultar Información Logística</string>
+
+    <string name="lbl_descripcion">Descripción</string>
+    <string name="lbl_tipo_autorizacion">Tipo Autorización</string>
+    <string name="lbl_tipo_entidad">Tipo Entidad</string>
+    <string name="lbl_solicitante">Solicitante</string>
+    <string name="lbl_autoriza">Autoriza</string>
+    <string name="lbl_fecha_autorizacion">Fecha Autorización</string>
+    <string name="lbl_servicio">Servicio</string>
+    <string name="lbl_proveedor">Proveedor</string>
+    <string name="lbl_prestador">Prestador</string>
+    <string name="lbl_justificacion">Justificación</string>
+    <string name="lbl_no_aplica">No Aplica</string>
+    <string name="lbl_cantidad">Cantidad</string>
+
+    <string name="lbl_usuario">Usuario</string>
+    <string name="lbl_cotrasena">Contraseña</string>
+    <string name="lbl_iniciar_sesion">Iniciar Sesión</string>
+    <string name="lbl_interno">Interno</string>
+    <string name="lbl_externo">Externo</string>
+    <string name="lbl_tipo_usuario">Tipo Usuario</string>
+
+    <string name="lbl_id">Identificación</string>
+    <string name="lbl_credencial">Credencial Paciente</string>
+    <string name="lbl_fecha_programada_regreso">Fecha Programada de Regreso</string>
+    <string name="lbl_fecha_creado">Fecha Creado</string>
+    <string name="lbl_solicitud_atencion">Solicitud de Atención</string>
+    <string name="lbl_nombre">Nombre</string>
+    <string name="lbl_convenio">Convenio</string>
+    <string name="lbl_estado">Estado</string>
+    <string name="lbl_ciudad_inicial">Ciudad Inicial</string>
+    <string name="lbl_ciudad_actual">Ciudad Actual</string>
+    <string name="lbl_traslado">Trasladado</string>
+
+    <string name="lbl_tab_informacion_general">Información General</string>
+    <string name="lbl_tab_datos_basicos">Datos Básicos del Paciente</string>
+    <string name="lbl_tab_tipo_aprobacion">Tipo de Aprobación</string>
+    <string name="lbl_tab_autorizacion">Autorización</string>
+    <string name="lbl_tab_detalle_autorizaciones">Detalle</string>
+
+    <!-- Strings para Servicios No Asistenciales -->
+    <string name="lbl_numero_solicitud">Número Solicitud</string>
+    <string name="lbl_tipo_solicitud">Tipo Solicitud</string>
+    <string name="lbl_ciudad">Ciudad</string>
+    <string name="lbl_justificacion_cancelacion">Justificación de Cancelación</string>
+    <string name="lbl_servicio_no_asistencial">Servicios No Asistenciales</string>
+    <string name="lbl_tab_servicio_proveedor">Servicio/Proveedor</string>
+    <string name="lbl_tab_documentacion_servicio">Documentación</string>
+    <string name="lbl_tab_servicios_adicionados">Servicios Adicionados</string>
+    <string name="lbl_descripcion_restriccion">Descripción y restricciones</string>
+    <string name="lbl_titulo_servicio_proveedor">Información del Servicio y Proveedor</string>
+    <string name="lbl_titulo_documentacion_servicio">Documentación del Servicio Solicitado</string>
+    <string name="lbl_titulo_servicios_adicionados">Servicios Adicionados</string>
+
+
+
+    <!-- Strings para Consultar Solicitudes de Aprobacion -->
+    <string name="lbl_consultar_solicitudes_aprobacion">Solicitudes de Aprobación</string>
+
+    <!-- Strings para Giros -->
+    <string name="lbl_titulo_giro">Giros</string>
+    <string name="lbl_tipo_giro">Tipo Giro</string>
+    <string name="lbl_id_columna">Id</string>
+    <string name="lbl_identificacion_beneficiario">Identificación Beneficiario</string>
+    <string name="lbl_beneficiario">Beneficiario</string>
+    <string name="lbl_tipo_identificacion_beneficiario">Tipo Identificación Beneficiario</string>
+    <string name="lbl_tipo_beneficiario">Tipo Beneficiario</string>
+    <string name="lbl_fecha_inicio">Fecha Inicio</string>
+    <string name="lbl_fecha_fin">Fecha Fin</string>
+    <string name="lbl_valor_moneda_extranjero">Valor Moneda Extranjero</string>
+    <string name="lbl_valor_moneda_local">Valor Moneda Local</string>
+    <string name="lbl_moneda_extranjero">Moneda Ext.</string>
+    <string name="lbl_moneda_local">Moneda Local</string>
+
+    <string name="lbl_registra_devolucion">Registra Devolución</string>
+    <string name="lbl_valor_devolucion">Valor Devolución</string>
+    <string name="lbl_legalizado">Legalizado</string>
+    <string name="lbl_valor_legalizado">Valor Legalizado</string>
+    <string name="lbl_justificacion_anulacion">Justificación Anulación</string>
+    <string name="lbl_aprobado_giro">Aprobado Giro</string>
+    <string name="lbl_historico_giro">Historico Giro</string>
+    <string name="lbl_conceptos">Conceptos</string>
+    <string name="lbl_reliquidacion">Reliquidación</string>
+    <string name="lbl_valor">Valor</string>
+    <string name="lbl_subtotal_concepto">Subtotal Concepto</string>
+    <string name="lbl_total_concepto">Total Concepto</string>
+    <string name="lbl_monto_diario">Monto Diario</string>
+    <string name="lbl_edad_hasta">Edad Hasta</string>
+    <string name="lbl_edad_desde">Edad Desde</string>
+    <string name="lbl_manutencion_entregar">Manutención a Entregar</string>
+    <string name="lbl_tab_manutencion">Manutención</string>
+    <string name="lbl_tab_conceptos">Conceptos</string>
+    <string name="lbl_tab_historico">Historico</string>
+
+    <string name="lbl_tab_info_general">Información general</string>
+    <string name="lbl_tab_procedimiento">Procedimientos</string>
+    <string name="lbl_tab_medicina">Medicina</string>
+
+    <!-- Strings para Notas Credito Giros -->
+    <string name="lbl_titulo_nota_credito_giro">Notas Crédito de Giros</string>
+    <string name="lbl_consecutivo_nota_credito">Consecutivo Nota Crédito</string>
+    <string name="lbl_id_giro_asociado">Id. Giro Asociado</string>
+    <string name="lbl_nombre_beneficiario">Nombre Beneficiario</string>
+    <string name="lbl_valor_nota">Valor Nota</string>
+    <string name="lbl_fecha_registro">Fecha Registro</string>
+    <string name="lbl_fecha_liquidacion">Fecha Liquidación</string>
+
+    <!-- Strings para Facturas -->
+    <string name="lbl_titulo_factura">Facturas</string>
+    <string name="lbl_numero_factura">Número Factura</string>
+    <string name="lbl_fecha_expedicion">Fecha Expedición</string>
+    <string name="lbl_fecha_radicacion">Fecha Radicación</string>
+    <string name="lbl_fecha_aprobacion_o_rechazo">Fecha Aprobación o Rechazo</string>
+    <string name="lbl_fecha_anulacion">Fecha Anulación</string>
+    <string name="lbl_valor_iva">Valor Iva</string>
+    <string name="lbl_valor_total">Valor Total</string>
+    <string name="lbl_valor_total_factura">Valor Total Factura</string>
+    <string name="lbl_factura">Factura</string>
+    <string name="lbl_valor_total_pagar">Valor Total a Pagar</string>
+    <string name="lbl_prestador_proveedor">Prestador/Proveedor</string>
+    <string name="lbl_tipo_servicio">Tipo de Servicio</string>
+
+    <!-- Strings para Notas credito debito -->
+    <string name="lbl_titulo_notas_credito_debito">Notas Crédito/Débito</string>
+    <string name="lbl_numero_nota">Número Nota</string>
+    <string name="lbl_fecha_aprobacion">Fecha de Aprobación</string>
+    <string name="lbl_motivo">Motivo</string>
+    <string name="lbl_tipo_nota">Tipo Nota</string>
+    <string name="lbl_valor_total_nota_credito">Valor Total Nota Crédito</string>
+
+    <!-- Strings para utilizaciones -->
+    <string name="lbl_titulo_utilizaciones">Utilizaciones</string>
+    <string name="lbl_desde">Desde</string>
+    <string name="lbl_hasta">Hasta</string>
+    <string name="lbl_tipo_seguro">Tipo de Seguro</string>
+    <string name="lbl_numero_seguro">Seguro Nro.</string>
+    <string name="lbl_concepto">Concepto</string>
+    <string name="lbl_total">Total</string>
+    <string name="lbl_total_glosa">Total Glosa</string>
+    <string name="lbl_trm">TRM</string>
+    <string name="lbl_subtotal">SubTotal</string>
+    <string name="lbl_porcentaje_iva">Porcentaje Iva</string>
+    <string name="lbl_tab_utilizaciones">Utilizaciones</string>
+    <string name="lbl_tab_administraciones">Administraciones</string>
+
+
+
+    <!-- Strings para Encuesta Satisfacción -->
+    <string name="lbl_titulo_encuesta_satisfaccion">Encuesta Satisfacción</string>
+    <string name="lbl_pregunta">Pregunta</string>
+    <string name="lbl_respuesta">Respuesta</string>
+    <string name="lbl_observacion">Observación</string>
+
+    <!-- Strings para Autorizaciones -->
+    <string name="lbl_autorizaciones">Autorizaciones</string>
+    <string name="lbl__detalle_autorizaciones">Detalle de la Autorización</string>
+    <string name="lbl_fecha_solicitud">Fecha Solicitud</string>
+    <string name="lbl_fecha_rechazo">Fecha Rechazo</string>
+
+    <!-- Strings para Documentos Medicos -->
+    <string name="lbl_documentos_medicos">Documentos Médicos</string>
+    <string name="lbl_tipo_documento">Tipo de Documento</string>
+
+    <string name="lbl_bitacoras">Bitácoras</string>
+    <string name="lbl_tipo_registro">Tipo de Registro</string>
+    <string name="lbl_tipo_accion">Tipo Acción</string>
+    <string name="lbl_nombre_usuario">Nombre Usuario</string>
+
+    <!-- Strings para Servicios Asistenciales -->
+    <string name="lbl_servicio_asistencial">Servicios Asistenciales</string>
+    <string name="lbl_numero_orden">Número de Orden</string>
+    <string name="lbl_id_prestador">Id Prestador</string>
+    <string name="lbl_nombre_prestador">Nombre Prestador</string>
+
+    <string name="lbl_sucursal">Sucursal</string>
+    <string name="lbl_codigo_procedimiento">Código Procedimiento</string>
+    <string name="lbl_procedimiento_espanol">Procedimiento Español</string>
+    <string name="lbl_procedimiento_ingles">Procedimiento Ingles</string>
+
+
+    <string name="lbl_epicrisis">Epicrisis</string>
+
+    <!-- Strings Informes Médicoss-->
+    <string name="lbl_informes_medicos">Informes Médicos</string>
+    <string name="lbl_fallecio">Fallecido?</string>
+    <string name="lbl_dado_alta">Dado Alta?</string>
+    <string name="lbl_opciones">Opciones</string>
+    <string name="lbl_documentos">Documentos</string>
+    <string name="lbl_entidad_prestadora">Entidad prestadora</string>
+    <string name="lbl_evolucion">Evolución del paciente</string>
+    <string name="lbl_tipo_paciente">Tipo de paciente</string>
+    <string name="lbl_fecha_hospitalizacion">Fecha Inicio Hopitalización</string>
+
+    <!-- Strings Procedimientos Adicionales-->
+    <string name="lbl_procedimientos_adicionales">Procedimientos Adicionales</string>
+    <string name="lbl_nombre_procedimiento">Nombre del Procedimiento</string>
+
+    <!-- Strings Funcionarios Externos-->
+    <string name="lbl_funcionarios_externos">Funcionarios Externos (Citas)</string>
+    <string name="lbl_area_medica">Funcionario Externo Área Médica</string>
+    <string name="lbl_fecha_cita">Fecha/Hora Cita</string>
+    <string name="lbl_medico">Médico</string>
+    <string name="lbl_especialidad">Escpecialidad</string>
+
+
+    <!-- String detalle Factura -->
+    <string name="lbl_fecha_emision">Fecha Emisión</string>
+    <string name="lbl_fecha_vencimiento_pago">Fecha Vencimiento Pago</string>
+    <string name="lbl_fecha_recibido_coomeva">Fecha Recibido Coomeva</string>
+    <string name="lbl_numero_orden_servicio">Número Orden Servicio</string>
+    <string name="lbl_fecha_finalizacion">Fecha Finalización</string>
+    <string name="lbl_valor_servicio">Valor Servicio</string>
+    <string name="lbl_seguro_hotelero">Seguro Hotelero</string>
+    <string name="lbl_tipo_pago">Tipo Pago</string>
+    <string name="lbl_tab_factura">Factura</string>
+    <string name="lbl_informacion_factura">Información Factura</string>
+    <string name="lbl_tab_glosa">Glosa</string>
+    <string name="lbl_glosa">Glosa</string>
+    <string name="lbl_aplica_glosa">Aplica Glosa</string>
+    <string name="lbl_valor_glosa">Valor Glosa</string>
+    <string name="lbl_impuesto_servicio_orden">Impuesto x Por Servicio X No. Órden</string>
+    <string name="lbl_tab_impuesto_servicio_orden">Impuesto</string>
+    <string name="lbl_tipo_impuesto">Tipo Impuesto</string>
+    <string name="lbl_porcentaje">Porcentaje</string>
+    <string name="lbl_valor_impuesto">Valor Impuesto</string>
+    <string name="lbl_aplica_seguro_hotelero">Aplica Seguro Hotelero</string>
+
+    <!-- String detalle Nota Credito Debito -->
+    <string name="lbl_nota_credito">Nota Crédito</string>
+    <string name="lbl_impuesto">Impuesto</string>
+    <string name="lbl_total_servicio">Total Servicio</string>
+    <string name="lbl_total_seguro_hotelero">Total Seguro Hotelero</string>
+    <string name="lbl_total_nota">Total Nota Crédito</string>
+    <string name="lbl_tab_impuesto">Impuesto</string>
+    <string name="lbl_tab_nota_credito">Nota Crédito</string>
+
+    <string name="lbl_fecha">Fecha</string>
+    <string name="lbl_cargando">Un momento por favor...</string>
+
+    <string name="lbl_doble_back">Por favor presione ATRÁS de nuevo para salir</string>
+    <string name="action_settings">Ajustes</string>
+
+    <string name="address_service_aut">http://pruebas-sectorsalud.coomeva.com.co/saludmp-ws/jax-rs/saludmp-sofibmobile</string>
+    <!--<string name="address_service_profile">http://pruebas-sectorsalud.coomeva.com.co/saludmp-ws/jax-rs/saludmp-autOficinaVirtual/informacion</string>-->
+    <string name="address_service_profile">http://pruebas-sectorsalud.coomeva.com.co/saludmp-ws/jax-rs/saludmp-autOficinaVirtual</string>
+    <string name="complement_aprobacion">/aprobacion</string>
+    <string name="complement_solicitudes">/solicitudes</string>
+    <string name="complement_servicios">/servicios</string>
+    <string name="complement_tipo_registros">/tipoRegistros</string>
+    <string name="complement_serviciosNoAsistenciales">/serviciosNoAsistenciales</string>
+    <string name="complement_giro">/giro</string>
+    <string name="complement_serviciosNoAsistenciales_detalle">/serviciosNoAsistenciales/detalle</string>
+    <string name="complement_giro_detalle">/giro/detalle</string>
+    <string name="complement_giro_notaCredito">/giro/notaCredito</string>
+    <string name="complement_factura">/factura</string>
+    <string name="complement_factura_detalle">/factura/detalle</string>
+    <string name="complement_nota">/nota</string>
+    <string name="complement_nota_detalle">/nota/detalle</string>
+    <string name="complement_utilizaciones">/utilizaciones</string>
+    <string name="complement_utilizaciones_detalle">/utilizaciones/detalle</string>
+    <string name="complement_encuesta">/encuesta</string>
+    <string name="complement_ServiciosAsistenciales">/ServiciosAsistenciales</string>
+    <string name="complement_ServiciosAsistenciales_detalle">/ServiciosAsistenciales/detalle</string>
+    <string name="complement_InformesMedicos">/InformesMedicos</string>
+    <string name="complement_InformesMedicos_detalle">/InformesMedicos/detalle</string>
+    <string name="complement_FuncionariosExternos">/FuncionariosExternos</string>
+    <string name="complement_Autorizaciones">/Autorizaciones</string>
+    <string name="complement_detalle_autorizaciones">/Autorizaciones/Detalle</string>
+    <string name="complement_ProcedimientoAdicionales">/ProcedimientoAdicionales</string>
+    <string name="complement_DocumentosMedicos">/DocumentosMedicos</string>
+    <string name="complement_Epicrisis">/Epicrisis</string>
+    <string name="complement_Bitacoras">/Bitacoras</string>
+    <string name="complement_convenios">/convenios</string>
+    <string name="complement_ciudades">/ciudades</string>
+    <string name="complement_estados">/estados</string>
+
+    <string name="solicitud_numero">Solicitud Número</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="lbl_cambiar_idioma">Cambiar Idioma</string>
+    <string name="lbl_cerrar_sesion">Cerrar Sesión</string>
+    <string name="lbl_cancelar">Cancelar</string>
+    <string name="lbl_aviso_cerrar_sesion">¿Estás seguro de que deseas cerrar sesión?</string>
+
+    <string name="aviso_usuario">Ingrese el usuario</string>
+    <string name="aviso_password">Ingrese la contraseña</string>
+    <string name="error_autenticacion">No se encontró un usuario registrado con la información ingresada.</string>
+
+
+</resources>

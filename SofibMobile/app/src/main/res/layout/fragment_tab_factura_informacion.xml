@@ -1,0 +1,209 @@
+    <LinearLayout android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+        <ScrollView
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:fillViewport="true">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TableLayout
+                    android:id="@+id/detalle_solicitud_cuerpo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/white"
+                    android:orientation="vertical"
+                    android:stretchColumns="1"
+                    android:shrinkColumns="1">
+
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/lbl_numero_factura"
+                            android:textStyle="bold"
+                            android:textColor="@color/colorTextTitle"
+                            android:textSize="@dimen/font_size_subtitle"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginLeft="10dp"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?android:attr/textAppearanceMedium"
+                            android:text="@string/lbl_numero_factura"
+                            android:textSize="@dimen/font_size_text"
+                            android:id="@+id/txtNumeroFactura"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="10dp" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/lbl_fecha_emision"
+                            android:textStyle="bold"
+                            android:textColor="@color/colorTextTitle"
+                            android:textSize="@dimen/font_size_subtitle"
+                            android:layout_marginLeft="10dp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?android:attr/textAppearanceMedium"
+                            android:text="@string/lbl_fecha_emision"
+                            android:textSize="@dimen/font_size_text"
+                            android:id="@+id/txtFechaEmision"
+                            android:layout_marginLeft="10dp" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/lbl_fecha_vencimiento_pago"
+                            android:textStyle="bold"
+                            android:textColor="@color/colorTextTitle"
+                            android:textSize="@dimen/font_size_subtitle"
+                            android:layout_marginLeft="10dp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?android:attr/textAppearanceMedium"
+                            android:text="@string/lbl_fecha_vencimiento_pago"
+                            android:textSize="@dimen/font_size_text"
+                            android:id="@+id/txtFechaVencimientoPago"
+                            android:layout_marginLeft="10dp" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/lbl_fecha_recibido_coomeva"
+                            android:textStyle="bold"
+                            android:textColor="@color/colorTextTitle"
+                            android:textSize="@dimen/font_size_subtitle"
+                            android:layout_marginLeft="10dp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?android:attr/textAppearanceMedium"
+                            android:text="@string/lbl_fecha_recibido_coomeva"
+                            android:textSize="@dimen/font_size_text"
+                            android:id="@+id/txtFechaRecibidoCoomeva"
+                            android:layout_marginLeft="10dp" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/lbl_proveedor"
+                            android:textStyle="bold"
+                            android:textColor="@color/colorTextTitle"
+                            android:textSize="@dimen/font_size_subtitle"
+                            android:layout_marginLeft="10dp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?android:attr/textAppearanceMedium"
+                            android:text="@string/lbl_proveedor"
+                            android:textSize="@dimen/font_size_text"
+                            android:id="@+id/txtProveedor"
+                            android:layout_marginLeft="10dp" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/lbl_valor_total_factura"
+                            android:textStyle="bold"
+                            android:textColor="@color/colorTextTitle"
+                            android:textSize="@dimen/font_size_subtitle"
+                            android:layout_marginLeft="10dp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?android:attr/textAppearanceMedium"
+                            android:text="@string/lbl_valor_total_factura"
+                            android:textSize="@dimen/font_size_text"
+                            android:id="@+id/txtValorTotalFactura"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginBottom="15dp" />
+                    </TableRow>
+
+                </TableLayout>
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:gravity="center"
+                    android:background="@color/colorPrimary">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/lbl_informacion_factura"
+                        android:textStyle="bold"
+                        android:textColor="@color/color_select"
+                        android:textSize="@dimen/font_size_subtitle"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ListView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:id="@+id/lstInformacionFactura"
+                        android:layout_gravity="center_horizontal|top" />
+                </LinearLayout>
+
+            </LinearLayout>
+        </ScrollView>
+
+    </LinearLayout>

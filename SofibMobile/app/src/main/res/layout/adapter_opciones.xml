@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/background_light">
+
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/background_light"
+        android:gravity="left">
+
+        <ImageView
+            android:layout_width="60dp"
+            android:id="@+id/icon_opcion"
+            android:layout_height="60dp"
+            android:padding="10dp"
+            android:src="@mipmap/consultarinfomed"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Opción"
+            android:textStyle="bold"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/font_size_subtitle"
+            android:padding="21dp"
+            android:id="@+id/nombre_opcion"/>
+    </LinearLayout>
+</LinearLayout>

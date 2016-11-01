@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:fillViewport="true">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="left"
+        android:background="@android:color/background_light">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/lbl_descripcion"
+                android:textStyle="bold"
+                android:textColor="@color/colorTextTitle"
+                android:textSize="@dimen/font_size_subtitle"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="10dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="Autorización para la Solicitud de Servicio de Alojamiento"
+                android:textSize="@dimen/font_size_text"
+                android:id="@+id/txtDescripcion"
+                android:layout_marginLeft="10dp"/>
+        </LinearLayout>
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:shrinkColumns="1"
+            android:stretchColumns="1">
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/lbl_ciudad"
+                    android:textStyle="bold"
+                    android:textColor="@color/colorTextTitle"
+                    android:textSize="@dimen/font_size_subtitle"
+                    android:layout_marginLeft="10dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="Cali"
+                    android:textSize="@dimen/font_size_text"
+                    android:id="@+id/txtCiudad"
+                    android:layout_marginLeft="10dp"/>
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/lbl_tipo_solicitud"
+                    android:textStyle="bold"
+                    android:textColor="@color/colorTextTitle"
+                    android:textSize="@dimen/font_size_subtitle"
+                    android:layout_marginLeft="10dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="Servicio Médico No Asistencial"
+                    android:textSize="@dimen/font_size_text"
+                    android:id="@+id/txtTipoSolicitud"
+                    android:layout_marginLeft="10dp"/>
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/lbl_fecha_solicitud"
+                    android:textStyle="bold"
+                    android:textColor="@color/colorTextTitle"
+                    android:textSize="@dimen/font_size_subtitle"
+                    android:layout_marginLeft="10dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="2016/07/24"
+                    android:textSize="@dimen/font_size_text"
+                    android:id="@+id/txtFechaSolicitud"
+                    android:layout_marginLeft="10dp"/>
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/lbl_estado"
+                    android:textStyle="bold"
+                    android:textColor="@color/colorTextTitle"
+                    android:textSize="@dimen/font_size_subtitle"
+                    android:layout_marginLeft="10dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="Aprobada"
+                    android:textSize="@dimen/font_size_text"
+                    android:id="@+id/txtEstado"
+                    android:layout_marginLeft="10dp"/>
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/lbl_fecha_aprobacion"
+                    android:textStyle="bold"
+                    android:textColor="@color/colorTextTitle"
+                    android:textSize="@dimen/font_size_subtitle"
+                    android:layout_marginLeft="10dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="2016/07/24"
+                    android:textSize="@dimen/font_size_text"
+                    android:id="@+id/txtFechaAprobacion"
+                    android:layout_marginLeft="10dp"/>
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/lbl_fecha_rechazo"
+                    android:textStyle="bold"
+                    android:textColor="@color/colorTextTitle"
+                    android:textSize="@dimen/font_size_subtitle"
+                    android:layout_marginLeft="10dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="2016/07/24"
+                    android:textSize="@dimen/font_size_text"
+                    android:id="@+id/txtFechaRechazo"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginBottom="20dp"/>
+            </TableRow>
+        </TableLayout>
+
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:gravity="center"
+            android:background="@color/colorPrimary">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/lbl__detalle_autorizaciones"
+                android:textStyle="bold"
+                android:textColor="@color/color_select"
+                android:textSize="@dimen/font_size_subtitle"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ListView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/listSolicitudes"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>

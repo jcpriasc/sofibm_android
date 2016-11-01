@@ -1,0 +1,358 @@
+<resources>
+    <string name="app_name">Sofib Mobile</string>
+    <string name="hola_mundo">Hello World!!</string>
+
+    <string name="lbl_hint_nombre">Name</string>
+
+    <string name="lbl_seleccionar_estado">Select State</string>
+    <string name="lbl_seleccionar_convenio">Select Contract</string>
+    <string name="lbl_seleccionar_ciudad_ini">Select Initial City</string>
+    <string name="lbl_seleccionar_ciudad_act">Select Current City</string>
+    <string name="lbl_sin_resultados">No data found</string>
+    <string name="lbl_seleccionar_ciudad_tipo_servicio">Select Type Service</string>
+    <string name="lbl_seleccionar_ciudad_tipo_registro">Select Type Register</string>
+    <string name="lbl_seleccionar_ciudad">Select City</string>
+
+
+    <string-array name="convenio_array">
+        <item>Select Contract</item>
+        <item>UTILITY SERVICES - Cali</item>
+        <item>123123 - Cali</item>
+    </string-array>
+
+    <string-array name="estado_array">
+        <item>Select State</item>
+        <item>Pending</item>
+        <item>Accepted</item>
+        <item>Rejected</item>
+    </string-array>
+
+    <string-array name="ciudad_inicial_array">
+        <item>Select Initial City</item>
+        <item>Cali</item>
+        <item>Bogota</item>
+        <item>Medellin</item>
+    </string-array>
+
+    <string-array name="ciudad_actual_array">
+        <item>Select Current City</item>
+        <item>Pasto</item>
+        <item>Bucaramanga</item>
+        <item>Manizales</item>
+    </string-array>
+
+    <string-array name="traslado_array">
+        <item>Select Transferred</item>
+        <item>Yes</item>
+        <item>No</item>
+    </string-array>
+
+    <string-array name="opciones_informes_medicos">
+        <item>View Detail</item>
+        <item>Downloan PDF in Spanish</item>
+        <item>Downloan PDF in English</item>
+    </string-array>
+
+    <string-array name="opcionesIdiomaArray">
+        <item>English</item>
+        <item>Spanish</item>
+        <item>Cancel</item>
+    </string-array>
+
+    <string name="lbl_titulo_consulta_solicitud_aprobacion"> Requests </string>
+    <string name="lbl_titulo_solicitud_aprobacion"> Advanced Search </string>
+    <string name="lbl_titulo_bitacora"> Journals Search </string>
+    <string name="lbl_buscar">Search</string>
+
+    <string name="lbl_consultar_info_medica">Search Medical Information</string>
+    <string name="lbl_consultar_info_logistica">Search Logistics Information</string>
+
+    <string name="lbl_descripcion">Description</string>
+    <string name="lbl_tipo_autorizacion">Authorization type</string>
+    <string name="lbl_tipo_entidad">Entity type</string>
+    <string name="lbl_solicitante">Applicant</string>
+    <string name="lbl_autoriza">Approve</string>
+    <string name="lbl_fecha_autorizacion">Approve Date</string>
+    <string name="lbl_servicio">Service</string>
+    <string name="lbl_proveedor">Provider</string>
+    <string name="lbl_prestador">Lender</string>
+    <string name="lbl_justificacion">Justification</string>
+    <string name="lbl_no_aplica">Does not apply</string>
+
+    <string name="lbl_usuario">User</string>
+    <string name="lbl_cotrasena">Password</string>
+    <string name="lbl_iniciar_sesion">Sign In</string>
+    <string name="lbl_interno">Intern</string>
+    <string name="lbl_externo">External</string>
+    <string name="lbl_tipo_usuario">Type of User</string>
+
+    <string name="lbl_tab_informacion_general">General Information</string>
+    <string name="lbl_tab_datos_basicos">Basic Patient Data</string>
+    <string name="lbl_tab_tipo_aprobacion">Type of Approval</string>
+    <string name="lbl_tab_autorizacion">Authorizations</string>
+    <string name="lbl_tab_detalle_autorizaciones">Details</string>
+
+    <string name="lbl_tab_info_general">General Information</string>
+    <string name="lbl_tab_procedimiento">Procedures</string>
+    <string name="lbl_tab_medicina">Drugs</string>
+
+    <string name="lbl_credencial">Patient Credential</string>
+    <string name="lbl_fecha_programada_regreso">Estimated Date of Return</string>
+    <string name="lbl_fecha_creado">Created Date</string>
+
+    <string name="lbl_id">Id</string>
+    <string name="lbl_solicitud_atencion">Medical Attention Petition</string>
+    <string name="lbl_nombre">Name</string>
+    <string name="lbl_convenio">Contract</string>
+    <string name="lbl_estado">State</string>
+    <string name="lbl_ciudad_inicial">Initial City</string>
+    <string name="lbl_ciudad_actual">Current City</string>
+    <string name="lbl_traslado">Transferred</string>
+
+    <string name="lbl_numero_solicitud">Request Number</string>
+    <string name="lbl_tipo_solicitud">Request Type</string>
+    <string name="lbl_ciudad">City</string>
+    <string name="lbl_justificacion_cancelacion">Justification cancel</string>
+    <string name="lbl_servicio_no_asistencial">No Assistance Services</string>
+    <string name="lbl_tab_servicio_proveedor">Service/Provider</string>
+    <string name="lbl_tab_documentacion_servicio">Documentation</string>
+    <string name="lbl_tab_servicios_adicionados">Added Services</string>
+    <string name="lbl_fecha">Date</string>
+    <string name="lbl_descripcion_restriccion">Description and Restrictions</string>
+    <string name="lbl_titulo_servicio_proveedor">Request and proviers information</string>
+    <string name="lbl_titulo_documentacion_servicio">Documentation of the requested service</string>
+    <string name="lbl_titulo_servicios_adicionados">Added Services</string>
+
+    <!-- Strings para Consultar Solicitudes de Aprobacion -->
+    <string name="lbl_consultar_solicitudes_aprobacion">Request Approval</string>
+
+    <!-- Strings para Giros -->
+    <string name="lbl_titulo_giro">Money Order</string>
+    <string name="lbl_tipo_giro">Money Order Type</string>
+    <string name="lbl_id_columna">Id</string>
+    <string name="lbl_identificacion_beneficiario">Beneficiary identification</string>
+    <string name="lbl_beneficiario">Beneficiary</string>
+
+    <string name="lbl_tipo_beneficiario">Beneficiary Type</string>
+    <string name="lbl_tipo_identificacion_beneficiario">Beneficiary identification type</string>
+
+    <string name="lbl_fecha_inicio">Start Date</string>
+    <string name="lbl_fecha_fin">End Date</string>
+    <string name="lbl_valor_moneda_extranjero">Value Foreign Currency</string>
+    <string name="lbl_valor_moneda_local">Value Local Currency</string>
+    <string name="lbl_registra_devolucion">Refund Records</string>
+    <string name="lbl_valor_devolucion">Refund Value</string>
+    <string name="lbl_legalizado">Legalized</string>
+    <string name="lbl_valor_legalizado">Legalized Value</string>
+    <string name="lbl_justificacion_anulacion">Justification for Annulment</string>
+    <string name="lbl_aprobado_giro">Approver of Money Order</string>
+
+    <string name="lbl_historico_giro">Money Order History</string>
+    <string name="lbl_conceptos">Concepts</string>
+    <string name="lbl_reliquidacion">Reassessment</string>
+    <string name="lbl_valor">Value</string>
+    <string name="lbl_cantidad">Quantity</string>
+    <string name="lbl_subtotal_concepto">Subtotal Concept</string>
+    <string name="lbl_total_concepto">Total Concept</string>
+    <string name="lbl_monto_diario">Amount</string>
+    <string name="lbl_edad_hasta">Age to</string>
+    <string name="lbl_edad_desde">Age From</string>
+    <string name="lbl_manutencion_entregar">Delivered Travel Expenses</string>
+    <string name="lbl_tab_manutencion">Travel Expenses</string>
+    <string name="lbl_tab_conceptos">Concepts</string>
+    <string name="lbl_tab_historico">Historical</string>
+
+    <!-- Strings para Notas Credito Giros -->
+    <string name="lbl_titulo_nota_credito_giro">Credit Notes From Money Order</string>
+    <string name="lbl_consecutivo_nota_credito">Consecutive Credit Note</string>
+    <string name="lbl_id_giro_asociado">Id. Associate Giro</string>
+    <string name="lbl_nombre_beneficiario">Beneficiary Name</string>
+    <string name="lbl_valor_nota">value Note</string>
+    <string name="lbl_fecha_registro">Registration date</string>
+    <string name="lbl_fecha_liquidacion">Settlement Date</string>
+
+    <!-- Strings para Facturas -->
+    <string name="lbl_titulo_factura">Bills</string>
+    <string name="lbl_numero_factura">Bill No.</string>
+    <string name="lbl_fecha_expedicion">Expedition Date</string>
+    <string name="lbl_fecha_radicacion">Register Date</string>
+    <string name="lbl_fecha_aprobacion_o_rechazo">Approval or Rejection Date</string>
+    <string name="lbl_fecha_anulacion">Cancellation Date</string>
+    <string name="lbl_valor_iva">Iva Value</string>
+    <string name="lbl_valor_total">Total Value</string>
+    <string name="lbl_valor_total_factura">Total Value</string>
+    <string name="lbl_factura">Bill</string>
+    <string name="lbl_valor_total_pagar">Total Value to Pay</string>
+    <string name="lbl_tipo_servicio">Service Type</string>
+
+    <!-- Strings para Notas credito debito -->
+    <string name="lbl_titulo_notas_credito_debito">Credit/Debit Notes</string>
+    <string name="lbl_numero_nota">Note No.</string>
+    <string name="lbl_motivo">Reason</string>
+    <string name="lbl_tipo_nota">Note Type</string>
+    <string name="lbl_valor_total_nota_credito">Total Value</string>
+
+    <!-- Strings para utilizaciones -->
+    <string name="lbl_titulo_utilizaciones">Closeouts</string>
+    <string name="lbl_desde">From</string>
+    <string name="lbl_hasta">Until</string>
+    <string name="lbl_tipo_seguro">Type of Insurance</string>
+    <string name="lbl_numero_seguro">Insurance No</string>
+    <string name="lbl_concepto">Concept</string>
+    <string name="lbl_total">Total</string>
+    <string name="lbl_total_glosa">Total Gloss</string>
+    <string name="lbl_trm">TRM</string>
+    <string name="lbl_subtotal">SubTotal</string>
+    <string name="lbl_porcentaje_iva">Iva Percent</string>
+    <string name="lbl_tab_utilizaciones">Closeouts</string>
+    <string name="lbl_tab_administraciones">Administration</string>
+
+    <!-- Strings para Encuesta Satisfacción -->
+    <string name="lbl_titulo_encuesta_satisfaccion">Satisfaction Survey</string>
+    <string name="lbl_pregunta">Question</string>
+    <string name="lbl_respuesta">Answer</string>
+    <string name="lbl_observacion">Comment</string>
+
+    <!-- Strings para Autorizaciones -->
+    <string name="lbl_autorizaciones">Authorizations</string>
+    <string name="lbl__detalle_autorizaciones">Details of Autorization</string>
+    <string name="lbl_fecha_aprobacion">Approval Daten</string>
+    <string name="lbl_fecha_rechazo">Reject Date</string>
+    <string name="lbl_nombre_paciente">Patient Name</string>
+    <string name="lbl_fecha_solicitud">Request Date</string>
+
+    <!-- Strings para Documentos Medicos -->
+    <string name="lbl_documentos_medicos">Medical Documents</string>
+    <string name="lbl_tipo_documento">Document Type</string>
+
+    <string name="lbl_bitacoras">Journals</string>
+    <string name="lbl_tipo_registro">Type of Record</string>
+    <string name="lbl_tipo_accion">Type Action</string>
+    <string name="lbl_nombre_usuario">User Name</string>
+
+    <!-- Strings para Servicios Asistenciales -->
+    <string name="lbl_servicio_asistencial">Assistance Services</string>
+    <string name="lbl_numero_orden">Number of Order</string>
+    <string name="lbl_id_prestador">Id Prestador</string>
+    <string name="lbl_nombre_prestador">Nombre Prestador</string>
+    <string name="lbl_sucursal">Branch Office</string>
+    <string name="lbl_codigo_procedimiento">Procedure Code</string>
+    <string name="lbl_procedimiento_espanol">Spanish Procedure</string>
+    <string name="lbl_procedimiento_ingles">English Procedure</string>
+
+    <string name="lbl_epicrisis">Discharge Letter</string>
+
+    <!-- Strings Procedimientos Adicionales-->
+    <string name="lbl_procedimientos_adicionales">Additional Procedures</string>
+    <string name="lbl_nombre_procedimiento">Procedure Name</string>
+    <string name="lbl_prestador_proveedor">Provider/Supplier</string>
+
+    <!-- Strings Informes Médicoss-->
+    <string name="lbl_informes_medicos">Medical Reports</string>
+    <string name="lbl_fallecio">Died?</string>
+    <string name="lbl_dado_alta">Discharged?</string>
+    <string name="lbl_opciones">Options</string>
+    <string name="lbl_documentos">Documents</string>
+    <string name="lbl_entidad_prestadora">Entity</string>
+    <string name="lbl_evolucion">Patient evolutions</string>
+    <string name="lbl_tipo_paciente">Patient Type</string>
+    <string name="lbl_fecha_hospitalizacion">Date</string>
+
+    <!-- Strings Funcionarios Externos-->
+    <string name="lbl_funcionarios_externos">External Functionary(Dating)</string>
+    <string name="lbl_area_medica">External Functionary of Medical Area</string>
+    <string name="lbl_fecha_cita">Date/Hour Dating</string>
+    <string name="lbl_medico">Doctor</string>
+    <string name="lbl_especialidad">Specialty</string>
+
+    <string name="lbl_moneda_extranjero">Foreign Currency</string>
+    <string name="lbl_moneda_local">Local Currency</string>
+
+
+    <!-- String detalle Factura -->
+    <string name="lbl_fecha_emision">Expedition Date</string>
+    <string name="lbl_fecha_vencimiento_pago">Expiration Date</string>
+    <string name="lbl_fecha_recibido_coomeva">Received by Coomeva Date</string>
+    <string name="lbl_numero_orden_servicio">Service Order</string>
+    <string name="lbl_fecha_finalizacion">End Date</string>
+    <string name="lbl_valor_servicio">Service Value</string>
+    <string name="lbl_seguro_hotelero">Hotel Insurance</string>
+    <string name="lbl_tipo_pago">Payment Type</string>
+    <string name="lbl_tab_factura">Bill</string>
+    <string name="lbl_informacion_factura">Billing information</string>
+    <string name="lbl_tab_glosa">Gloss</string>
+    <string name="lbl_glosa">Gloss</string>
+    <string name="lbl_aplica_glosa">Apply Gloss</string>
+    <string name="lbl_valor_glosa">Gloss Value</string>
+    <string name="lbl_impuesto_servicio_orden">Taxes x Service x Order No.</string>
+    <string name="lbl_tab_impuesto_servicio_orden">Taxes</string>
+    <string name="lbl_tipo_impuesto">Tax Type</string>
+    <string name="lbl_porcentaje">Percentage</string>
+    <string name="lbl_valor_impuesto">Tax Value</string>
+    <string name="lbl_aplica_seguro_hotelero">Applies to Hotel Insurance</string>
+
+    <!-- String detalle Nota Credito Debito -->
+    <string name="lbl_nota_credito">Credit Note</string>
+    <string name="lbl_impuesto">Taxes</string>
+    <string name="lbl_total_servicio">Total Service</string>
+    <string name="lbl_total_seguro_hotelero">Total Hotel Insurance</string>
+    <string name="lbl_total_nota">Credit Note Total</string>
+
+    <string name="lbl_tab_impuesto">Taxes</string>
+    <string name="lbl_tab_nota_credito">Credit Note</string>
+
+    <string name="lbl_cargando">Please wait...</string>
+
+
+    <string name="address_service_aut">http://pruebas-sectorsalud.coomeva.com.co/saludmp-ws/jax-rs/saludmp-sofibmobile</string>
+    <!--<string name="address_service_profile">http://pruebas-sectorsalud.coomeva.com.co/saludmp-ws/jax-rs/saludmp-autOficinaVirtual/informacion</string>-->
+    <string name="address_service_profile">http://pruebas-sectorsalud.coomeva.com.co/saludmp-ws/jax-rs/saludmp-autOficinaVirtual</string>
+    <string name="complement_aprobacion">/aprobacion</string>
+    <string name="complement_solicitudes">/solicitudes</string>
+    <string name="complement_servicios">/servicios</string>
+    <string name="complement_tipo_registros">/tipoRegistros</string>
+    <string name="complement_serviciosNoAsistenciales">/serviciosNoAsistenciales</string>
+    <string name="complement_giro">/giro</string>
+    <string name="complement_serviciosNoAsistenciales_detalle">/serviciosNoAsistenciales/detalle</string>
+    <string name="complement_giro_detalle">/giro/detalle</string>
+    <string name="complement_giro_notaCredito">/giro/notaCredito</string>
+    <string name="complement_factura">/factura</string>
+    <string name="complement_factura_detalle">/factura/detalle</string>
+    <string name="complement_nota">/nota</string>
+    <string name="complement_nota_detalle">/nota/detalle</string>
+    <string name="complement_utilizaciones">/utilizaciones</string>
+    <string name="complement_utilizaciones_detalle">/utilizaciones/detalle</string>
+    <string name="complement_encuesta">/encuesta</string>
+    <string name="complement_ServiciosAsistenciales">/ServiciosAsistenciales</string>
+    <string name="complement_ServiciosAsistenciales_detalle">/ServiciosAsistenciales/detalle</string>
+    <string name="complement_InformesMedicos">/InformesMedicos</string>
+    <string name="complement_InformesMedicos_detalle">/InformesMedicos/detalle</string>
+    <string name="complement_FuncionariosExternos">/FuncionariosExternos</string>
+    <string name="complement_Autorizaciones">/Autorizaciones</string>
+    <string name="complement_detalle_autorizaciones">/Autorizaciones/Detalle</string>
+    <string name="complement_ProcedimientoAdicionales">/ProcedimientoAdicionales</string>
+    <string name="complement_DocumentosMedicos">/DocumentosMedicos</string>
+    <string name="complement_Epicrisis">/Epicrisis</string>
+    <string name="complement_Bitacoras">/Bitacoras</string>
+    <string name="complement_convenios">/convenios</string>
+    <string name="complement_ciudades">/ciudades</string>
+    <string name="complement_estados">/estados</string>
+
+    <string name="solicitud_numero">Request number</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="lbl_doble_back">Please click BACK again to exit</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="lbl_cambiar_idioma">Change Language</string>
+    <string name="lbl_cerrar_sesion">Log Out</string>
+    <string name="lbl_cancelar">Cancel</string>
+    <string name="lbl_aviso_cerrar_sesion">You are sure you want to logout?</string>
+
+    <string name="aviso_usuario">Enter the user</string>
+    <string name="aviso_password">Enter the password</string>
+    <string name="error_autenticacion">User not found</string>
+
+
+</resources>

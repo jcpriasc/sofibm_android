@@ -1,0 +1,248 @@
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/detalle_cabecera"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="txtNumeroSolicitud"
+                android:id="@+id/txtNumeroSolicitud"
+                android:layout_marginTop="15dp"
+                android:layout_marginLeft="15dp"
+                android:textColor="@android:color/background_light"
+                android:textSize="@dimen/font_size_title"
+                android:textStyle="bold|italic"/>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="txtNombrePaciente"
+                android:id="@+id/txtNombrePaciente"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="15dp"
+                android:textColor="@android:color/background_light"
+                android:textSize="@dimen/font_size_title"
+                android:textStyle="bold|italic"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="txtTipoRegistro"
+                android:id="@+id/txtTipoRegistro"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="5dp"
+                android:textColor="@android:color/background_light"
+                android:textSize="@dimen/font_size_title"
+                android:textStyle="bold|italic"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="txtTipoAccion"
+                android:id="@+id/txtTipoAccion"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="5dp"
+                android:textColor="@android:color/background_light"
+                android:textSize="@dimen/font_size_title"
+                android:textStyle="bold|italic"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="txtEstado"
+                android:id="@+id/txtEstado"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="5dp"
+                android:textColor="@android:color/background_light"
+                android:textSize="@dimen/font_size_title"
+                android:textStyle="bold|italic"
+                android:layout_marginBottom="15dp" />
+
+        </LinearLayout>
+
+        <ScrollView
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:fillViewport="true">
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/lbl_ciudad_inicial"
+                        android:textStyle="bold"
+                        android:textColor="@color/colorTextTitle"
+                        android:textSize="@dimen/font_size_subtitle"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginLeft="10dp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:text="Cali"
+                        android:textSize="@dimen/font_size_text"
+                        android:id="@+id/textCiudad"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="10dp"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/lbl_tipo_servicio"
+                        android:textStyle="bold"
+                        android:textColor="@color/colorTextTitle"
+                        android:textSize="@dimen/font_size_subtitle"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginLeft="10dp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:text="Servicio No Asistencial"
+                        android:textSize="@dimen/font_size_text"
+                        android:id="@+id/textServicio"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginRight="10dp"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/lbl_nombre_usuario"
+                        android:textStyle="bold"
+                        android:textColor="@color/colorTextTitle"
+                        android:textSize="@dimen/font_size_subtitle"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginLeft="10dp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:text="Colaborador Aseguradora Catalina1"
+                        android:textSize="@dimen/font_size_text"
+                        android:id="@+id/textNombreUsuario"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginRight="10dp"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/lbl_fecha"
+                        android:textStyle="bold"
+                        android:textColor="@color/colorTextTitle"
+                        android:textSize="@dimen/font_size_subtitle"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginLeft="10dp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:text="28-04-2015 02:48:23 PM"
+                        android:textSize="@dimen/font_size_text"
+                        android:id="@+id/textFecha"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginRight="10dp"/>
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/lbl_descripcion"
+                        android:textStyle="bold"
+                        android:textColor="@color/colorTextTitle"
+                        android:textSize="@dimen/font_size_subtitle"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginLeft="10dp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:text="[No. Factura]= 5678 [Servicio]= ALOJAMIENTO [Proveedor]= Hotel Los Heroes [Valor Total Factura]= $1,310,000.00 [Valor IVA]= $160,000.00 [Fecha Emisión]= 20/03/2015 [Fecha Vencimiento]= 31/03/2015 [Fecha Recibido en Coomeva]= 20/03/2015 [No. Orden Servicio]= 730-1 [Valor Servicio]= $1,000,000.00 [Seguro Hotelero]= $150,000.00 [Tipo Impuesto]= IVA [Porcentaje]= 16% [Valor Impuesto]= $160,000.00 [Aplica a Seguro Hotelero]= No"
+                        android:textSize="@dimen/font_size_text"
+                        android:id="@+id/textDescripcion"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginRight="10dp"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+            <!--
+
+        fechaCreadoString
+        descripcion-->
+
+
+
+
+        </ScrollView>
+
+    </LinearLayout>
+
+
+
+</android.support.design.widget.CoordinatorLayout>

@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/background_light">
+
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/background_light"
+        android:gravity="left">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/lbl_descripcion"
+            android:textStyle="bold"
+            android:textColor="@color/colorTextTitle"
+            android:textSize="@dimen/font_size_subtitle"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Medicamento: 30 Dolex Gripa, Drogas la Rebaja, Entrega: RECOGIDOS_POR_PACIENTE"
+            android:textSize="@dimen/font_size_text"
+            android:id="@+id/textDescripcion"
+            android:layout_marginLeft="10dp"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/lbl_estado"
+                android:textStyle="bold"
+                android:textColor="@color/colorTextTitle"
+                android:textSize="@dimen/font_size_subtitle"
+                android:layout_marginLeft="10dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="Aprobada"
+                android:textSize="@dimen/font_size_text"
+                android:id="@+id/textEstado"
+                android:layout_marginLeft="10dp"/>
+            </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/lbl_justificacion_cancelacion"
+            android:textStyle="bold"
+            android:textColor="@color/colorTextTitle"
+            android:textSize="@dimen/font_size_subtitle"
+            android:layout_marginLeft="10dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Test"
+            android:textSize="@dimen/font_size_text"
+            android:id="@+id/textJustificacionCancelacion"
+            android:layout_marginLeft="10dp"
+            android:layout_marginBottom="50dp"/>
+    </LinearLayout>
+</LinearLayout>

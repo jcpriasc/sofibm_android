@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:fillViewport="true">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_horizontal"
+        android:background="@android:color/background_light">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/lbl_titulo_solicitud_aprobacion"
+            android:textAlignment="center"
+            android:textStyle="bold"
+            android:textColor="@color/colorTextTitle"
+            android:textSize="@dimen/abc_text_size_title_material"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="30dp"
+            />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:hint="@string/lbl_hint_nombre"
+            android:ems="10"
+            android:id="@+id/editText"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="30dp"
+            />
+
+        <Spinner
+            android:id="@+id/spinner_convenios"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:spinnerMode="dialog"
+            />
+
+        <ImageView
+            android:layout_marginTop="50dp"
+            android:layout_width="60dp"
+            android:id="@+id/search_action"
+            android:layout_height="60dp"
+            android:src="@drawable/icon_search"/>
+
+
+
+    </LinearLayout>
+
+</ScrollView>

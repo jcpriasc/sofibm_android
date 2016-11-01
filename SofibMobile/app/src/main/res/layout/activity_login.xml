@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="co.com.coomeva.sofibmobile.LoginView">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/imgBackground"
+        android:layout_gravity="center"
+        android:src="@mipmap/background_sofib"
+        android:scaleType="centerCrop"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:orientation="vertical"
+        android:weightSum="30">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:id="@+id/textViewTest"
+            android:layout_gravity="center_horizontal"
+            android:layout_weight="20"
+            android:textColor="@color/abc_primary_text_material_dark" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="@string/lbl_tipo_usuario"
+            android:id="@+id/textView"
+            android:layout_gravity="center_horizontal"
+            android:layout_weight="1"
+            android:textColor="@color/abc_primary_text_material_dark" />
+
+        <RadioGroup
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:id="@+id/radioGroudTipoUsuario"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginRight="50dp"
+            android:layout_marginLeft="50dp"
+            android:layout_weight="1">
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/lbl_interno"
+                android:id="@+id/radioButton"
+                android:layout_gravity="center_horizontal"
+                android:textColor="@color/abc_primary_text_material_dark"
+                android:checked="true"
+                android:buttonTint="@color/abc_primary_text_material_dark" />
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/lbl_externo"
+                android:id="@+id/radioButton2"
+                android:layout_gravity="center_horizontal"
+                android:textColor="@color/abc_primary_text_material_dark"
+                android:checked="false"
+                android:buttonTint="@color/abc_primary_text_disable_only_material_dark" />
+
+        </RadioGroup>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/editTextUser"
+            android:layout_gravity="center_horizontal"
+            android:hint="@string/lbl_usuario"
+            android:inputType="text"
+            android:layout_marginLeft="40dp"
+            android:layout_marginRight="40dp"
+            android:layout_weight="1"
+            android:textColor="@color/abc_primary_text_material_dark"
+            android:textColorHint="@color/abc_primary_text_material_dark"
+            android:backgroundTint="@color/abc_primary_text_disable_only_material_dark" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/editTextPass"
+            android:layout_gravity="center_horizontal"
+            android:hint="@string/lbl_cotrasena"
+            android:layout_marginLeft="40dp"
+            android:layout_marginRight="40dp"
+            android:layout_weight="1"
+            android:inputType="textPassword"
+            android:textColor="@color/abc_primary_text_material_dark"
+            android:textColorHint="@color/abc_primary_text_material_dark"
+            android:backgroundTint="@color/abc_primary_text_disable_only_material_dark" />
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/imageButton"
+            android:layout_gravity="center_horizontal"
+            android:layout_weight="4"
+            android:src="@mipmap/ic_arrow_right_drop_circle"
+            android:background="@android:color/transparent"
+            />
+
+
+    </LinearLayout>
+
+</FrameLayout>
