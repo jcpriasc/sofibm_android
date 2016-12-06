@@ -55,10 +55,10 @@ public class DetalleSolicitudAtencionFragment extends Fragment{
 
 
         //Se colocan los datos de la solicitud estatica del View a los componentes para mostrar su informacion
-        txtSolicitudAtencion.setText(ConsultaSolicitudAtencionView.getSolicitudAtencionSeleccionada().getNumeroSolicitud());
+        txtSolicitudAtencion.setText(getResources().getString(R.string.lbl_solicitud_atencion) + ": "+ConsultaSolicitudAtencionView.getSolicitudAtencionSeleccionada().getNumeroSolicitud());
         txtEstado.setText(ConsultaSolicitudAtencionView.getSolicitudAtencionSeleccionada().getEstado());
-        txtNombre.setText(ConsultaSolicitudAtencionView.getSolicitudAtencionSeleccionada().getNombrePaciente());
-        txtIdentificacion.setText(ConsultaSolicitudAtencionView.getSolicitudAtencionSeleccionada().getIdentificacion());
+        txtNombre.setText(getResources().getString(R.string.lbl_nombre) + ": "+ConsultaSolicitudAtencionView.getSolicitudAtencionSeleccionada().getNombrePaciente());
+        txtIdentificacion.setText(getResources().getString(R.string.lbl_id) + ": "+ConsultaSolicitudAtencionView.getSolicitudAtencionSeleccionada().getIdentificacion());
 
         if(ConsultaSolicitudAtencionView.getSolicitudAtencionSeleccionada().getCredencialPaciente() == null
                 || ConsultaSolicitudAtencionView.getSolicitudAtencionSeleccionada().getCredencialPaciente().trim().equals("")){

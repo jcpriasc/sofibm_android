@@ -218,7 +218,7 @@ public class DetalleNotaCreditoDebitoFragment extends Fragment{
                 for (int x = 0; x < jsonArrayServicios.length(); x++) {
                     JSONObject servicioItem = jsonArrayServicios.getJSONObject(x);
 
-                    String numeroOrdenServicio = (servicioItem.getString("numeroOrdenServicio") != null && !servicioItem.getString("numeroOrdenServicio").equals("null")) ? servicioItem.getString("numeroOrdenServicio"):"";
+                    String numeroOrdenServicio = (servicioItem.getString("orderServicio") != null && !servicioItem.getString("orderServicio").equals("null")) ? servicioItem.getString("orderServicio"):"";
                     String tipoImpuesto = (servicioItem.getString("tipoImpuesto") != null && !servicioItem.getString("tipoImpuesto").equals("null")) ? servicioItem.getString("tipoImpuesto"):"";
                     String servicioServicio = (servicioItem.getString("servicio") != null && !servicioItem.getString("servicio").equals("null")) ? servicioItem.getString("servicio"):"";
                     String porcentaje = (servicioItem.getString("porcentaje") != null && !servicioItem.getString("porcentaje").equals("null")) ? servicioItem.getString("porcentaje"):"";

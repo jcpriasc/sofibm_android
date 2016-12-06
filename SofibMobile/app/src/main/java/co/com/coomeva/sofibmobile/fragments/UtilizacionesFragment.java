@@ -111,9 +111,8 @@ public class UtilizacionesFragment extends Fragment{
                 ///////////////////////////////////////////////////////////////////////////////
                 JSONArray jsonArrayUtilizaciones = obj.optJSONArray("utilizaciones");
 
-                if(lstDetalleUtilizacionesDTO == null){
-                    lstDetalleUtilizacionesDTO = new ArrayList<DetalleUtilizacionesDTO>();
-                }
+                lstDetalleUtilizacionesDTO = new ArrayList<DetalleUtilizacionesDTO>();
+
 
                 for (int x = 0; x < jsonArrayUtilizaciones.length(); x++) {
                     JSONObject utilizaciones = jsonArrayUtilizaciones.getJSONObject(x);
@@ -135,10 +134,8 @@ public class UtilizacionesFragment extends Fragment{
 
 
                 JSONArray jsonArrayAdministraciones = obj.optJSONArray("administraciones");
+                lstAdministraciones = new ArrayList<AdministracionesDTO>();
 
-                if(lstAdministraciones == null){
-                    lstAdministraciones = new ArrayList<AdministracionesDTO>();
-                }
 
 
                 for (int x = 0; x < jsonArrayAdministraciones.length(); x++) {

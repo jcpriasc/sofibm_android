@@ -105,7 +105,11 @@ public class AjustesView extends AppCompatActivity {
                                     datos.eliminarUsuario();
                                     datos.getDb().setTransactionSuccessful();
 
+
+
                                     Intent intentLogin = new Intent(view.getContext(), LoginView.class);
+                                    intentLogin.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                                    intentLogin.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                                     startActivity(intentLogin);
 
                                 }catch (Exception e){
