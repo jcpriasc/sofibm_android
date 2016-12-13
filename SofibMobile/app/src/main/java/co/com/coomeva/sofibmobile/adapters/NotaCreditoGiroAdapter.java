@@ -34,8 +34,8 @@ public class NotaCreditoGiroAdapter extends ArrayAdapter<NotaCreditoGiroDTO> {
 
         TextView txtConsecutivoNotaCredito;
         TextView txtIdGiroAsociado;
-        TextView txtNombreBeneficiario;
-        TextView txtTipoGiro;
+      //  TextView txtNombreBeneficiario;
+      //  TextView txtTipoGiro;
     }
 
 
@@ -51,13 +51,13 @@ public class NotaCreditoGiroAdapter extends ArrayAdapter<NotaCreditoGiroDTO> {
 
         viewHolder.txtConsecutivoNotaCredito = (TextView) convertView.findViewById(R.id.txtConsecutivoNotaCredito);
         viewHolder.txtIdGiroAsociado = (TextView) convertView.findViewById(R.id.txtIdGiroAsociado);
-        viewHolder.txtNombreBeneficiario = (TextView) convertView.findViewById(R.id.txtNombreBeneficiario);
-        viewHolder.txtTipoGiro = (TextView) convertView.findViewById(R.id.txtTipoGiro);
+       // viewHolder.txtNombreBeneficiario = (TextView) convertView.findViewById(R.id.txtNombreBeneficiario);
+       // viewHolder.txtTipoGiro = (TextView) convertView.findViewById(R.id.txtTipoGiro);
 
         viewHolder.txtConsecutivoNotaCredito.setText(lstNotaCreditoGiros.get(position).getConsecutivoNotaCredito());
         viewHolder.txtIdGiroAsociado.setText(lstNotaCreditoGiros.get(position).getIdGiroAsociado());
-        viewHolder.txtNombreBeneficiario.setText(lstNotaCreditoGiros.get(position).getNombreBeneficiario());
-        viewHolder.txtTipoGiro.setText(lstNotaCreditoGiros.get(position).getTipoGiro());
+       // viewHolder.txtNombreBeneficiario.setText(lstNotaCreditoGiros.get(position).getNombreBeneficiario());
+       // viewHolder.txtTipoGiro.setText(lstNotaCreditoGiros.get(position).getTipoGiro());
 
         return convertView;
     }

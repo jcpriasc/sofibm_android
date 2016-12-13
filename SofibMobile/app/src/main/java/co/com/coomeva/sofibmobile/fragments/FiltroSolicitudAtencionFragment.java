@@ -132,7 +132,15 @@ public class FiltroSolicitudAtencionFragment extends Fragment{
                         String nameCiudadActual = spinnerCiudadActual.getSelectedItem().toString();
                         ciudadActual = resultMapCiudadActual.getResultMap().get(nameCiudadActual);
 
-//                        int traslado = spinnerTraslado.getSelectedItemPosition();
+                        int trasladoPosicion = spinnerTraslado.getSelectedItemPosition();
+
+                        if(trasladoPosicion == 1){
+                            traslado = "1";
+                        }else if(trasladoPosicion == 2){
+                            traslado = "0";
+                        }else if(trasladoPosicion == 0){
+                            traslado = "NA";
+                        }
 
                         identificacion = editTextIdentificacion.getText().toString();
 
@@ -147,12 +155,14 @@ public class FiltroSolicitudAtencionFragment extends Fragment{
                         }
 
                         nombre = editTextNombre.getText().toString();
+                        nombre = nombre.replaceAll(" ", "%20");
 
                         if (nombre.equals("")){
                             nombre = "0";
                         }
-
-                        String listParams="/SAC/ABCD1234/0";
+                        nombre = nombre.toUpperCase();
+                        String listParams="/SAC/ABCD1234";
+                        listParams+="/"+identificacion;
                         listParams+="/"+solAtencion;
                         listParams+="/"+nombre;
                         listParams+="/"+convenio;

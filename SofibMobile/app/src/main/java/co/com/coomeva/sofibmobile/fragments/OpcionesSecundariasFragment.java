@@ -874,8 +874,9 @@ public class OpcionesSecundariasFragment extends Fragment{
                     String cantidad = (obj.getString("cantidad") != null && !obj.getString("cantidad").equals("null")) ? obj.getString("cantidad"):"";
                     String estado = (obj.getString("estado")!= null && !obj.getString("estado").equals("null")) ? obj.getString("estado"):"";
                     String fechaString = (obj.getString("fecha")!= null && !obj.getString("fecha").equals("null")) ? obj.getString("fecha"):"";
+                    String id = (obj.getString("id")!= null && !obj.getString("id").equals("null")) ? obj.getString("id"):"";
 
-                    ServicioAsistencialDTO dto = new ServicioAsistencialDTO(numeroOrden,sucursal,idPrestador,nombrePrestador,tipoServicio,codigoProcedimiento,procedimientoEspanol,procedimientoIngles, cantidad,estado,fechaString);
+                    ServicioAsistencialDTO dto = new ServicioAsistencialDTO(numeroOrden,sucursal,idPrestador,nombrePrestador,tipoServicio,codigoProcedimiento,procedimientoEspanol,procedimientoIngles, cantidad,estado,fechaString,id);
                     lstServiciosAsistenciales.add(dto);
 
                 }

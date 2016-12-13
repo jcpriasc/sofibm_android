@@ -20,7 +20,7 @@ public class ServicioAsistencialDTO implements Serializable {
     private String estado;
     private Date fecha;
     private String fechaString;
-
+    private String id;
 
     public ServicioAsistencialDTO() {
     }
@@ -33,7 +33,7 @@ public class ServicioAsistencialDTO implements Serializable {
     }
 
 
-    public ServicioAsistencialDTO(String numeroOrden, String sucursal, String idPrestador, String nombrePrestador, String tipoServicio, String codigoProcedimiento, String procedimientoEspanol, String procedimientoIngles, String cantidad, String estado, String fechaString) {
+    public ServicioAsistencialDTO(String numeroOrden, String sucursal, String idPrestador, String nombrePrestador, String tipoServicio, String codigoProcedimiento, String procedimientoEspanol, String procedimientoIngles, String cantidad, String estado, String fechaString, String id) {
         this.numeroOrden = numeroOrden;
         this.sucursal = sucursal;
         this.idPrestador = idPrestador;
@@ -45,6 +45,7 @@ public class ServicioAsistencialDTO implements Serializable {
         this.cantidad = cantidad;
         this.estado = estado;
         this.fechaString = fechaString;
+        this.id = id;
     }
 
     public String getNumeroOrden() {
@@ -141,5 +142,13 @@ public class ServicioAsistencialDTO implements Serializable {
 
     public void setFechaString(String fechaString) {
         this.fechaString = fechaString;
+    }
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
     }
 }

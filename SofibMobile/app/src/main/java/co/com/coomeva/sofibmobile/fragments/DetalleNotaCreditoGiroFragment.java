@@ -50,8 +50,8 @@ public class DetalleNotaCreditoGiroFragment extends Fragment{
         //Se colocan los datos del giro estatica del View a los componentes para mostrar su informacio
             txtConsecutivoNotaCredito.setText(getResources().getString(R.string.lbl_consecutivo_nota_credito) + ": "+NotaCreditoGiroFragment.notaCreditoGiroSeleccionado.getConsecutivoNotaCredito());
             txtIdGiroAsociado.setText(getResources().getString(R.string.lbl_id_giro_asociado) + ": "+NotaCreditoGiroFragment.notaCreditoGiroSeleccionado.getIdGiroAsociado());
-            txtNombreBeneficiario.setText(getResources().getString(R.string.lbl_nombre_beneficiario) + ": "+NotaCreditoGiroFragment.notaCreditoGiroSeleccionado.getNombreBeneficiario());
-            txtTipoGiro.setText(getResources().getString(R.string.lbl_tipo_giro) + ": "+NotaCreditoGiroFragment.notaCreditoGiroSeleccionado.getTipoGiro());
+            txtNombreBeneficiario.setText(NotaCreditoGiroFragment.notaCreditoGiroSeleccionado.getNombreBeneficiario());
+            txtTipoGiro.setText(NotaCreditoGiroFragment.notaCreditoGiroSeleccionado.getTipoGiro());
             txtCiudad.setText(NotaCreditoGiroFragment.notaCreditoGiroSeleccionado.getCiudad());
             txtTipoBeneficiario.setText(NotaCreditoGiroFragment.notaCreditoGiroSeleccionado.getTipoBeneficiario());
             txtEstado.setText(NotaCreditoGiroFragment.notaCreditoGiroSeleccionado.getEstado());

@@ -12,18 +12,19 @@ import java.util.List;
 import co.com.coomeva.sofibmobile.R;
 import co.com.coomeva.sofibmobile.dto.DetallServiciosAsistencialesDTO;
 import co.com.coomeva.sofibmobile.dto.DetalleAutorizacionesDTO;
+import co.com.coomeva.sofibmobile.dto.DetalleServicioAsistencialDTO;
 
 /**
  * Created by JuanCamilo on 9/25/16.
  */
-public class DetallServiciosAsistencialesAdapter extends ArrayAdapter<DetallServiciosAsistencialesDTO> {
+public class DetallServiciosAsistencialesAdapter extends ArrayAdapter<DetalleServicioAsistencialDTO> {
 
 
     private Context context;
-    private List<DetallServiciosAsistencialesDTO> listDetallServiciosAsistenciales;
+    private List<DetalleServicioAsistencialDTO> listDetallServiciosAsistenciales;
     LayoutInflater inflater;
 
-    public DetallServiciosAsistencialesAdapter(Context context, List<DetallServiciosAsistencialesDTO> listDetallServiciosAsistenciales) {
+    public DetallServiciosAsistencialesAdapter(Context context, List<DetalleServicioAsistencialDTO> listDetallServiciosAsistenciales) {
         super(context, R.layout.adapter_detalle_de_servicio_asistencial, listDetallServiciosAsistenciales);
 
         this.context = context;
@@ -51,7 +52,7 @@ public class DetallServiciosAsistencialesAdapter extends ArrayAdapter<DetallServ
         viewHolder.txtFecha = (TextView) convertView.findViewById(R.id.textFecha);
 
         viewHolder.txtEstado.setText(listDetallServiciosAsistenciales.get(position).getEstado());
-        viewHolder.txtFecha.setText(listDetallServiciosAsistenciales.get(position).getFechaTexto());
+        viewHolder.txtFecha.setText(listDetallServiciosAsistenciales.get(position).getFecha());
 
         return convertView;
     }
