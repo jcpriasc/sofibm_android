@@ -58,7 +58,8 @@
                         android:textStyle="bold"
                         android:textColor="@color/colorTextTitle"
                         android:textSize="@dimen/font_size_subtitle"
-                        android:layout_marginLeft="10dp"/>
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginBottom="10dp" />
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -74,23 +75,6 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:orientation="vertical">
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/lbl_nombre_beneficiario"
-                        android:textStyle="bold"
-                        android:textColor="@color/colorTextTitle"
-                        android:textSize="@dimen/font_size_subtitle"
-                        android:layout_marginLeft="10dp"/>
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:textAppearance="?android:attr/textAppearanceMedium"
-                        android:text="@string/lbl_nombre_beneficiario"
-                        android:textSize="@dimen/font_size_text"
-                        android:id="@+id/txtNombreBeneficiario"
-                        android:layout_marginLeft="10dp" />
 
                 </LinearLayout>
 
@@ -99,24 +83,6 @@
                     android:layout_height="wrap_content"
                     android:orientation="horizontal">
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/lbl_tipo_giro"
-                        android:textStyle="bold"
-                        android:textColor="@color/colorTextTitle"
-                        android:textSize="@dimen/font_size_subtitle"
-                        android:layout_marginLeft="10dp"/>
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:textAppearance="?android:attr/textAppearanceMedium"
-                        android:text="@string/lbl_tipo_giro"
-                        android:textSize="@dimen/font_size_text"
-                        android:id="@+id/txtTipoGiro"
-                        android:layout_marginLeft="10dp"
-                        android:layout_marginBottom="15dp" />
                 </LinearLayout>
             </LinearLayout>
 

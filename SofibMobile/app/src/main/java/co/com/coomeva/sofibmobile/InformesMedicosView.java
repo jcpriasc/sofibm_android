@@ -86,6 +86,7 @@ public class InformesMedicosView extends AppCompatActivity {
                                     }
                                     break;
                                 case R.id.menu_servicio_asistencial:
+                                    params = "/SAC/ABCD1234/"+ ConsultaSolicitudAtencionView.solicitudAtencionSeleccionada.getNumeroSolicitud();
                                     if (OpcionesSecundariasFragment.consultarServiciosAsistenciales(getApplicationContext().getResources().getString(R.string.complement_ServiciosAsistenciales), params, InformesMedicosView.this)) {
                                         Intent intentServiciosAsistenciales = new Intent(getApplicationContext(), ServiciosAsistencialesView.class);
                                         startActivity(intentServiciosAsistenciales);

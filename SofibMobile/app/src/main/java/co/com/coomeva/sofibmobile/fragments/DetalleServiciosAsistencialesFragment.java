@@ -19,6 +19,7 @@ import co.com.coomeva.sofibmobile.adapters.DetallServiciosAsistencialesAdapter;
 import co.com.coomeva.sofibmobile.adapters.DetalleAutoricionesAdapter;
 import co.com.coomeva.sofibmobile.dto.DetallServiciosAsistencialesDTO;
 import co.com.coomeva.sofibmobile.dto.DetalleAutorizacionesDTO;
+import co.com.coomeva.sofibmobile.dto.DetalleServicioAsistencialDTO;
 
 /**
  * Created by JuanCamilo on 9/25/16.
@@ -27,7 +28,7 @@ public class DetalleServiciosAsistencialesFragment extends Fragment{
 
     private DetallServiciosAsistencialesAdapter detallServiciosAsistencialesAdapter;
     private ListView listViewDetallServiciosAsistencialesAdapter;
-    private final List<DetallServiciosAsistencialesDTO> detalleServiciosAsistencialesList = new ArrayList<>();
+    private  List<DetalleServicioAsistencialDTO> detalleServiciosAsistencialesList = new ArrayList<>();
 
     private TextView textNumeroOrden;
     private TextView textSucursal;
@@ -72,8 +73,7 @@ public class DetalleServiciosAsistencialesFragment extends Fragment{
         textEstado.setText(ServicioAsistencialFragment.servicio.getEstado());
         textFecha.setText(ServicioAsistencialFragment.servicio.getFechaString());
 
-        detalleServiciosAsistencialesList.add(new DetallServiciosAsistencialesDTO("IMPRESA", new Date()));
-        detalleServiciosAsistencialesList.add(new DetallServiciosAsistencialesDTO("PENDIENTE", new Date()));
+        detalleServiciosAsistencialesList = ServicioAsistencialFragment.lstDetalleServicioAsistencialDTO;
 
         detallServiciosAsistencialesAdapter = new DetallServiciosAsistencialesAdapter(view.getContext(), detalleServiciosAsistencialesList);
         listViewDetallServiciosAsistencialesAdapter.setAdapter(detallServiciosAsistencialesAdapter);

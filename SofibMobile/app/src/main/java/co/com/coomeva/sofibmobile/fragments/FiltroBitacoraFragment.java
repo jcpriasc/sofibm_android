@@ -39,8 +39,8 @@ public class FiltroBitacoraFragment extends Fragment{
     ImageView imgConsultarBitacora;
     Spinner spinnerTipoServicio;
     Spinner spinnerTipoRegistro;
-    Spinner spinnerCiudad;
-    EditText editTextNombrePaciente;
+    //Spinner spinnerCiudad;
+    //EditText editTextNombrePaciente;
 
     private static String tipoRegistro;
     private static String tipoServicio;
@@ -54,10 +54,10 @@ public class FiltroBitacoraFragment extends Fragment{
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_filtro_bitacora, container, false);
 
-        editTextNombrePaciente =(EditText) view.findViewById(R.id.editTextNombrePaciente);
+        //editTextNombrePaciente =(EditText) view.findViewById(R.id.editTextNombrePaciente);
 
         imgConsultarBitacora = (ImageView) view.findViewById(R.id.search_action);
-        spinnerCiudad = (Spinner) view.findViewById(R.id.spinner_ciudad);
+        //spinnerCiudad = (Spinner) view.findViewById(R.id.spinner_ciudad);
         spinnerTipoRegistro = (Spinner) view.findViewById(R.id.spinner__tipo_registro);
         spinnerTipoServicio = (Spinner) view.findViewById(R.id.spinner_tipo_servicio);
 
@@ -83,11 +83,11 @@ public class FiltroBitacoraFragment extends Fragment{
                 spinnerTipoRegistro.setAdapter(adapter);
             }
 
-            if (resultMapCiudad!=null){
+            /*if (resultMapCiudad!=null){
                 ArrayAdapter<String> adapterCiudad =new ArrayAdapter<String>(getActivity(),android.R.layout.simple_spinner_item, resultMapCiudad.getSpinnerArray());
                 adapterCiudad.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
                 spinnerCiudad.setAdapter(adapterCiudad);
-            }
+            }*/
 
             imgConsultarBitacora.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -101,14 +101,19 @@ public class FiltroBitacoraFragment extends Fragment{
                         String nameTipoServicio = spinnerTipoServicio.getSelectedItem().toString();
                         tipoServicio = resultMapTipoServicio.getResultMap().get(nameTipoServicio);
 
-                        String nameCiudad = spinnerCiudad.getSelectedItem().toString();
-                        ciudad = resultMapCiudad.getResultMap().get(nameCiudad);
+                       // String nameCiudad = spinnerCiudad.getSelectedItem().toString();
+                       // ciudad = resultMapCiudad.getResultMap().get(nameCiudad);
 
-                        nombrePaciente = editTextNombrePaciente.getText().toString();
+                       // nombrePaciente = editTextNombrePaciente.getText().toString();
 
-                        if (nombrePaciente.equals("")){
-                            nombrePaciente = "0";
-                        }
+                       // if (nombrePaciente.equals("")){
+                       //     nombrePaciente = "0";
+                       // }
+
+                        //Se pidio en control de cambio 215 eliminar filtro nombre paciente y ciudad
+
+                        nombrePaciente = "0";
+                        ciudad = "0";
 
                         String listParams="/SAC/ABCD1234/"+ ConsultaSolicitudAtencionView.solicitudAtencionSeleccionada.getNumeroSolicitud();
                         listParams+="/"+nombrePaciente;
