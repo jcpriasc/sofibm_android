@@ -314,6 +314,13 @@
     <string name="lbl_tipo_convenio">Tipo Convenio</string>
     <string name="lbl_pais">País</string>
 
+    <string name="lbl_diagnostico">Diagnóstico</string>
+    <string name="lbl_estado_paciente">Estado del Paciente</string>
+    <string name="lbl_fecha_estimada_regreso">Fecha Estimada de Regreso</string>
+    <string name="lbl_procedimiento">Procedimiento</string>
+    <string name="lbl_entidad">Entidad</string>
+    <string name="lbl_tipo">Tipo</string>
+
     <string name="lbl_doble_back">Por favor presione ATRÁS de nuevo para salir</string>
     <string name="action_settings">Ajustes</string>
 

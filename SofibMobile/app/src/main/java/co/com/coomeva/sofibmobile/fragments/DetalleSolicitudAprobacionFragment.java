@@ -135,42 +135,48 @@ public class DetalleSolicitudAprobacionFragment extends Fragment{
 
                 JSONArray jsonArrayDocumentos = obj.optJSONArray("lstDocumentos");
 
-                for (int x = 0; x < jsonArrayDocumentos.length(); x++) {
-                    JSONObject documento = jsonArrayDocumentos.getJSONObject(x);
+                if(jsonArrayDocumentos != null) {
+                    for (int x = 0; x < jsonArrayDocumentos.length(); x++) {
+                        JSONObject documento = jsonArrayDocumentos.getJSONObject(x);
 
-                    String tipoArchivo = (documento.getString("tipoArchivo") != null && !documento.getString("tipoArchivo").equals("null")) ? documento.getString("tipoArchivo"):"";
-                    String nombreDocumento = (documento.getString("nombreDocumento") != null && !documento.getString("nombreDocumento").equals("null")) ? documento.getString("nombreDocumento"):"";
-                    String archivoString = (documento.getString("archivo") != null && !documento.getString("archivo").equals("null")) ? documento.getString("archivo"):"";
-                    String id = (documento.getString("id") != null && !documento.getString("id").equals("null")) ? documento.getString("id"):"";
+                        String tipoArchivo = (documento.getString("tipoArchivo") != null && !documento.getString("tipoArchivo").equals("null")) ? documento.getString("tipoArchivo") : "";
+                        String nombreDocumento = (documento.getString("nombreDocumento") != null && !documento.getString("nombreDocumento").equals("null")) ? documento.getString("nombreDocumento") : "";
+                        String archivoString = (documento.getString("archivo") != null && !documento.getString("archivo").equals("null")) ? documento.getString("archivo") : "";
+                        String id = (documento.getString("id") != null && !documento.getString("id").equals("null")) ? documento.getString("id") : "";
 
-                    DocumentosAprobacionDTO documentosAprobacionDTO = new DocumentosAprobacionDTO(tipoArchivo, nombreDocumento, archivoString, id);
+                        DocumentosAprobacionDTO documentosAprobacionDTO = new DocumentosAprobacionDTO(tipoArchivo, nombreDocumento, archivoString, id);
 
-                    if (lstDocumentoAprobacion==null){
-                        lstDocumentoAprobacion = new ArrayList<>();
+                        if (lstDocumentoAprobacion == null) {
+                            lstDocumentoAprobacion = new ArrayList<>();
+                        }
+
+                        lstDocumentoAprobacion.add(documentosAprobacionDTO);
+
                     }
-
-                    lstDocumentoAprobacion.add(documentosAprobacionDTO);
-
+                }else{
+                    lstDocumentoAprobacion = new ArrayList<>();
                 }
 
                 JSONArray jsonArrayProcedimiento = obj.optJSONArray("lstProcedimiento");
+                if(jsonArrayProcedimiento != null) {
+                    for (int x = 0; x < jsonArrayProcedimiento.length(); x++) {
+                        JSONObject procedimiento = jsonArrayProcedimiento.getJSONObject(x);
 
-                for (int x = 0; x < jsonArrayProcedimiento.length(); x++) {
-                    JSONObject procedimiento = jsonArrayProcedimiento.getJSONObject(x);
+                        String nombreProcedimiento = (procedimiento.getString("nombre") != null && !procedimiento.getString("nombre").equals("null")) ? procedimiento.getString("nombre"):"";
+                        String prestadorProcedimiento = (procedimiento.getString("prestador") != null && !procedimiento.getString("prestador").equals("null")) ? procedimiento.getString("prestador"):"";
 
-                    String nombreProcedimiento = (procedimiento.getString("nombre") != null && !procedimiento.getString("nombre").equals("null")) ? procedimiento.getString("nombre"):"";
-                    String prestadorProcedimiento = (procedimiento.getString("prestador") != null && !procedimiento.getString("prestador").equals("null")) ? procedimiento.getString("prestador"):"";
+                        ProcedimientoDTO procedimientoDTO = new ProcedimientoDTO(nombreProcedimiento, prestadorProcedimiento);
 
-                    ProcedimientoDTO procedimientoDTO = new ProcedimientoDTO(nombreProcedimiento, prestadorProcedimiento);
+                        if (lstProcedimientos==null){
+                            lstProcedimientos = new ArrayList<>();
+                        }
 
-                    if (lstProcedimientos==null){
-                        lstProcedimientos = new ArrayList<>();
+                        lstProcedimientos.add(procedimientoDTO);
+
                     }
-
-                    lstProcedimientos.add(procedimientoDTO);
-
+                }else{
+                    lstDocumentoAprobacion = new ArrayList<>();
                 }
-
                 detalleSolicitudAprobacionSeleccionada = new DetalleSolicitudAprobacionDTO(identificacion, nombre, estadoPaciente, fechaRegreso, diagnostico, convenio, tipoConvenio, pais, entidad, tipo, justificacion, lstProcedimientos, lstDocumentoAprobacion);
 
             }

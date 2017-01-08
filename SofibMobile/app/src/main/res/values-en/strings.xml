@@ -310,6 +310,12 @@
     <string name="lbl_tipo_convenio">Type Contract</string>
     <string name="lbl_pais">Country</string>
 
+    <string name="lbl_diagnostico">Diagnostic</string>
+    <string name="lbl_estado_paciente">Patient Status</string>
+    <string name="lbl_fecha_estimada_regreso">Estimated Date of Return</string>
+    <string name="lbl_procedimiento">Procedure</string>
+    <string name="lbl_entidad">Entity</string>
+    <string name="lbl_tipo">Type</string>
 
     <string name="address_service_aut">http://pruebas-sectorsalud.coomeva.com.co/saludmp-ws/jax-rs/saludmp-sofibmobile</string>
     <!--<string name="address_service_profile">http://pruebas-sectorsalud.coomeva.com.co/saludmp-ws/jax-rs/saludmp-autOficinaVirtual/informacion</string>-->

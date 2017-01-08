@@ -31,7 +31,7 @@ public class TabSolicitudAprobacionInformacionGeneralFragment extends Fragment{
         txtTipoConvenio = (TextView) view.findViewById(R.id.txtTipoConvenio);
         txtPais = (TextView) view.findViewById(R.id.txtPais);
 
-        txtNombreConvenio.setText(TabSolicitudAprobacionFragment.detalleSolicitudAprobacionDTO.getNombre());
+        txtNombreConvenio.setText(TabSolicitudAprobacionFragment.detalleSolicitudAprobacionDTO.getConvenio());
         txtTipoConvenio.setText(TabSolicitudAprobacionFragment.detalleSolicitudAprobacionDTO.getTipoConvenio());
         txtPais.setText(TabSolicitudAprobacionFragment.detalleSolicitudAprobacionDTO.getPais());
 

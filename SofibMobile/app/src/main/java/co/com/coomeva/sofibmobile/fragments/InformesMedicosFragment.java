@@ -203,7 +203,7 @@ public class InformesMedicosFragment extends Fragment{
                         for (int x = 0; x < jsonArrayDocumentos.length(); x++) {
                             JSONObject docu = jsonArrayDocumentos.getJSONObject(x);
 
-                            String nombre = (docu.getString("nombre") != null && !docu.getString("nombre").equals("null")) ? docu.getString("nombre") : "";
+                            String nombre = (docu.getString("nombreDocumento") != null && !docu.getString("nombreDocumento").equals("null")) ? docu.getString("nombreDocumento") : "";
                             String tipoDocumento = (docu.getString("tipoDocumento") != null && !docu.getString("tipoDocumento").equals("null")) ? docu.getString("tipoDocumento") : "";
 
                             DocumentosMedicosDTO documentosMedicosDTO = new DocumentosMedicosDTO();
