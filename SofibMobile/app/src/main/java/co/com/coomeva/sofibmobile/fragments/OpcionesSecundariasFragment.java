@@ -117,6 +117,7 @@ public class OpcionesSecundariasFragment extends Fragment{
             opcionesList.add(new OpcionesDTO("15", getResources().getString(R.string.lbl_titulo_utilizaciones), R.mipmap.utilizacion));
             opcionesList.add(new OpcionesDTO("16", getResources().getString(R.string.lbl_titulo_encuesta_satisfaccion), R.mipmap.encuesta));
             opcionesList.add(new OpcionesDTO("17", getResources().getString(R.string.lbl_consultar_solicitudes_aprobacion), R.mipmap.aprobacion));
+            opcionesList.add(new OpcionesDTO("18", getResources().getString(R.string.lbl_bitacoras), R.mipmap.bitacoras));
         }
 
         opcionesAdapter = new OpcionesAdapter(view.getContext(), opcionesList);
@@ -262,7 +263,11 @@ public class OpcionesSecundariasFragment extends Fragment{
                             throw new Exception(getActivity().getResources().getString(R.string.lbl_sin_resultados));
                         }
 
+                    }else if(opcionesList.get(i).getId().equals("18")) {
+                        Intent intentBitacora = new Intent(view.getContext(), BitacoraView.class);
+                        startActivity(intentBitacora);
                     }
+
                 }catch (Exception e){
                     Toast.makeText(getActivity(),e.getMessage(), Toast.LENGTH_LONG).show();
                 }
@@ -922,9 +927,12 @@ public class OpcionesSecundariasFragment extends Fragment{
                     String proveedor = (obj.getString("proveedor")!= null && !obj.getString("proveedor").equals("null")) ? obj.getString("proveedor"):"";
                     String prestador = (obj.getString("prestador")!= null && !obj.getString("prestador").equals("null")) ? obj.getString("prestador"):"";
                     String justificacion = (obj.getString("justificacion")!= null && !obj.getString("justificacion").equals("null")) ? obj.getString("justificacion"):"";
+                    String idAprobacion = (obj.getString("idAprobacion")!= null && !obj.getString("idAprobacion").equals("null")) ? obj.getString("idAprobacion"):"";
+
+
 
                     ConsultaSolicitudDTO dto = new ConsultaSolicitudDTO(nombrePaciente,estado,fechaSolicitud,solicitudDescripcion,tipoAutorizacion,tipoEntidad,solicitante,autoriza, fechaAutorizacion,servicio,proveedor,
-                            prestador, justificacion,"","","","","","","","","");
+                            prestador, justificacion,"","","","","","","","","",idAprobacion);
                     lstSolicitudAprobacion.add(dto);
 
                 }

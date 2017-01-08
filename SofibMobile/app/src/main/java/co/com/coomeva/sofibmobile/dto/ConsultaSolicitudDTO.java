@@ -34,6 +34,7 @@ public class ConsultaSolicitudDTO {
     private Date fechaCreado;
     private String fechaProgramadaRegresoString;
     private String fechaCreadoString;
+    private String idAprobacion;
 
 
     public ConsultaSolicitudDTO() {
@@ -52,7 +53,7 @@ public class ConsultaSolicitudDTO {
         this.convenio = convenio;
     }
 
-    public ConsultaSolicitudDTO(String nombrePaciente, String estado, String fechaSolicitudString, String descripcion, String tipoAutorizacion, String tipoEntidad, String solicitante, String autoriza, String fechaAutorizacionTexto, String servicio, String proveedor, String prestador, String justificacion, String numeroSolicitud, String identificacion, String convenio, String credencialPaciente, String ciudadInicial, String ciudadActual, String traslado, String fechaProgramadaRegresoString, String fechaCreadoString) {
+    public ConsultaSolicitudDTO(String nombrePaciente, String estado, String fechaSolicitudString, String descripcion, String tipoAutorizacion, String tipoEntidad, String solicitante, String autoriza, String fechaAutorizacionTexto, String servicio, String proveedor, String prestador, String justificacion, String numeroSolicitud, String identificacion, String convenio, String credencialPaciente, String ciudadInicial, String ciudadActual, String traslado, String fechaProgramadaRegresoString, String fechaCreadoString, String idAprobacion) {
         this.nombrePaciente = nombrePaciente;
         this.estado = estado;
         this.fechaSolicitudString = fechaSolicitudString;
@@ -75,6 +76,7 @@ public class ConsultaSolicitudDTO {
         this.traslado = traslado;
         this.fechaProgramadaRegresoString = fechaProgramadaRegresoString;
         this.fechaCreadoString = fechaCreadoString;
+        this.idAprobacion = idAprobacion;
     }
 
     private SimpleDateFormat simple = new SimpleDateFormat("yyyy/MM/dd");
@@ -306,5 +308,13 @@ public class ConsultaSolicitudDTO {
 
     public void setFechaCreadoString(String fechaCreadoString) {
         this.fechaCreadoString = fechaCreadoString;
+    }
+
+    public String getIdAprobacion() {
+        return idAprobacion;
+    }
+
+    public void setIdAprobacion(String idAprobacion) {
+        this.idAprobacion = idAprobacion;
     }
 }

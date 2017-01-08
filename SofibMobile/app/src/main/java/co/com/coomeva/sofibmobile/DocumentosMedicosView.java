@@ -206,6 +206,10 @@ public class DocumentosMedicosView extends AppCompatActivity {
                                         throw new Exception(getApplicationContext().getResources().getString(R.string.lbl_sin_resultados));
                                     }
                                     break;
+                                case R.id.menu_bitacoras_logistica:
+                                    Intent intentBitacoraLogistica = new Intent(getApplicationContext(), BitacoraView.class);
+                                    startActivity(intentBitacoraLogistica);
+                                    break;
                                 case R.id.menu_solicitudes_aprobacion_logistica:
                                     params = "/SAC/ABCD1234/0/0/0/"+ ConsultaSolicitudAtencionView.solicitudAtencionSeleccionada.getNumeroSolicitud()+"/l";
                                     if (OpcionesSecundariasFragment.consultarSolicitudAprobacion(getApplicationContext().getResources().getString(R.string.complement_aprobacion), params, DocumentosMedicosView.this)){
