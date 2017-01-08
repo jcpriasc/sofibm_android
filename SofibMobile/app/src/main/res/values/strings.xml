@@ -324,6 +324,7 @@
     <string name="lbl_doble_back">Por favor presione ATRÁS de nuevo para salir</string>
     <string name="action_settings">Ajustes</string>
 
+
     <string name="address_service_aut">http://pruebas-sectorsalud.coomeva.com.co/saludmp-ws/jax-rs/saludmp-sofibmobile</string>
     <!--<string name="address_service_profile">http://pruebas-sectorsalud.coomeva.com.co/saludmp-ws/jax-rs/saludmp-autOficinaVirtual/informacion</string>-->
     <string name="address_service_profile">http://pruebas-sectorsalud.coomeva.com.co/saludmp-ws/jax-rs/saludmp-autOficinaVirtual</string>

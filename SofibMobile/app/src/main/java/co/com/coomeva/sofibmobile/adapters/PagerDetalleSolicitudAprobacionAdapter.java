@@ -10,7 +10,9 @@ import android.support.v4.app.FragmentStatePagerAdapter;
 import co.com.coomeva.sofibmobile.fragments.TabFacturaGlosaFragment;
 import co.com.coomeva.sofibmobile.fragments.TabFacturaImpuestoFragment;
 import co.com.coomeva.sofibmobile.fragments.TabFacturaInformacionFragment;
+import co.com.coomeva.sofibmobile.fragments.TabSolicitudAprobacionDatosPacienteFragment;
 import co.com.coomeva.sofibmobile.fragments.TabSolicitudAprobacionInformacionGeneralFragment;
+import co.com.coomeva.sofibmobile.fragments.TabSolicitudAprobacionTipoAprobacionFragment;
 
 public class PagerDetalleSolicitudAprobacionAdapter extends FragmentStatePagerAdapter {
     int mNumOfTabs;
@@ -28,11 +30,11 @@ public class PagerDetalleSolicitudAprobacionAdapter extends FragmentStatePagerAd
                 TabSolicitudAprobacionInformacionGeneralFragment informacionGeneralFragment = new TabSolicitudAprobacionInformacionGeneralFragment();
                 return informacionGeneralFragment;
             case 1:
-                TabSolicitudAprobacionInformacionGeneralFragment informacionGeneralFragment2 = new TabSolicitudAprobacionInformacionGeneralFragment();
-                return informacionGeneralFragment2;
+                TabSolicitudAprobacionDatosPacienteFragment datosPacienteFragment = new TabSolicitudAprobacionDatosPacienteFragment();
+                return datosPacienteFragment;
             case 2:
-                TabSolicitudAprobacionInformacionGeneralFragment informacionGeneralFragment3 = new TabSolicitudAprobacionInformacionGeneralFragment();
-                return informacionGeneralFragment3;
+                TabSolicitudAprobacionTipoAprobacionFragment solicitudAprobacionTipoAprobacionFragment = new TabSolicitudAprobacionTipoAprobacionFragment();
+                return solicitudAprobacionTipoAprobacionFragment;
             default:
                 return null;
         }
