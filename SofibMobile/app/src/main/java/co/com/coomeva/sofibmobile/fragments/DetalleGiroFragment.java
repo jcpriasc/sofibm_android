@@ -1,6 +1,7 @@
 package co.com.coomeva.sofibmobile.fragments;
 
 import android.os.Bundle;
+import android.os.Environment;
 import android.support.annotation.Nullable;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v4.app.Fragment;
@@ -14,9 +15,15 @@ import android.widget.Toast;
 import org.json.JSONArray;
 import org.json.JSONObject;
 
+import java.io.File;
+import java.io.FileOutputStream;
+import java.io.InputStream;
+import java.net.HttpURLConnection;
+import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
 
+import co.com.coomeva.sofibmobile.LoginView;
 import co.com.coomeva.sofibmobile.R;
 import co.com.coomeva.sofibmobile.dto.ConceptosDTO;
 import co.com.coomeva.sofibmobile.dto.DetalleGiroDTO;
@@ -24,6 +31,8 @@ import co.com.coomeva.sofibmobile.dto.DetalleServicioNoAsistencialDTO;
 import co.com.coomeva.sofibmobile.dto.HistoricoGirosDTO;
 import co.com.coomeva.sofibmobile.dto.ManutencionDTO;
 import co.com.coomeva.sofibmobile.dto.ServicioAdicionalDTO;
+import co.com.coomeva.sofibmobile.modelo.Usuario;
+import co.com.coomeva.sofibmobile.task.ConexionDescargaArchivoTask;
 import co.com.coomeva.sofibmobile.task.ConexionServicioListaTask;
 import co.com.coomeva.sofibmobile.utils.Utilities;
 
@@ -52,6 +61,7 @@ public class DetalleGiroFragment extends Fragment{
     private TextView txtAprobadoGiro;
 
     private FloatingActionButton btnDetalle;
+    private FloatingActionButton btnDescargar;
 
     private List<ManutencionDTO> lstManutencion = new ArrayList<ManutencionDTO>();
     private List<ConceptosDTO> lstConceptos = new ArrayList<ConceptosDTO>();
@@ -84,6 +94,7 @@ public class DetalleGiroFragment extends Fragment{
         txtAprobadoGiro = (TextView) view.findViewById(R.id.txtAprobadoGiro);
 
         btnDetalle = (FloatingActionButton) view.findViewById(R.id.btnDetalle);
+        btnDescargar = (FloatingActionButton) view.findViewById(R.id.btnDescargar);
         try {
 
 
@@ -134,8 +145,31 @@ public class DetalleGiroFragment extends Fragment{
             }
         });
 
+        btnDescargar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                try {
+
+                    String params = "http://pruebas-sofib.coomeva.com.co/cni-web/exportDocument?format=pdf&useDataSource=true&reportName=reporteGiro&ID_GIRO="+GiroFragment.giro.getCons()+"&NOMBRE_ROL="+ LoginView.usuarioSesion.getRol();
+
+                    ConexionDescargaArchivoTask task = new ConexionDescargaArchivoTask(getActivity(),params, "");
+
+                    synchronized (task) {
+                        task.execute().wait();
+                    }
+
+                }catch (Exception e) {
+                    Toast.makeText(view.getContext(), e.getMessage(), Toast.LENGTH_LONG).show();
+                }
+            }
+        });
+
         return view;
     }
+
+
+
+
 
     private boolean consultarDetalleGiro(String serviceName, String listParams){
 

@@ -21,6 +21,7 @@ import java.util.Date;
 import java.util.List;
 
 import co.com.coomeva.sofibmobile.BitacoraView;
+import co.com.coomeva.sofibmobile.ConsultaSolicitudAtencionView;
 import co.com.coomeva.sofibmobile.R;
 import co.com.coomeva.sofibmobile.adapters.BitacoraAdapter;
 import co.com.coomeva.sofibmobile.adapters.InformesMedicosAdapter;
@@ -29,6 +30,7 @@ import co.com.coomeva.sofibmobile.dto.DescipcionDTO;
 import co.com.coomeva.sofibmobile.dto.DetalleInformeMedicoDTO;
 import co.com.coomeva.sofibmobile.dto.DocumentosMedicosDTO;
 import co.com.coomeva.sofibmobile.dto.InformesMedicosDTO;
+import co.com.coomeva.sofibmobile.task.ConexionDescargaArchivoTask;
 import co.com.coomeva.sofibmobile.task.ConexionServicioListaTask;
 import co.com.coomeva.sofibmobile.task.ConexionServicioTask;
 
@@ -95,8 +97,34 @@ public class InformesMedicosFragment extends Fragment{
 
                             }else if (which == 1) {
 
-                            }else if (which == 2) {
+                                try {
 
+                                    String params = "http://pruebas-sofib.coomeva.com.co/cni-web/exportDocument?format=pdf&reportName=informe_medico&CONS_INFORME_MEDICO="+informeMedico.getConsInformeMedico()+"&CONS_SOLICITUD_ATENCION="+ ConsultaSolicitudAtencionView.solicitudAtencionSeleccionada.getNumeroSolicitud()+"&nocache=15416516316";
+
+                                    ConexionDescargaArchivoTask task = new ConexionDescargaArchivoTask(getActivity(),params, "");
+
+                                    synchronized (task) {
+                                        task.execute().wait();
+                                    }
+
+                                }catch (Exception e) {
+                                    Toast.makeText(getActivity(), e.getMessage(), Toast.LENGTH_LONG).show();
+                                }
+
+                            }else if (which == 2) {
+                                try {
+
+                                    String params = "http://pruebas-sofib.coomeva.com.co/cni-web/exportDocument?format=pdf&reportName=informe_medico&CONS_INFORME_MEDICO="+informeMedico.getConsInformeMedico()+"&CONS_SOLICITUD_ATENCION="+ ConsultaSolicitudAtencionView.solicitudAtencionSeleccionada.getNumeroSolicitud()+"&nocache=15416516316";
+
+                                    ConexionDescargaArchivoTask task = new ConexionDescargaArchivoTask(getActivity(),params, "");
+
+                                    synchronized (task) {
+                                        task.execute().wait();
+                                    }
+
+                                }catch (Exception e) {
+                                    Toast.makeText(getActivity(), e.getMessage(), Toast.LENGTH_LONG).show();
+                                }
                             }
                         }
                     });
