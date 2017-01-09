@@ -1,0 +1,186 @@
+    <LinearLayout xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+        <ScrollView
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TableLayout
+                    android:id="@+id/detalle_solicitud_cuerpo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/white"
+                    android:orientation="vertical"
+                    android:shrinkColumns="1"
+                    android:stretchColumns="1">
+
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textStyle="bold"
+                            android:textColor="@color/colorTextTitle"
+                            android:textSize="@dimen/font_size_subtitle"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginLeft="10dp"
+                            android:text="@string/lbl_id" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?android:attr/textAppearanceMedium"
+                            android:textSize="@dimen/font_size_text"
+                            android:id="@+id/txtIdentificacion"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="10dp"
+                            android:text="@string/lbl_id" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/lbl_nombre"
+                            android:textStyle="bold"
+                            android:textColor="@color/colorTextTitle"
+                            android:textSize="@dimen/font_size_subtitle"
+                            android:layout_marginLeft="10dp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?android:attr/textAppearanceMedium"
+                            android:text="@string/lbl_nombre"
+                            android:textSize="@dimen/font_size_text"
+                            android:id="@+id/txtNombre"
+                            android:layout_marginLeft="10dp" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/lbl_diagnostico"
+                            android:textStyle="bold"
+                            android:textColor="@color/colorTextTitle"
+                            android:textSize="@dimen/font_size_subtitle"
+                            android:layout_marginLeft="10dp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?android:attr/textAppearanceMedium"
+                            android:text="@string/lbl_diagnostico"
+                            android:textSize="@dimen/font_size_text"
+                            android:id="@+id/txtDiagnostico"
+                            android:layout_marginLeft="10dp" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/lbl_estado_paciente"
+                            android:textStyle="bold"
+                            android:textColor="@color/colorTextTitle"
+                            android:textSize="@dimen/font_size_subtitle"
+                            android:layout_marginLeft="10dp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?android:attr/textAppearanceMedium"
+                            android:text="@string/lbl_estado_paciente"
+                            android:textSize="@dimen/font_size_text"
+                            android:id="@+id/txtEstadoPaciente"
+                            android:layout_marginLeft="10dp" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/lbl_fecha_estimada_regreso"
+                            android:textStyle="bold"
+                            android:textColor="@color/colorTextTitle"
+                            android:textSize="@dimen/font_size_subtitle"
+                            android:layout_marginLeft="10dp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?android:attr/textAppearanceMedium"
+                            android:text="@string/lbl_fecha_estimada_regreso"
+                            android:textSize="@dimen/font_size_text"
+                            android:id="@+id/txtFechaEstimadaRegreso"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginBottom="15dp" />
+                    </TableRow>
+
+                </TableLayout>
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:gravity="center"
+                    android:background="@color/colorPrimary">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/lbl_tab_procedimiento"
+                        android:textStyle="bold"
+                        android:textColor="@color/color_select"
+                        android:textSize="@dimen/font_size_subtitle"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ListView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:id="@+id/lstProcedimientos"
+                        android:layout_gravity="center_horizontal|top" />
+                </LinearLayout>
+
+            </LinearLayout>
+        </ScrollView>
+
+    </LinearLayout>

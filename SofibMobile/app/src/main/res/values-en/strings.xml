@@ -303,6 +303,19 @@
 
     <string name="lbl_cargando">Please wait...</string>
 
+    <string name="lbl_informacion_general">General Information</string>
+    <string name="lbl_datos_basicos_paciente">Basic Patient Data</string>
+    <string name="lbl_tipo_aprobacion">Type of Approval</string>
+    <string name="lbl_nombre_conveio">Name Contract</string>
+    <string name="lbl_tipo_convenio">Type Contract</string>
+    <string name="lbl_pais">Country</string>
+
+    <string name="lbl_diagnostico">Diagnostic</string>
+    <string name="lbl_estado_paciente">Patient Status</string>
+    <string name="lbl_fecha_estimada_regreso">Estimated Date of Return</string>
+    <string name="lbl_procedimiento">Procedure</string>
+    <string name="lbl_entidad">Entity</string>
+    <string name="lbl_tipo">Type</string>
 
     <string name="address_service_aut">http://pruebas-sectorsalud.coomeva.com.co/saludmp-ws/jax-rs/saludmp-sofibmobile</string>
     <!--<string name="address_service_profile">http://pruebas-sectorsalud.coomeva.com.co/saludmp-ws/jax-rs/saludmp-autOficinaVirtual/informacion</string>-->
@@ -337,6 +350,7 @@
     <string name="complement_convenios">/convenios</string>
     <string name="complement_ciudades">/ciudades</string>
     <string name="complement_estados">/estados</string>
+    <string name="complement_detalle_aprobacion">/aprobacion/detalle/</string>
 
     <string name="solicitud_numero">Request number</string>
 

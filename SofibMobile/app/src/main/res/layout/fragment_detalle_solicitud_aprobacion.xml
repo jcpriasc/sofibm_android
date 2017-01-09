@@ -328,6 +328,17 @@
 
     </LinearLayout>
 
-
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/btnDetalle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="30dp"
+        android:clickable="true"
+        app:layout_anchor="@id/detalle_solicitud_cabecera"
+        app:layout_anchorGravity="bottom|right|end"
+        app:fabSize="normal"
+        android:baselineAlignBottom="false"
+        app:backgroundTint="@color/colorTextTitle"
+        android:src="@mipmap/icono_mas" />
 
 </android.support.design.widget.CoordinatorLayout>

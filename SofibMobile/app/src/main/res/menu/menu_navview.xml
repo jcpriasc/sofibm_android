@@ -81,6 +81,10 @@
                 android:id="@+id/menu_solicitudes_aprobacion_logistica"
                 android:icon="@mipmap/aprobacion"
                 android:title="@string/lbl_consultar_solicitudes_aprobacion"/>
+            <item
+                android:id="@+id/menu_bitacoras_logistica"
+                android:icon="@mipmap/bitacoras"
+                android:title="@string/lbl_bitacoras"/>
         </menu>
     </item>
 </menu>
