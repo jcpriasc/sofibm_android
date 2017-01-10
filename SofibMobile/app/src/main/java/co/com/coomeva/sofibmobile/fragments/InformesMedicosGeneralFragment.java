@@ -15,6 +15,7 @@ import java.util.List;
 
 import co.com.coomeva.sofibmobile.R;
 import co.com.coomeva.sofibmobile.adapters.DetalleAutoricionesAdapter;
+import co.com.coomeva.sofibmobile.adapters.DocumentosInformesMedicosAdapter;
 import co.com.coomeva.sofibmobile.adapters.DocumentosMedicosAdapter;
 import co.com.coomeva.sofibmobile.dto.DetalleAutorizacionesDTO;
 import co.com.coomeva.sofibmobile.dto.DetalleInformeMedicoDTO;
@@ -25,7 +26,7 @@ import co.com.coomeva.sofibmobile.dto.DocumentosMedicosDTO;
  */
 public class InformesMedicosGeneralFragment extends Fragment{
 
-    private DocumentosMedicosAdapter documentosMedicosAdapter;
+    private DocumentosInformesMedicosAdapter documentosMedicosAdapter;
     private ListView listViewDocumentosMedicosAdapter;
     private List<DocumentosMedicosDTO> documentosMedicosList = new ArrayList<>();
     private TextView textEntidadPrestadora;
@@ -78,7 +79,7 @@ public class InformesMedicosGeneralFragment extends Fragment{
 
         documentosMedicosList = detalleInformeMedicoSeleccionado.getLstDocumentos();
 
-        documentosMedicosAdapter = new DocumentosMedicosAdapter(view.getContext(), documentosMedicosList);
+        documentosMedicosAdapter = new DocumentosInformesMedicosAdapter(view.getContext(), documentosMedicosList);
         listViewDocumentosMedicosAdapter.setAdapter(documentosMedicosAdapter);
 
         justifyListViewHeightBasedOnChildren(listViewDocumentosMedicosAdapter);

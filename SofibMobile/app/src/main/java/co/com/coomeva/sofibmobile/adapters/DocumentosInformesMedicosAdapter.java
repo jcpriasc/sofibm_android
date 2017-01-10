@@ -4,12 +4,15 @@ import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
 import android.support.v4.content.FileProvider;
+import android.util.Base64;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import org.json.JSONObject;
 
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -20,6 +23,8 @@ import co.com.coomeva.sofibmobile.R;
 import co.com.coomeva.sofibmobile.dto.DocumentosMedicosDTO;
 import co.com.coomeva.sofibmobile.fragments.DocumentosMedicosFragment;
 import co.com.coomeva.sofibmobile.fragments.InformesMedicosFragment;
+import co.com.coomeva.sofibmobile.fragments.OpcionesSecundariasFragment;
+import co.com.coomeva.sofibmobile.task.ConexionServicioListaTask;
 import co.com.coomeva.sofibmobile.utils.Utilities;
 
 /**
@@ -73,17 +78,41 @@ public class DocumentosInformesMedicosAdapter extends ArrayAdapter<DocumentosMed
             @Override
             public void onClick(View view) {
                 if (viewHolder.iconOpcion!=null){
+
+                    String tipoArchivo = "";
+                    String nombreDocumento = "";
+                    String archivo = "";
+                    byte[] fileArray = new byte[0];
+
                     try {
 
-                        String nombreArchivo = InformesMedicosFragment.detalleInformeMedicoSeleccionado.getLstDocumentos().get((int)viewHolder.iconOpcion.getTag()).getNombre().toString();
-                        byte[] fileArray = DocumentosMedicosFragment.documentosMedicosList.get((int)viewHolder.iconOpcion.getTag()).getImagen();
+                        String params = "SAC/ABCD1234/"+ InformesMedicosFragment.detalleInformeMedicoSeleccionado.getLstDocumentos().get((int)viewHolder.iconOpcion.getTag()).getId();
+
+
+                        ConexionServicioListaTask task = new ConexionServicioListaTask(context, getContext().getResources().getString(R.string.complement_documento_informes_medico), params);
+
+                        synchronized (task) {
+                            task.execute().wait();
+                        }
+
+                        if (ConexionServicioListaTask.respJSON !=null){
+                            JSONObject obj = ConexionServicioListaTask.respJSON;
+
+                            tipoArchivo = obj.getString("tipoDocumento");
+                            nombreDocumento = obj.getString("nombreDocumento");
+                            archivo = obj.getString("archivo");
+
+                            fileArray = Base64.decode(archivo, Base64.DEFAULT);
+
+                        }
+
                         File rootDirectory = new File(context.getFilesDir(), "docs");
 
                         if (!rootDirectory.exists()) {
                             rootDirectory.mkdirs();
                         }
 
-                        File someFile = new File(rootDirectory, nombreArchivo);
+                        File someFile = new File(rootDirectory, nombreDocumento);
                         someFile.createNewFile();
                         FileOutputStream fos = new FileOutputStream(someFile);
                         fos.write(fileArray);

@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
+import android.util.Base64;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -171,6 +172,8 @@ public class InformesMedicosFragment extends Fragment{
                         String dadoAlta = (obj.getString("dadoAlta") != null && !obj.getString("dadoAlta").equals("null")) ? obj.getString("dadoAlta") : "";
                         String fallecido = (obj.getString("fallecido") != null && !obj.getString("fallecido").equals("null")) ? obj.getString("fallecido") : "";
                         String fechaHospitalizacion = (obj.getString("fechaInicioHospitaliza") != null && !obj.getString("fechaInicioHospitaliza").equals("null")) ? obj.getString("fechaInicioHospitaliza") : "";
+                        String id = (obj.getString("fechaInicioHospitaliza") != null && !obj.getString("fechaInicioHospitaliza").equals("null")) ? obj.getString("fechaInicioHospitaliza") : "";
+
 
                         detalleInformeMedicoSeleccionado.setEntidadPrestadora(entidadPrestadora);
                         detalleInformeMedicoSeleccionado.setEvolucionPaciente(evolucionPaciente);
@@ -233,10 +236,17 @@ public class InformesMedicosFragment extends Fragment{
 
                             String nombre = (docu.getString("nombreDocumento") != null && !docu.getString("nombreDocumento").equals("null")) ? docu.getString("nombreDocumento") : "";
                             String tipoDocumento = (docu.getString("tipoDocumento") != null && !docu.getString("tipoDocumento").equals("null")) ? docu.getString("tipoDocumento") : "";
+                            String archivo = (docu.getString("archivo") != null && !docu.getString("archivo").equals("null")) ? docu.getString("archivo") : "";
+                            String idDocu = (docu.getString("id") != null && !docu.getString("id").equals("null")) ? docu.getString("id") : "";
+
+
+                            byte[] archivoArray = Base64.decode(archivo, Base64.DEFAULT);
 
                             DocumentosMedicosDTO documentosMedicosDTO = new DocumentosMedicosDTO();
                             documentosMedicosDTO.setNombre(nombre);
                             documentosMedicosDTO.setTipoDocumento(tipoDocumento);
+                            documentosMedicosDTO.setImagen(archivoArray);
+                            documentosMedicosDTO.setId(idDocu);
                             lstDocumentos.add(documentosMedicosDTO);
                         }
 
