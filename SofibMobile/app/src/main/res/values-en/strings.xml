@@ -353,6 +353,7 @@
     <string name="complement_detalle_aprobacion">/aprobacion/detalle/</string>
     <string name="complement_documento_documento_medico">/DocumentosMedicos/documento/</string>
     <string name="complement_documento_informes_medico">/InformesMedicos/detalle/documento/</string>
+    <string name="complement_tipo_servicios">/tipoServicios/</string>
 
     <string name="solicitud_numero">Request number</string>
 

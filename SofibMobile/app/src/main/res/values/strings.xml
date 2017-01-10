@@ -359,6 +359,7 @@
     <string name="complement_ciudades">/ciudades</string>
     <string name="complement_estados">/estados</string>
     <string name="complement_detalle_aprobacion">/aprobacion/detalle/</string>
+    <string name="complement_tipo_servicios">/tipoServicios/</string>
 
     <string name="complement_documento_documento_medico">/DocumentosMedicos/documento/</string>
     <string name="complement_documento_informes_medico">/InformesMedicos/detalle/documento/</string>
