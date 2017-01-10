@@ -8,6 +8,7 @@ import android.graphics.BitmapFactory;
 import android.net.Uri;
 import android.os.Environment;
 import android.support.v4.content.FileProvider;
+import android.util.Base64;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -16,18 +17,26 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import org.json.JSONArray;
+import org.json.JSONObject;
+
 import java.io.ByteArrayInputStream;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
+import java.util.ArrayList;
 import java.util.List;
 
+import co.com.coomeva.sofibmobile.ConsultaSolicitudAtencionView;
 import co.com.coomeva.sofibmobile.R;
 import co.com.coomeva.sofibmobile.dto.AutorizacionesDTO;
 import co.com.coomeva.sofibmobile.dto.DocumentosMedicosDTO;
 import co.com.coomeva.sofibmobile.fragments.DocumentosMedicosFragment;
+import co.com.coomeva.sofibmobile.fragments.OpcionesSecundariasFragment;
+import co.com.coomeva.sofibmobile.task.ConexionServicioListaTask;
+import co.com.coomeva.sofibmobile.task.ConexionServicioTask;
 import co.com.coomeva.sofibmobile.utils.Utilities;
 
 /**
@@ -81,17 +90,42 @@ public class DocumentosMedicosAdapter extends ArrayAdapter<DocumentosMedicosDTO>
             @Override
             public void onClick(View view) {
                 if (viewHolder.iconOpcion!=null){
+
+                    String tipoArchivo = "";
+                    String nombreDocumento = "";
+                    String archivo = "";
+                    byte[] fileArray = new byte[0];
+
                     try {
 
-                        String nombreArchivo = DocumentosMedicosFragment.documentosMedicosList.get((int)viewHolder.iconOpcion.getTag()).getNombre().toString();
-                        byte[] fileArray = DocumentosMedicosFragment.documentosMedicosList.get((int)viewHolder.iconOpcion.getTag()).getImagen();
+                        String params = "SAC/ABCD1234/"+ OpcionesSecundariasFragment.documentosMedicosList.get((int)viewHolder.iconOpcion.getTag()).getId().toString();
+
+
+                        ConexionServicioListaTask task = new ConexionServicioListaTask(context, getContext().getResources().getString(R.string.complement_documento_documento_medico), params);
+
+                        synchronized (task) {
+                            task.execute().wait();
+                        }
+
+                        if (ConexionServicioListaTask.respJSON !=null){
+                            JSONObject obj = ConexionServicioListaTask.respJSON;
+
+                            tipoArchivo = obj.getString("tipoArchivo");
+                            nombreDocumento = obj.getString("nombreDocumento");
+                            archivo = obj.getString("archivo");
+
+                            fileArray = Base64.decode(archivo, Base64.DEFAULT);
+
+                        }
+
+
                         File rootDirectory = new File(context.getFilesDir(), "docs");
 
                         if (!rootDirectory.exists()) {
                             rootDirectory.mkdirs();
                         }
 
-                        File someFile = new File(rootDirectory, nombreArchivo);
+                        File someFile = new File(rootDirectory, nombreDocumento);
                         someFile.createNewFile();
                         FileOutputStream fos = new FileOutputStream(someFile);
                         fos.write(fileArray);

@@ -7,6 +7,7 @@ import android.support.v4.app.FragmentTransaction;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.ImageView;
@@ -77,11 +78,46 @@ public class FiltroBitacoraFragment extends Fragment{
                 spinnerTipoServicio.setAdapter(adapter);
             }
 
+
             if (resultMapTipoRegistro!=null){
                 ArrayAdapter<String> adapter =new ArrayAdapter<String>(getActivity(),android.R.layout.simple_spinner_item, resultMapTipoRegistro.getSpinnerArray());
                 adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
                 spinnerTipoRegistro.setAdapter(adapter);
             }
+
+
+            spinnerTipoRegistro.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+                @Override
+                public void onItemSelected(AdapterView<?> parentView, View selectedItemView, int position, long id) {
+
+                    String nameTipoRegistro = spinnerTipoRegistro.getSelectedItem().toString();
+                    tipoRegistro = resultMapTipoRegistro.getResultMap().get(nameTipoRegistro);
+
+                    nameTipoRegistro =nameTipoRegistro.replaceAll(" ","%20").toUpperCase();
+                    final SpinnerDTO resultMapTipoServicio = llenar_spinner(getActivity().getResources().getString(R.string.complement_tipo_servicios), "SAC/ABCD1234/"+tipoRegistro, "SER");
+
+                    if (resultMapTipoServicio!=null){
+                        ArrayAdapter<String> adapter =new ArrayAdapter<String>(getActivity(),android.R.layout.simple_spinner_item, resultMapTipoServicio.getSpinnerArray());
+                        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                        spinnerTipoServicio.setAdapter(adapter);
+                    }else{
+
+                        String[] array = new String[1];
+                        array[0] = getActivity().getResources().getString(R.string.lbl_seleccionar_ciudad_tipo_servicio);
+                        ArrayAdapter<String> adapter =new ArrayAdapter<String>(getActivity(),android.R.layout.simple_spinner_item, array);
+                        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                        spinnerTipoServicio.setAdapter(adapter);
+                    }
+
+                }
+
+                @Override
+                public void onNothingSelected(AdapterView<?> parentView) {
+                    // your code here
+                }
+
+            });
+
 
             /*if (resultMapCiudad!=null){
                 ArrayAdapter<String> adapterCiudad =new ArrayAdapter<String>(getActivity(),android.R.layout.simple_spinner_item, resultMapCiudad.getSpinnerArray());
@@ -92,15 +128,19 @@ public class FiltroBitacoraFragment extends Fragment{
             imgConsultarBitacora.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-
+                    String nameTipoServicio = "";
                     try {
 
                         String nameTipoRegistro = spinnerTipoRegistro.getSelectedItem().toString();
                         tipoRegistro = resultMapTipoRegistro.getResultMap().get(nameTipoRegistro);
 
-                        String nameTipoServicio = spinnerTipoServicio.getSelectedItem().toString();
-                        tipoServicio = resultMapTipoServicio.getResultMap().get(nameTipoServicio);
-
+                        if(resultMapTipoServicio == null){
+                            nameTipoServicio = spinnerTipoServicio.getSelectedItem().toString();
+                            tipoServicio = "0";
+                        }else {
+                             nameTipoServicio = spinnerTipoServicio.getSelectedItem().toString();
+                            tipoServicio = resultMapTipoServicio.getResultMap().get(nameTipoServicio);
+                        }
                        // String nameCiudad = spinnerCiudad.getSelectedItem().toString();
                        // ciudad = resultMapCiudad.getResultMap().get(nameCiudad);
 
@@ -171,7 +211,7 @@ public class FiltroBitacoraFragment extends Fragment{
             });
 
         }catch (Exception e){
-            Toast.makeText(getActivity(),e.getMessage(), Toast.LENGTH_LONG).show();
+           // Toast.makeText(getActivity(),e.getMessage(), Toast.LENGTH_LONG).show();
         }
 
         return view;
@@ -215,7 +255,7 @@ public class FiltroBitacoraFragment extends Fragment{
                     String codigo = obj.getString("codigo");
                     String descripcion = "";
                     if (tipoSpinner.equals("SER")){
-                        descripcion = obj.getString("nombre");
+                        descripcion = obj.getString("descripcion");
                     }else if (tipoSpinner.equals("REG")){
                         descripcion = obj.getString("descripcion");
                     }else if (tipoSpinner.equals("CIU")){

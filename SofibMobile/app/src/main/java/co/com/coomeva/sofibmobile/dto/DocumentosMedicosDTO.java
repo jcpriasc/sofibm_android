@@ -11,14 +11,16 @@ public class DocumentosMedicosDTO {
     private String nombre;
     private String tipoDocumento;
     private byte[] imagen;
+    private String id;
 
     public DocumentosMedicosDTO() {
     }
 
-    public DocumentosMedicosDTO(String nombre, String tipoDocumento, byte[] imagen) {
+    public DocumentosMedicosDTO(String nombre, String tipoDocumento, byte[] imagen, String id) {
         this.nombre = nombre;
         this.tipoDocumento = tipoDocumento;
         this.imagen = imagen;
+        this.id = id;
     }
 
     public String getNombre() {
@@ -43,5 +45,13 @@ public class DocumentosMedicosDTO {
 
     public void setImagen(byte[] imagen) {
         this.imagen = imagen;
+    }
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
     }
 }
