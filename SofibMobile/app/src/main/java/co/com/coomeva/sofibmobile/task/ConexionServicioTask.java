@@ -69,7 +69,18 @@ public class ConexionServicioTask  extends AsyncTask<String,Integer,JSONArray>{
 
             HttpResponse resp = httpClient.execute(del);
             String respStr = EntityUtils.toString(resp.getEntity());
-            respJSON = new JSONArray(respStr);
+
+            if(respStr != null && !respStr.trim().equals("")){
+
+                if(respStr.startsWith("[")){
+                    respJSON = new JSONArray(respStr);
+                }else{
+                    respJSON = new JSONArray("[]");
+                }
+
+            }
+
+
 
         }
         catch(Exception ex){

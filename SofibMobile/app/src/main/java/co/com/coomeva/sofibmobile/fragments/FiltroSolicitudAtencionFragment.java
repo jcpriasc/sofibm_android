@@ -120,17 +120,34 @@ public class FiltroSolicitudAtencionFragment extends Fragment{
 
                     try {
 
-                        String nameConvenio = spinnerConvenio.getSelectedItem().toString();
-                        convenio = resultMapConvenio.getResultMap().get(nameConvenio);
+                        if(spinnerConvenio.getSelectedItem() != null){
+                            String nameConvenio = spinnerConvenio.getSelectedItem().toString();
+                            convenio = resultMapConvenio.getResultMap().get(nameConvenio);
+                        }else{
+                            convenio = "0";
+                        }
 
-                        String nameEstado = spinnerEstado.getSelectedItem().toString();
-                        estado = resultMapEstado.getResultMap().get(nameEstado);
+                        if(spinnerEstado.getSelectedItem() != null){
+                            String nameEstado = spinnerEstado.getSelectedItem().toString();
+                            estado = resultMapEstado.getResultMap().get(nameEstado);
+                        }else{
+                            estado = "0";
+                        }
 
-                        String nameCiudadInicial = spinnerCiudadInicial.getSelectedItem().toString();
-                        ciudadInicial = resultMapCiudadInicial.getResultMap().get(nameCiudadInicial);
+                        if(spinnerCiudadInicial.getSelectedItem() != null){
+                            String nameCiudadInicial = spinnerCiudadInicial.getSelectedItem().toString();
+                            ciudadInicial = resultMapCiudadInicial.getResultMap().get(nameCiudadInicial);
+                        }else{
+                            ciudadInicial = "0";
+                        }
 
-                        String nameCiudadActual = spinnerCiudadActual.getSelectedItem().toString();
-                        ciudadActual = resultMapCiudadActual.getResultMap().get(nameCiudadActual);
+                        if(spinnerCiudadActual.getSelectedItem() != null){
+                            String nameCiudadActual = spinnerCiudadActual.getSelectedItem().toString();
+                            ciudadActual = resultMapCiudadActual.getResultMap().get(nameCiudadActual);
+                        }else{
+                            ciudadActual = "0";
+                        }
+
 
                         int trasladoPosicion = spinnerTraslado.getSelectedItemPosition();
 
@@ -252,44 +269,45 @@ public class FiltroSolicitudAtencionFragment extends Fragment{
 
             JSONArray respJSONSpinner = ConexionServicioTask.respJSON;
 
-            String[] result = new String[respJSONSpinner.length()];
 
-            if (result!=null && result.length>0){
-                Map<String, String> resultMap = new HashMap<String, String>();
-                String[] spinnerArray = new String[result.length+1];
+                String[] result = new String[respJSONSpinner.length()];
 
-                if (tipoSpinner.equals("CON")){
-                    resultMap.put(getActivity().getResources().getString(R.string.lbl_seleccionar_convenio), "0");
-                    spinnerArray[0] = getActivity().getResources().getString(R.string.lbl_seleccionar_convenio);
-                }else if (tipoSpinner.equals("EST")){
-                    resultMap.put(getActivity().getResources().getString(R.string.lbl_seleccionar_estado), "0");
-                    spinnerArray[0] = getActivity().getResources().getString(R.string.lbl_seleccionar_estado);
-                }else if (tipoSpinner.equals("CIU_INI")){
-                    resultMap.put(getActivity().getResources().getString(R.string.lbl_seleccionar_ciudad_ini), "0");
-                    spinnerArray[0] = getActivity().getResources().getString(R.string.lbl_seleccionar_ciudad_ini);
-                }else if (tipoSpinner.equals("CIU_ACT")){
-                    resultMap.put(getActivity().getResources().getString(R.string.lbl_seleccionar_ciudad_act), "0");
-                    spinnerArray[0] = getActivity().getResources().getString(R.string.lbl_seleccionar_ciudad_act);
-                }
+                if (result != null && result.length > 0) {
+                    Map<String, String> resultMap = new HashMap<String, String>();
+                    String[] spinnerArray = new String[result.length + 1];
 
-                for (int j = 0; j < respJSONSpinner.length(); j++) {
-                    JSONObject obj = respJSONSpinner.getJSONObject(j);
-
-                    String codigo = obj.getString("codigo");
-                    String descripcion = "";
-                    if (tipoSpinner.equals("CON")){
-                        descripcion = obj.getString("nombre");
-                    }else if (tipoSpinner.equals("EST")){
-                        descripcion = obj.getString("descripcion");
-                    }else if (tipoSpinner.equals("CIU_INI") || tipoSpinner.equals("CIU_ACT")){
-                        descripcion = obj.getString("ciudad");
+                    if (tipoSpinner.equals("CON")) {
+                        resultMap.put(getActivity().getResources().getString(R.string.lbl_seleccionar_convenio), "0");
+                        spinnerArray[0] = getActivity().getResources().getString(R.string.lbl_seleccionar_convenio);
+                    } else if (tipoSpinner.equals("EST")) {
+                        resultMap.put(getActivity().getResources().getString(R.string.lbl_seleccionar_estado), "0");
+                        spinnerArray[0] = getActivity().getResources().getString(R.string.lbl_seleccionar_estado);
+                    } else if (tipoSpinner.equals("CIU_INI")) {
+                        resultMap.put(getActivity().getResources().getString(R.string.lbl_seleccionar_ciudad_ini), "0");
+                        spinnerArray[0] = getActivity().getResources().getString(R.string.lbl_seleccionar_ciudad_ini);
+                    } else if (tipoSpinner.equals("CIU_ACT")) {
+                        resultMap.put(getActivity().getResources().getString(R.string.lbl_seleccionar_ciudad_act), "0");
+                        spinnerArray[0] = getActivity().getResources().getString(R.string.lbl_seleccionar_ciudad_act);
                     }
-                    resultMap.put(descripcion, codigo);
-                    spinnerArray[j+1] = descripcion;
-                }
 
-                spinnerDTOs = new SpinnerDTO(resultMap, spinnerArray);
-            }
+                    for (int j = 0; j < respJSONSpinner.length(); j++) {
+                        JSONObject obj = respJSONSpinner.getJSONObject(j);
+
+                        String codigo = obj.getString("codigo");
+                        String descripcion = "";
+                        if (tipoSpinner.equals("CON")) {
+                            descripcion = obj.getString("nombre");
+                        } else if (tipoSpinner.equals("EST")) {
+                            descripcion = obj.getString("descripcion");
+                        } else if (tipoSpinner.equals("CIU_INI") || tipoSpinner.equals("CIU_ACT")) {
+                            descripcion = obj.getString("ciudad");
+                        }
+                        resultMap.put(descripcion, codigo);
+                        spinnerArray[j + 1] = descripcion;
+                    }
+
+                    spinnerDTOs = new SpinnerDTO(resultMap, spinnerArray);
+                }
 
 
         }catch (Exception e){

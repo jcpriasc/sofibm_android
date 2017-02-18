@@ -39,7 +39,7 @@ public class ConsultaSolicitudAprobacionFragment extends Fragment{
 
         listViewConsultaSolicitudAdapter = (ListView) view.findViewById(R.id.listSolicitudes);
 
-        consultaSolicitudList = OpcionesSecundariasFragment.lstSolicitudAprobacion;
+        consultaSolicitudList = FiltroSolicitudAprobacionFragment.lstSolicitudAprobacion;
         consultaSolicitudAdapter = new ConsultaSolicitudAdapter(view.getContext(), consultaSolicitudList);
         listViewConsultaSolicitudAdapter.setAdapter(consultaSolicitudAdapter);
 

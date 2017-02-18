@@ -25,42 +25,6 @@
             android:layout_marginBottom="10dp"
             />
 
-        <EditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:inputType="text"
-            android:hint="@string/lbl_id"
-            android:ems="10"
-            android:id="@+id/editTextIdentificacion"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginLeft="20dp"
-            android:layout_marginRight="20dp"
-            />
-
-
-        <EditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:inputType="text"
-            android:hint="@string/lbl_solicitud_atencion"
-            android:ems="10"
-            android:id="@+id/editTextSolAtencion"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginLeft="20dp"
-            android:layout_marginRight="20dp"
-            />
-
-        <EditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:inputType="text"
-            android:hint="@string/lbl_nombre"
-            android:ems="10"
-            android:id="@+id/editTextNombre"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginLeft="20dp"
-            android:layout_marginRight="20dp"
-            />
 
         <Spinner
             android:id="@+id/spinner_convenios"
@@ -74,40 +38,7 @@
             />
 
         <Spinner
-            android:id="@+id/spinner_estados"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:layout_marginBottom="10dp"
-            android:layout_marginLeft="20dp"
-            android:layout_marginRight="20dp"
-            android:spinnerMode="dialog"
-            />
-
-        <Spinner
-            android:id="@+id/spinner_ciudad_inicial"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:layout_marginBottom="10dp"
-            android:layout_marginLeft="20dp"
-            android:layout_marginRight="20dp"
-            android:spinnerMode="dialog"
-            />
-
-        <Spinner
-            android:id="@+id/spinner_ciudad_actual"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:layout_marginBottom="10dp"
-            android:layout_marginLeft="20dp"
-            android:layout_marginRight="20dp"
-            android:spinnerMode="dialog"
-            />
-
-        <Spinner
-            android:id="@+id/spinner_traslado"
+            android:id="@+id/spinner_servicios"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"

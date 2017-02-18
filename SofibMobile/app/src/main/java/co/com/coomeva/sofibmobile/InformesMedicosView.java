@@ -18,6 +18,7 @@ import android.widget.Toast;
 import co.com.coomeva.sofibmobile.dto.BitacoraDTO;
 import co.com.coomeva.sofibmobile.dto.InformesMedicosDTO;
 import co.com.coomeva.sofibmobile.fragments.BitacoraFragment;
+import co.com.coomeva.sofibmobile.fragments.FiltroSolicitudAprobacionFragment;
 import co.com.coomeva.sofibmobile.fragments.InformesMedicosFragment;
 import co.com.coomeva.sofibmobile.fragments.OpcionesSecundariasFragment;
 import co.com.coomeva.sofibmobile.utils.Constantes;
@@ -137,13 +138,10 @@ public class InformesMedicosView extends AppCompatActivity {
                                     }
                                     break;
                                 case R.id.menu_consultar_solicitudes_aprobacion:
-                                    params = "/SAC/ABCD1234/0/0/0/"+ ConsultaSolicitudAtencionView.solicitudAtencionSeleccionada.getNumeroSolicitud()+"/m";
-                                    if (OpcionesSecundariasFragment.consultarSolicitudAprobacion(getApplicationContext().getResources().getString(R.string.complement_aprobacion), params, InformesMedicosView.this)){
-                                        Intent intentConsultarSolicitudesAprobacionAsistencial = new Intent(getApplicationContext(), ConsultaSolicitudAprobacionView.class);
-                                        startActivity(intentConsultarSolicitudesAprobacionAsistencial);
-                                    }else {
-                                        throw new Exception(getApplicationContext().getResources().getString(R.string.lbl_sin_resultados));
-                                    }
+                                    FiltroSolicitudAprobacionFragment.tipoAprobacion = "m";
+                                    Intent intentConsultarSolicitudesAprobacionNoAsistencial = new Intent(getApplicationContext(), ConsultaSolicitudAprobacionView.class);
+                                    startActivity(intentConsultarSolicitudesAprobacionNoAsistencial);
+
                                     break;
                                 case R.id.menu_servicio_no_asistencial:
                                     params = "/SAC/ABCD1234/"+ ConsultaSolicitudAtencionView.solicitudAtencionSeleccionada.getNumeroSolicitud();

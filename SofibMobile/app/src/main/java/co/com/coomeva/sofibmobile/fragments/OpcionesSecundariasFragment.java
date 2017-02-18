@@ -188,13 +188,11 @@ public class OpcionesSecundariasFragment extends Fragment{
                             throw new Exception(getActivity().getResources().getString(R.string.lbl_sin_resultados));
                         }
                     }else if(opcionesList.get(i).getId().equals("9")) {
-                        String params = "/SAC/ABCD1234/0/0/0/"+ ConsultaSolicitudAtencionView.solicitudAtencionSeleccionada.getNumeroSolicitud()+"/m";
-                        if (consultarSolicitudAprobacion(getActivity().getResources().getString(R.string.complement_aprobacion), params, getActivity())){
-                            Intent intentConsultarSolicitudesAprobacionAsistencial = new Intent(view.getContext(), ConsultaSolicitudAprobacionView.class);
-                            startActivity(intentConsultarSolicitudesAprobacionAsistencial);
-                        }else {
-                            throw new Exception(getActivity().getResources().getString(R.string.lbl_sin_resultados));
-                        }
+
+                        FiltroSolicitudAprobacionFragment.tipoAprobacion = "m";
+                        Intent intentConsultarSolicitudesAprobacionNoAsistencial = new Intent(view.getContext(), ConsultaSolicitudAprobacionView.class);
+                        startActivity(intentConsultarSolicitudesAprobacionNoAsistencial);
+
                     }else if(opcionesList.get(i).getId().equals("10")) {
                         String params = "/SAC/ABCD1234/"+ ConsultaSolicitudAtencionView.solicitudAtencionSeleccionada.getNumeroSolicitud();
                         if (consultarServicioNoAsistencial(getActivity().getResources().getString(R.string.complement_serviciosNoAsistenciales), params, getActivity())){
@@ -255,13 +253,9 @@ public class OpcionesSecundariasFragment extends Fragment{
                         }
                     }else if(opcionesList.get(i).getId().equals("17")) {
 
-                        String params = "/SAC/ABCD1234/0/0/0/"+ ConsultaSolicitudAtencionView.solicitudAtencionSeleccionada.getNumeroSolicitud()+"/l";
-                        if (consultarSolicitudAprobacion(getActivity().getResources().getString(R.string.complement_aprobacion), params, getActivity())){
-                            Intent intentConsultarSolicitudesAprobacionNoAsistencial = new Intent(view.getContext(), ConsultaSolicitudAprobacionView.class);
-                            startActivity(intentConsultarSolicitudesAprobacionNoAsistencial);
-                        }else {
-                            throw new Exception(getActivity().getResources().getString(R.string.lbl_sin_resultados));
-                        }
+                        FiltroSolicitudAprobacionFragment.tipoAprobacion = "l";
+                        Intent intentConsultarSolicitudesAprobacionNoAsistencial = new Intent(view.getContext(), ConsultaSolicitudAprobacionView.class);
+                        startActivity(intentConsultarSolicitudesAprobacionNoAsistencial);
 
                     }else if(opcionesList.get(i).getId().equals("18")) {
                         Intent intentBitacora = new Intent(view.getContext(), BitacoraView.class);

@@ -17,6 +17,7 @@ import android.widget.Toast;
 
 import co.com.coomeva.sofibmobile.dto.AutorizacionesDTO;
 import co.com.coomeva.sofibmobile.fragments.AutorizacionesFragment;
+import co.com.coomeva.sofibmobile.fragments.FiltroSolicitudAprobacionFragment;
 import co.com.coomeva.sofibmobile.fragments.FuncionariosExternosFragment;
 import co.com.coomeva.sofibmobile.fragments.OpcionesSecundariasFragment;
 import co.com.coomeva.sofibmobile.utils.Constantes;
@@ -135,13 +136,10 @@ public class FuncionariosExternosView extends AppCompatActivity {
                                 case R.id.menu_funcionarios_externos:
                                     break;
                                 case R.id.menu_consultar_solicitudes_aprobacion:
-                                    params = "/SAC/ABCD1234/0/0/0/"+ ConsultaSolicitudAtencionView.solicitudAtencionSeleccionada.getNumeroSolicitud()+"/m";
-                                    if (OpcionesSecundariasFragment.consultarSolicitudAprobacion(getApplicationContext().getResources().getString(R.string.complement_aprobacion), params, FuncionariosExternosView.this)){
-                                        Intent intentConsultarSolicitudesAprobacionAsistencial = new Intent(getApplicationContext(), ConsultaSolicitudAprobacionView.class);
-                                        startActivity(intentConsultarSolicitudesAprobacionAsistencial);
-                                    }else {
-                                        throw new Exception(getApplicationContext().getResources().getString(R.string.lbl_sin_resultados));
-                                    }
+                                    FiltroSolicitudAprobacionFragment.tipoAprobacion = "m";
+                                    Intent intentConsultarSolicitudesAprobacionNoAsistencial = new Intent(getApplicationContext(), ConsultaSolicitudAprobacionView.class);
+                                    startActivity(intentConsultarSolicitudesAprobacionNoAsistencial);
+
                                     break;
                                 case R.id.menu_servicio_no_asistencial:
                                     params = "/SAC/ABCD1234/"+ ConsultaSolicitudAtencionView.solicitudAtencionSeleccionada.getNumeroSolicitud();
@@ -212,13 +210,9 @@ public class FuncionariosExternosView extends AppCompatActivity {
                                     startActivity(intentBitacoraLogistica);
                                     break;
                                 case R.id.menu_solicitudes_aprobacion_logistica:
-                                    params = "/SAC/ABCD1234/0/0/0/"+ ConsultaSolicitudAtencionView.solicitudAtencionSeleccionada.getNumeroSolicitud()+"/l";
-                                    if (OpcionesSecundariasFragment.consultarSolicitudAprobacion(getApplicationContext().getResources().getString(R.string.complement_aprobacion), params, FuncionariosExternosView.this)){
-                                        Intent intentConsultarSolicitudesAprobacionAsistencial = new Intent(getApplicationContext(), ConsultaSolicitudAprobacionView.class);
-                                        startActivity(intentConsultarSolicitudesAprobacionAsistencial);
-                                    }else {
-                                        throw new Exception(getApplicationContext().getResources().getString(R.string.lbl_sin_resultados));
-                                    }
+                                    FiltroSolicitudAprobacionFragment.tipoAprobacion = "l";
+                                    Intent intentConsultarSolicitudesAprobacionLogis= new Intent(getApplicationContext(), ConsultaSolicitudAprobacionView.class);
+                                    startActivity(intentConsultarSolicitudesAprobacionLogis);
                                     break;
                             }
 
