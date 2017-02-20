@@ -387,4 +387,8 @@
 
     <string name="lbl_seleccionar_servicio">Seleccionar Servicio</string>
 
+    <string name="usuario_interno">INTERNO</string>
+    <string name="usuario_externo">EXTERNO</string>
+
+
 </resources>

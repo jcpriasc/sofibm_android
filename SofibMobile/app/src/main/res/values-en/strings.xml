@@ -373,5 +373,7 @@
     <string name="aviso_password">Enter the password</string>
     <string name="error_autenticacion">User not found</string>
 
+    <string name="usuario_interno">INTERNO</string>
+    <string name="usuario_externo">EXTERNO</string>
 
 </resources>

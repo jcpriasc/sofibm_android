@@ -19,6 +19,7 @@ import java.util.Date;
 import java.util.List;
 
 import co.com.coomeva.sofibmobile.ConsultaSolicitudAprobacionView;
+import co.com.coomeva.sofibmobile.LoginView;
 import co.com.coomeva.sofibmobile.R;
 import co.com.coomeva.sofibmobile.adapters.ConsultaSolicitudAdapter;
 import co.com.coomeva.sofibmobile.dto.ConsultaSolicitudDTO;
@@ -39,7 +40,14 @@ public class ConsultaSolicitudAprobacionFragment extends Fragment{
 
         listViewConsultaSolicitudAdapter = (ListView) view.findViewById(R.id.listSolicitudes);
 
-        consultaSolicitudList = FiltroSolicitudAprobacionFragment.lstSolicitudAprobacion;
+
+        if( LoginView.usuarioSesion != null && LoginView.usuarioSesion.getTipoUsuario().equals( getActivity().getResources().getString(R.string.usuario_interno)) ){
+            consultaSolicitudList = FiltroSolicitudAprobacionFragment.lstSolicitudAprobacion;
+        }else{
+            consultaSolicitudList = OpcionesSecundariasFragment.lstSolicitudAprobacion;
+
+        }
+
         consultaSolicitudAdapter = new ConsultaSolicitudAdapter(view.getContext(), consultaSolicitudList);
         listViewConsultaSolicitudAdapter.setAdapter(consultaSolicitudAdapter);
 

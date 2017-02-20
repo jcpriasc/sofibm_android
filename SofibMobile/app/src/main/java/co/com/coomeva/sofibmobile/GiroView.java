@@ -141,10 +141,21 @@ public class GiroView extends AppCompatActivity {
                                     }
                                     break;
                                 case R.id.menu_consultar_solicitudes_aprobacion:
-                                    FiltroSolicitudAprobacionFragment.tipoAprobacion = "m";
-                                    Intent intentConsultarSolicitudesAprobacionNoAsistencial = new Intent(getApplicationContext(), ConsultaSolicitudAprobacionView.class);
-                                    startActivity(intentConsultarSolicitudesAprobacionNoAsistencial);
+                                    if( LoginView.usuarioSesion != null && LoginView.usuarioSesion.getTipoUsuario().equals( getApplicationContext().getResources().getString(R.string.usuario_interno)) ){
+                                        FiltroSolicitudAprobacionFragment.tipoAprobacion = "m";
+                                        Intent intentConsultarSolicitudesAprobacionNoAsistencial = new Intent(getApplicationContext(), ConsultaSolicitudAprobacionView.class);
+                                        startActivity(intentConsultarSolicitudesAprobacionNoAsistencial);
 
+                                    }else{
+                                        params = "/SAC/ABCD1234/0/0/0/"+ ConsultaSolicitudAtencionView.solicitudAtencionSeleccionada.getNumeroSolicitud()+"/m";
+                                        if (OpcionesSecundariasFragment.consultarSolicitudAprobacion(getApplicationContext().getResources().getString(R.string.complement_aprobacion), params, GiroView.this)){
+                                            Intent intentConsultarSolicitudesAprobacionAsistencial = new Intent(getApplicationContext(), ConsultaSolicitudAprobacionView.class);
+                                            startActivity(intentConsultarSolicitudesAprobacionAsistencial);
+                                        }else {
+                                            throw new Exception(getApplicationContext().getResources().getString(R.string.lbl_sin_resultados));
+                                        }
+
+                                    }
                                     break;
                                 case R.id.menu_servicio_no_asistencial:
                                     params = "/SAC/ABCD1234/"+ ConsultaSolicitudAtencionView.solicitudAtencionSeleccionada.getNumeroSolicitud();
@@ -208,9 +219,21 @@ public class GiroView extends AppCompatActivity {
                                     startActivity(intentBitacoraLogistica);
                                     break;
                                 case R.id.menu_solicitudes_aprobacion_logistica:
-                                    FiltroSolicitudAprobacionFragment.tipoAprobacion = "l";
-                                    Intent intentConsultarSolicitudesAprobacionLogis= new Intent(getApplicationContext(), ConsultaSolicitudAprobacionView.class);
-                                    startActivity(intentConsultarSolicitudesAprobacionLogis);
+                                    if( LoginView.usuarioSesion != null && LoginView.usuarioSesion.getTipoUsuario().equals( getApplicationContext().getResources().getString(R.string.usuario_interno)) ){
+                                        FiltroSolicitudAprobacionFragment.tipoAprobacion = "l";
+                                        Intent intentConsultarSolicitudesAprobacionLogis= new Intent(getApplicationContext(), ConsultaSolicitudAprobacionView.class);
+                                        startActivity(intentConsultarSolicitudesAprobacionLogis);
+
+                                    }else{
+                                        params = "/SAC/ABCD1234/0/0/0/"+ ConsultaSolicitudAtencionView.solicitudAtencionSeleccionada.getNumeroSolicitud()+"/l";
+                                        if (OpcionesSecundariasFragment.consultarSolicitudAprobacion(getApplicationContext().getResources().getString(R.string.complement_aprobacion), params, GiroView.this)){
+                                            Intent intentConsultarSolicitudesAprobacionAsistencial = new Intent(getApplicationContext(), ConsultaSolicitudAprobacionView.class);
+                                            startActivity(intentConsultarSolicitudesAprobacionAsistencial);
+                                        }else {
+                                            throw new Exception(getApplicationContext().getResources().getString(R.string.lbl_sin_resultados));
+                                        }
+
+                                    }
                                     break;
                             }
 
