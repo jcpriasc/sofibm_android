@@ -601,7 +601,7 @@ public class OpcionesSecundariasFragment extends Fragment{
             String[] result = new String[respJSONSpinner.length()];
 
             if (result!=null && result.length>0){
-                lstEncuesta = new ArrayList<>();
+                lstInformesMedicos = new ArrayList<>();
                 respuesta = true;
                 for (int j = 0; j < respJSONSpinner.length(); j++) {
                     JSONObject obj = respJSONSpinner.getJSONObject(j);

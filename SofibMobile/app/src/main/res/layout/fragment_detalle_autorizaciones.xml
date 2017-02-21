@@ -38,151 +38,163 @@
                 android:layout_marginLeft="10dp"/>
         </LinearLayout>
 
-        <TableLayout
+        <LinearLayout
+            android:orientation="horizontal"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:shrinkColumns="1"
-            android:stretchColumns="1">
+            android:layout_marginBottom="0dp" >
 
-            <TableRow
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/lbl_ciudad"
+                android:textStyle="bold"
+                android:textColor="@color/colorTextTitle"
+                android:textSize="@dimen/font_size_subtitle"
+                android:layout_marginLeft="10dp"
+                android:layout_row="0"
+                android:layout_column="0" />
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/lbl_ciudad"
-                    android:textStyle="bold"
-                    android:textColor="@color/colorTextTitle"
-                    android:textSize="@dimen/font_size_subtitle"
-                    android:layout_marginLeft="10dp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="Cali"
+                android:textSize="@dimen/font_size_text"
+                android:id="@+id/txtCiudad"
+                android:layout_marginLeft="10dp"/>
+        </LinearLayout>
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textAppearance="?android:attr/textAppearanceMedium"
-                    android:text="Cali"
-                    android:textSize="@dimen/font_size_text"
-                    android:id="@+id/txtCiudad"
-                    android:layout_marginLeft="10dp"/>
-            </TableRow>
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="0dp" >
 
-            <TableRow
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/lbl_tipo_solicitud"
+                android:textStyle="bold"
+                android:textColor="@color/colorTextTitle"
+                android:textSize="@dimen/font_size_subtitle"
+                android:layout_marginLeft="10dp"
+                android:layout_row="1" />
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/lbl_tipo_solicitud"
-                    android:textStyle="bold"
-                    android:textColor="@color/colorTextTitle"
-                    android:textSize="@dimen/font_size_subtitle"
-                    android:layout_marginLeft="10dp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="Servicio Médico No Asistencial"
+                android:textSize="@dimen/font_size_text"
+                android:id="@+id/txtTipoSolicitud"
+                android:layout_marginLeft="10dp"/>
+        </LinearLayout>
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textAppearance="?android:attr/textAppearanceMedium"
-                    android:text="Servicio Médico No Asistencial"
-                    android:textSize="@dimen/font_size_text"
-                    android:id="@+id/txtTipoSolicitud"
-                    android:layout_marginLeft="10dp"/>
-            </TableRow>
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="0dp" >
 
-            <TableRow
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/lbl_fecha_solicitud"
+                android:textStyle="bold"
+                android:textColor="@color/colorTextTitle"
+                android:textSize="@dimen/font_size_subtitle"
+                android:layout_marginLeft="10dp"
+                android:layout_row="2" />
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/lbl_fecha_solicitud"
-                    android:textStyle="bold"
-                    android:textColor="@color/colorTextTitle"
-                    android:textSize="@dimen/font_size_subtitle"
-                    android:layout_marginLeft="10dp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="2016/07/24"
+                android:textSize="@dimen/font_size_text"
+                android:id="@+id/txtFechaSolicitud"
+                android:layout_marginLeft="10dp"/>
+        </LinearLayout>
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textAppearance="?android:attr/textAppearanceMedium"
-                    android:text="2016/07/24"
-                    android:textSize="@dimen/font_size_text"
-                    android:id="@+id/txtFechaSolicitud"
-                    android:layout_marginLeft="10dp"/>
-            </TableRow>
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="0dp" >
 
-            <TableRow
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/lbl_estado"
+                android:textStyle="bold"
+                android:textColor="@color/colorTextTitle"
+                android:textSize="@dimen/font_size_subtitle"
+                android:layout_marginLeft="10dp"
+                android:layout_row="3" />
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/lbl_estado"
-                    android:textStyle="bold"
-                    android:textColor="@color/colorTextTitle"
-                    android:textSize="@dimen/font_size_subtitle"
-                    android:layout_marginLeft="10dp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="Aprobada"
+                android:textSize="@dimen/font_size_text"
+                android:id="@+id/txtEstado"
+                android:layout_marginLeft="10dp"/>
+        </LinearLayout>
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textAppearance="?android:attr/textAppearanceMedium"
-                    android:text="Aprobada"
-                    android:textSize="@dimen/font_size_text"
-                    android:id="@+id/txtEstado"
-                    android:layout_marginLeft="10dp"/>
-            </TableRow>
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="0dp" >
 
-            <TableRow
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/lbl_fecha_aprobacion"
+                android:textStyle="bold"
+                android:textColor="@color/colorTextTitle"
+                android:textSize="@dimen/font_size_subtitle"
+                android:layout_marginLeft="10dp"
+                android:layout_row="4" />
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/lbl_fecha_aprobacion"
-                    android:textStyle="bold"
-                    android:textColor="@color/colorTextTitle"
-                    android:textSize="@dimen/font_size_subtitle"
-                    android:layout_marginLeft="10dp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="2016/07/24"
+                android:textSize="@dimen/font_size_text"
+                android:id="@+id/txtFechaAprobacion"
+                android:layout_marginLeft="10dp"/>
+        </LinearLayout>
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textAppearance="?android:attr/textAppearanceMedium"
-                    android:text="2016/07/24"
-                    android:textSize="@dimen/font_size_text"
-                    android:id="@+id/txtFechaAprobacion"
-                    android:layout_marginLeft="10dp"/>
-            </TableRow>
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="0dp" >
 
-            <TableRow
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/lbl_fecha_rechazo"
+                android:textStyle="bold"
+                android:textColor="@color/colorTextTitle"
+                android:textSize="@dimen/font_size_subtitle"
+                android:layout_marginLeft="10dp"
+                android:layout_row="5" />
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/lbl_fecha_rechazo"
-                    android:textStyle="bold"
-                    android:textColor="@color/colorTextTitle"
-                    android:textSize="@dimen/font_size_subtitle"
-                    android:layout_marginLeft="10dp"/>
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textAppearance="?android:attr/textAppearanceMedium"
-                    android:text="2016/07/24"
-                    android:textSize="@dimen/font_size_text"
-                    android:id="@+id/txtFechaRechazo"
-                    android:layout_marginLeft="10dp"
-                    android:layout_marginBottom="20dp"/>
-            </TableRow>
-        </TableLayout>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="2016/07/24"
+                android:textSize="@dimen/font_size_text"
+                android:id="@+id/txtFechaRechazo"
+                android:layout_marginLeft="10dp"
+                android:layout_marginBottom="20dp"/>
+        </LinearLayout>
 
 
         <LinearLayout

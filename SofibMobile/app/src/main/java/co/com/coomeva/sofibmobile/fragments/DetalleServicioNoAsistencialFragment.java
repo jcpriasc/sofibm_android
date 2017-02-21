@@ -126,9 +126,8 @@ public class DetalleServicioNoAsistencialFragment extends Fragment{
                 String descripcionYRestricciones = (obj.getString("descripcionYRestricciones") != null && !obj.getString("descripcionYRestricciones").equals("null")) ? obj.getString("descripcionYRestricciones"):"";
 
                 JSONArray json_array = obj.optJSONArray("detalle");
-                if(lstServiciosAdicionales == null){
                     lstServiciosAdicionales = new ArrayList<ServicioAdicionalDTO>();
-                }
+
 
                 for (int x = 0; x < json_array.length(); x++) {
                     JSONObject detalle = json_array.getJSONObject(x);

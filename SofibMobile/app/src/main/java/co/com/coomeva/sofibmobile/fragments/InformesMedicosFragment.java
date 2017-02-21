@@ -185,9 +185,7 @@ public class InformesMedicosFragment extends Fragment{
                         ///////////////////////////////////////////////////////////////////////////////
                         JSONArray jsonArrayMedicamentos = obj.optJSONArray("medicamentoNombre");
 
-                        if (lstMedicina == null) {
-                            lstMedicina = new ArrayList<DescipcionDTO>();
-                        }
+                        lstMedicina = new ArrayList<DescipcionDTO>();
 
                         for (int x = 0; x < jsonArrayMedicamentos.length(); x++) {
                             JSONObject medicamento = jsonArrayMedicamentos.getJSONObject(x);
@@ -206,9 +204,8 @@ public class InformesMedicosFragment extends Fragment{
 
                         JSONArray jsonArrayProcedimiento = obj.optJSONArray("nombreProcedimiento");
 
-                        if (lstProcedimientos == null) {
-                            lstProcedimientos = new ArrayList<DescipcionDTO>();
-                        }
+                        lstProcedimientos = new ArrayList<DescipcionDTO>();
+
 
                         for (int x = 0; x < jsonArrayProcedimiento.length(); x++) {
                             JSONObject procedimiento = jsonArrayProcedimiento.getJSONObject(x);
@@ -227,9 +224,8 @@ public class InformesMedicosFragment extends Fragment{
 
                         JSONArray jsonArrayDocumentos = obj.optJSONArray("archivo");
 
-                        if (lstDocumentos == null) {
                             lstDocumentos = new ArrayList<DocumentosMedicosDTO>();
-                        }
+                        
 
                         for (int x = 0; x < jsonArrayDocumentos.length(); x++) {
                             JSONObject docu = jsonArrayDocumentos.getJSONObject(x);

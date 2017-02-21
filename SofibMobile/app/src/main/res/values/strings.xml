@@ -164,7 +164,7 @@
 
     <string name="lbl_tab_info_general">Información general</string>
     <string name="lbl_tab_procedimiento">Procedimientos</string>
-    <string name="lbl_tab_medicina">Medicina</string>
+    <string name="lbl_tab_medicina">Medicamentos</string>
 
     <!-- Strings para Notas Credito Giros -->
     <string name="lbl_titulo_nota_credito_giro">Notas Crédito de Giros</string>
