@@ -22,6 +22,13 @@
         <item>123123 - Cali</item>
     </string-array>
 
+    <string-array name="servicios_array">
+        <item>Seleccionar Servicio</item>
+        <item>Medicamentos</item>
+    </string-array>
+
+
+
     <string-array name="estado_array">
         <item>Seleccionar Estado</item>
         <item>Pendiente</item>
@@ -377,6 +384,11 @@
     <string name="aviso_usuario">Ingrese el usuario</string>
     <string name="aviso_password">Ingrese la contraseña</string>
     <string name="error_autenticacion">No se encontró un usuario registrado con la información ingresada.</string>
+
+    <string name="lbl_seleccionar_servicio">Seleccionar Servicio</string>
+
+    <string name="usuario_interno">INTERNO</string>
+    <string name="usuario_externo">EXTERNO</string>
 
 
 </resources>

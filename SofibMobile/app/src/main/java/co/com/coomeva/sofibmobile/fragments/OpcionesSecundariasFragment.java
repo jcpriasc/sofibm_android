@@ -57,6 +57,7 @@ import co.com.coomeva.sofibmobile.dto.ProcedimientosAdicionalesDTO;
 import co.com.coomeva.sofibmobile.dto.ServicioAsistencialDTO;
 import co.com.coomeva.sofibmobile.dto.ServicioNoAsistencialDTO;
 import co.com.coomeva.sofibmobile.dto.UtilizacionesDTO;
+import co.com.coomeva.sofibmobile.modelo.Usuario;
 import co.com.coomeva.sofibmobile.task.ConexionServicioTask;
 import co.com.coomeva.sofibmobile.utils.Utilities;
 
@@ -188,13 +189,22 @@ public class OpcionesSecundariasFragment extends Fragment{
                             throw new Exception(getActivity().getResources().getString(R.string.lbl_sin_resultados));
                         }
                     }else if(opcionesList.get(i).getId().equals("9")) {
-                        String params = "/SAC/ABCD1234/0/0/0/"+ ConsultaSolicitudAtencionView.solicitudAtencionSeleccionada.getNumeroSolicitud()+"/m";
-                        if (consultarSolicitudAprobacion(getActivity().getResources().getString(R.string.complement_aprobacion), params, getActivity())){
-                            Intent intentConsultarSolicitudesAprobacionAsistencial = new Intent(view.getContext(), ConsultaSolicitudAprobacionView.class);
-                            startActivity(intentConsultarSolicitudesAprobacionAsistencial);
-                        }else {
-                            throw new Exception(getActivity().getResources().getString(R.string.lbl_sin_resultados));
+
+                        if( LoginView.usuarioSesion != null && LoginView.usuarioSesion.getTipoUsuario().equals( getActivity().getResources().getString(R.string.usuario_interno)) ){
+                            FiltroSolicitudAprobacionFragment.tipoAprobacion = "m";
+                            Intent intentConsultarSolicitudesAprobacionNoAsistencial = new Intent(view.getContext(), ConsultaSolicitudAprobacionView.class);
+                            startActivity(intentConsultarSolicitudesAprobacionNoAsistencial);
+                        }else{
+
+                            String params = "/SAC/ABCD1234/0/0/0/"+ ConsultaSolicitudAtencionView.solicitudAtencionSeleccionada.getNumeroSolicitud()+"/m";
+                            if (consultarSolicitudAprobacion(getActivity().getResources().getString(R.string.complement_aprobacion), params, getActivity())){
+                                Intent intentConsultarSolicitudesAprobacionAsistencial = new Intent(view.getContext(), ConsultaSolicitudAprobacionView.class);
+                                startActivity(intentConsultarSolicitudesAprobacionAsistencial);
+                            }else {
+                                throw new Exception(getActivity().getResources().getString(R.string.lbl_sin_resultados));
+                            }
                         }
+
                     }else if(opcionesList.get(i).getId().equals("10")) {
                         String params = "/SAC/ABCD1234/"+ ConsultaSolicitudAtencionView.solicitudAtencionSeleccionada.getNumeroSolicitud();
                         if (consultarServicioNoAsistencial(getActivity().getResources().getString(R.string.complement_serviciosNoAsistenciales), params, getActivity())){
@@ -255,12 +265,20 @@ public class OpcionesSecundariasFragment extends Fragment{
                         }
                     }else if(opcionesList.get(i).getId().equals("17")) {
 
-                        String params = "/SAC/ABCD1234/0/0/0/"+ ConsultaSolicitudAtencionView.solicitudAtencionSeleccionada.getNumeroSolicitud()+"/l";
-                        if (consultarSolicitudAprobacion(getActivity().getResources().getString(R.string.complement_aprobacion), params, getActivity())){
+                        if( LoginView.usuarioSesion != null && LoginView.usuarioSesion.getTipoUsuario().equals( getActivity().getResources().getString(R.string.usuario_interno)) ){
+                            FiltroSolicitudAprobacionFragment.tipoAprobacion = "l";
                             Intent intentConsultarSolicitudesAprobacionNoAsistencial = new Intent(view.getContext(), ConsultaSolicitudAprobacionView.class);
                             startActivity(intentConsultarSolicitudesAprobacionNoAsistencial);
-                        }else {
-                            throw new Exception(getActivity().getResources().getString(R.string.lbl_sin_resultados));
+                        }else{
+
+                            String params = "/SAC/ABCD1234/0/0/0/"+ ConsultaSolicitudAtencionView.solicitudAtencionSeleccionada.getNumeroSolicitud()+"/l";
+                            if (consultarSolicitudAprobacion(getActivity().getResources().getString(R.string.complement_aprobacion), params, getActivity())){
+                                Intent intentConsultarSolicitudesAprobacionNoAsistencial = new Intent(view.getContext(), ConsultaSolicitudAprobacionView.class);
+                                startActivity(intentConsultarSolicitudesAprobacionNoAsistencial);
+                            }else {
+                                throw new Exception(getActivity().getResources().getString(R.string.lbl_sin_resultados));
+                            }
+
                         }
 
                     }else if(opcionesList.get(i).getId().equals("18")) {

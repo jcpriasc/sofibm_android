@@ -17,6 +17,7 @@ import android.widget.Toast;
 
 import co.com.coomeva.sofibmobile.fragments.DocumentosMedicosFragment;
 import co.com.coomeva.sofibmobile.fragments.EpicrisisFragment;
+import co.com.coomeva.sofibmobile.fragments.FiltroSolicitudAprobacionFragment;
 import co.com.coomeva.sofibmobile.fragments.OpcionesSecundariasFragment;
 import co.com.coomeva.sofibmobile.utils.Constantes;
 
@@ -133,12 +134,21 @@ public class EpicrisisView extends AppCompatActivity {
                                     }
                                     break;
                                 case R.id.menu_consultar_solicitudes_aprobacion:
-                                    params = "/SAC/ABCD1234/0/0/0/"+ ConsultaSolicitudAtencionView.solicitudAtencionSeleccionada.getNumeroSolicitud()+"/m";
-                                    if (OpcionesSecundariasFragment.consultarSolicitudAprobacion(getApplicationContext().getResources().getString(R.string.complement_aprobacion), params, EpicrisisView.this)){
-                                        Intent intentConsultarSolicitudesAprobacionAsistencial = new Intent(getApplicationContext(), ConsultaSolicitudAprobacionView.class);
-                                        startActivity(intentConsultarSolicitudesAprobacionAsistencial);
-                                    }else {
-                                        throw new Exception(getApplicationContext().getResources().getString(R.string.lbl_sin_resultados));
+
+                                    if( LoginView.usuarioSesion != null && LoginView.usuarioSesion.getTipoUsuario().equals( getApplicationContext().getResources().getString(R.string.usuario_interno)) ){
+                                        FiltroSolicitudAprobacionFragment.tipoAprobacion = "m";
+                                        Intent intentConsultarSolicitudesAprobacionNoAsistencial = new Intent(getApplicationContext(), ConsultaSolicitudAprobacionView.class);
+                                        startActivity(intentConsultarSolicitudesAprobacionNoAsistencial);
+
+                                    }else{
+                                        params = "/SAC/ABCD1234/0/0/0/"+ ConsultaSolicitudAtencionView.solicitudAtencionSeleccionada.getNumeroSolicitud()+"/m";
+                                        if (OpcionesSecundariasFragment.consultarSolicitudAprobacion(getApplicationContext().getResources().getString(R.string.complement_aprobacion), params, EpicrisisView.this)){
+                                            Intent intentConsultarSolicitudesAprobacionAsistencial = new Intent(getApplicationContext(), ConsultaSolicitudAprobacionView.class);
+                                            startActivity(intentConsultarSolicitudesAprobacionAsistencial);
+                                        }else {
+                                            throw new Exception(getApplicationContext().getResources().getString(R.string.lbl_sin_resultados));
+                                        }
+
                                     }
                                     break;
 
@@ -211,12 +221,20 @@ public class EpicrisisView extends AppCompatActivity {
                                     startActivity(intentBitacoraLogistica);
                                     break;
                                 case R.id.menu_solicitudes_aprobacion_logistica:
-                                    params = "/SAC/ABCD1234/0/0/0/"+ ConsultaSolicitudAtencionView.solicitudAtencionSeleccionada.getNumeroSolicitud()+"/l";
-                                    if (OpcionesSecundariasFragment.consultarSolicitudAprobacion(getApplicationContext().getResources().getString(R.string.complement_aprobacion), params, EpicrisisView.this)){
-                                        Intent intentConsultarSolicitudesAprobacionAsistencial = new Intent(getApplicationContext(), ConsultaSolicitudAprobacionView.class);
-                                        startActivity(intentConsultarSolicitudesAprobacionAsistencial);
-                                    }else {
-                                        throw new Exception(getApplicationContext().getResources().getString(R.string.lbl_sin_resultados));
+                                    if( LoginView.usuarioSesion != null && LoginView.usuarioSesion.getTipoUsuario().equals( getApplicationContext().getResources().getString(R.string.usuario_interno)) ){
+                                        FiltroSolicitudAprobacionFragment.tipoAprobacion = "l";
+                                        Intent intentConsultarSolicitudesAprobacionLogis= new Intent(getApplicationContext(), ConsultaSolicitudAprobacionView.class);
+                                        startActivity(intentConsultarSolicitudesAprobacionLogis);
+
+                                    }else{
+                                        params = "/SAC/ABCD1234/0/0/0/"+ ConsultaSolicitudAtencionView.solicitudAtencionSeleccionada.getNumeroSolicitud()+"/l";
+                                        if (OpcionesSecundariasFragment.consultarSolicitudAprobacion(getApplicationContext().getResources().getString(R.string.complement_aprobacion), params, EpicrisisView.this)){
+                                            Intent intentConsultarSolicitudesAprobacionAsistencial = new Intent(getApplicationContext(), ConsultaSolicitudAprobacionView.class);
+                                            startActivity(intentConsultarSolicitudesAprobacionAsistencial);
+                                        }else {
+                                            throw new Exception(getApplicationContext().getResources().getString(R.string.lbl_sin_resultados));
+                                        }
+
                                     }
                                     break;
                             }

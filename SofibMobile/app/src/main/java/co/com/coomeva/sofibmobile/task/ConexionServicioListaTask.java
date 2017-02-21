@@ -62,7 +62,17 @@ public class ConexionServicioListaTask extends AsyncTask<String,Integer,JSONObje
 
             HttpResponse resp = httpClient.execute(del);
             String respStr = EntityUtils.toString(resp.getEntity());
+
+            if(respStr != null && !respStr.trim().equals("")){
+                if(respStr.contains("\"codigo\":\"1\"")){
+                    respJSON = null;
+                }else{
+                    respJSON = new JSONObject(respStr);
+                }
+
+            }
             respJSON = new JSONObject(respStr);
+
 
         }
         catch(Exception ex){

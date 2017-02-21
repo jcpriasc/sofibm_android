@@ -365,11 +365,15 @@
     <string name="lbl_cambiar_idioma">Change Language</string>
     <string name="lbl_cerrar_sesion">Log Out</string>
     <string name="lbl_cancelar">Cancel</string>
+    <string name="lbl_seleccionar_servicio">Select Service</string>
+
     <string name="lbl_aviso_cerrar_sesion">You are sure you want to logout?</string>
 
     <string name="aviso_usuario">Enter the user</string>
     <string name="aviso_password">Enter the password</string>
     <string name="error_autenticacion">User not found</string>
 
+    <string name="usuario_interno">INTERNO</string>
+    <string name="usuario_externo">EXTERNO</string>
 
 </resources>
