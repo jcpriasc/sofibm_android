@@ -20,6 +20,11 @@
         <item>123123 - Cali</item>
     </string-array>
 
+    <string-array name="servicios_array">
+        <item>Seleccionar Service</item>
+        <item>Medicines</item>
+    </string-array>
+
     <string-array name="estado_array">
         <item>Select State</item>
         <item>Pending</item>
@@ -317,6 +322,9 @@
     <string name="lbl_entidad">Entity</string>
     <string name="lbl_tipo">Type</string>
 
+    <string name="lbl_pendiente">Pending</string>
+    <string name="lbl_aprobado">Approved</string>
+
     <string name="address_service_aut">http://pruebas-sectorsalud.coomeva.com.co/saludmp-ws/jax-rs/saludmp-sofibmobile</string>
     <!--<string name="address_service_profile">http://pruebas-sectorsalud.coomeva.com.co/saludmp-ws/jax-rs/saludmp-autOficinaVirtual/informacion</string>-->
     <string name="address_service_profile">http://pruebas-sectorsalud.coomeva.com.co/saludmp-ws/jax-rs/saludmp-autOficinaVirtual</string>
@@ -375,5 +383,7 @@
 
     <string name="usuario_interno">INTERNO</string>
     <string name="usuario_externo">EXTERNO</string>
+
+    <string name="toast_scroll">Please scroll down to see more information</string>
 
 </resources>

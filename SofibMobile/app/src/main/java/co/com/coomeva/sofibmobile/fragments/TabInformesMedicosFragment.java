@@ -36,9 +36,14 @@ public class TabInformesMedicosFragment extends Fragment{
            // ((AppCompatActivity) getActivity()).setSupportActionBar(toolbar);
 
             TabLayout tabLayout = (TabLayout) view.findViewById(R.id.tab_layout);
-            tabLayout.addTab(tabLayout.newTab().setText(getResources().getString(R.string.lbl_tab_info_general)));
-            tabLayout.addTab(tabLayout.newTab().setText(getResources().getString(R.string.lbl_tab_procedimiento)));
-            tabLayout.addTab(tabLayout.newTab().setText(getResources().getString(R.string.lbl_tab_medicina)));
+//            tabLayout.addTab(tabLayout.newTab().setText(getResources().getString(R.string.lbl_tab_info_general)));
+//            tabLayout.addTab(tabLayout.newTab().setText(getResources().getString(R.string.lbl_tab_procedimiento)));
+//            tabLayout.addTab(tabLayout.newTab().setText(getResources().getString(R.string.lbl_tab_medicina)));
+
+            tabLayout.addTab(tabLayout.newTab().setIcon(R.mipmap.info_general));
+            tabLayout.addTab(tabLayout.newTab().setIcon(R.mipmap.procedimiento));
+            tabLayout.addTab(tabLayout.newTab().setIcon(R.mipmap.medicina));
+
             tabLayout.setTabGravity(TabLayout.GRAVITY_FILL);
 
             final ViewPager viewPager = (ViewPager) view.findViewById(R.id.pager);

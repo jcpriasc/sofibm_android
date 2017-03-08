@@ -38,9 +38,14 @@ public class TabGiroFragment extends Fragment{
            // ((AppCompatActivity) getActivity()).setSupportActionBar(toolbar);
 
             TabLayout tabLayout = (TabLayout) view.findViewById(R.id.tab_layout);
-            tabLayout.addTab(tabLayout.newTab().setText(getResources().getString(R.string.lbl_tab_manutencion)));
-            tabLayout.addTab(tabLayout.newTab().setText(getResources().getString(R.string.lbl_tab_conceptos)));
-            tabLayout.addTab(tabLayout.newTab().setText(getResources().getString(R.string.lbl_tab_historico)));
+//            tabLayout.addTab(tabLayout.newTab().setText(getResources().getString(R.string.lbl_tab_manutencion)));
+//            tabLayout.addTab(tabLayout.newTab().setText(getResources().getString(R.string.lbl_tab_conceptos)));
+//            tabLayout.addTab(tabLayout.newTab().setText(getResources().getString(R.string.lbl_tab_historico)));
+
+            tabLayout.addTab(tabLayout.newTab().setIcon(R.mipmap.concepto));
+            tabLayout.addTab(tabLayout.newTab().setIcon(R.mipmap.manutencion));
+            tabLayout.addTab(tabLayout.newTab().setIcon(R.mipmap.historico));
+
             tabLayout.setTabGravity(TabLayout.GRAVITY_FILL);
 
             final ViewPager viewPager = (ViewPager) view.findViewById(R.id.pager);

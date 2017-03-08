@@ -109,6 +109,12 @@ public class  AutorizacionesFragment extends Fragment{
                     String justificacion = (obj.getString("justificacion") != null && !obj.getString("justificacion").equals("null")) ? obj.getString("justificacion"):"";
                     String estado = (obj.getString("estado") != null && !obj.getString("estado").equals("null")) ? obj.getString("estado"):"";
 
+                    if(estado != null && estado.equals("true")){
+                        estado = getActivity().getResources().getString(R.string.lbl_aprobado);
+                    }else if(estado != null && estado.equals("false")){
+                        estado = getActivity().getResources().getString(R.string.lbl_pendiente);
+                    }
+
                     DetalleAutorizacionesDTO dto = new DetalleAutorizacionesDTO(descripcion, justificacion, estado);
 
                     lstDetalleAutorizaciones.add(dto);

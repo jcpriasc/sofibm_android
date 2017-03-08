@@ -41,9 +41,14 @@ public class TabFacturaFragment extends Fragment{
            // ((AppCompatActivity) getActivity()).setSupportActionBar(toolbar);
 
             TabLayout tabLayout = (TabLayout) view.findViewById(R.id.tab_layout);
-            tabLayout.addTab(tabLayout.newTab().setText(getResources().getString(R.string.lbl_tab_factura)));
-            tabLayout.addTab(tabLayout.newTab().setText(getResources().getString(R.string.lbl_tab_glosa)));
-            tabLayout.addTab(tabLayout.newTab().setText(getResources().getString(R.string.lbl_tab_impuesto_servicio_orden)));
+//            tabLayout.addTab(tabLayout.newTab().setText(getResources().getString(R.string.lbl_tab_factura)));
+//            tabLayout.addTab(tabLayout.newTab().setText(getResources().getString(R.string.lbl_tab_glosa)));
+//            tabLayout.addTab(tabLayout.newTab().setText(getResources().getString(R.string.lbl_tab_impuesto_servicio_orden)));
+
+
+            tabLayout.addTab(tabLayout.newTab().setIcon(R.mipmap.factura));
+            tabLayout.addTab(tabLayout.newTab().setIcon(R.mipmap.glosa));
+            tabLayout.addTab(tabLayout.newTab().setIcon(R.mipmap.impuesto));
             tabLayout.setTabGravity(TabLayout.GRAVITY_FILL);
 
             final ViewPager viewPager = (ViewPager) view.findViewById(R.id.pager);

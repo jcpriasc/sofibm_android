@@ -62,54 +62,54 @@ public class DetalleSolicitudAtencionFragment extends Fragment{
 
         if(ConsultaSolicitudAtencionView.getSolicitudAtencionSeleccionada().getCredencialPaciente() == null
                 || ConsultaSolicitudAtencionView.getSolicitudAtencionSeleccionada().getCredencialPaciente().trim().equals("")){
-            txtCredencialPaciente.setText(R.string.lbl_no_aplica);
+            txtCredencialPaciente.setText("");
         }else{
             txtCredencialPaciente.setText(ConsultaSolicitudAtencionView.getSolicitudAtencionSeleccionada().getCredencialPaciente().trim());
         }
 
         if(ConsultaSolicitudAtencionView.getSolicitudAtencionSeleccionada().getConvenio() == null
                 || ConsultaSolicitudAtencionView.getSolicitudAtencionSeleccionada().getConvenio().trim().equals("")){
-            txtConvenio.setText(R.string.lbl_no_aplica);
+            txtConvenio.setText("");
         }else{
             txtConvenio.setText(ConsultaSolicitudAtencionView.getSolicitudAtencionSeleccionada().getConvenio().trim());
         }
 
         if(ConsultaSolicitudAtencionView.getSolicitudAtencionSeleccionada().getCiudadInicial() == null
                 || ConsultaSolicitudAtencionView.getSolicitudAtencionSeleccionada().getCiudadInicial().trim().equals("")){
-            txtCiudadInicial.setText(R.string.lbl_no_aplica);
+            txtCiudadInicial.setText("");
         }else{
             txtCiudadInicial.setText(ConsultaSolicitudAtencionView.getSolicitudAtencionSeleccionada().getCiudadInicial().trim());
         }
 
         if(ConsultaSolicitudAtencionView.getSolicitudAtencionSeleccionada().getCiudadActual() == null
                 || ConsultaSolicitudAtencionView.getSolicitudAtencionSeleccionada().getCiudadActual().trim().equals("")){
-            txtCiudadActual.setText(R.string.lbl_no_aplica);
+            txtCiudadActual.setText("");
         }else{
             txtCiudadActual.setText(ConsultaSolicitudAtencionView.getSolicitudAtencionSeleccionada().getCiudadActual().trim());
         }
 
         if(ConsultaSolicitudAtencionView.getSolicitudAtencionSeleccionada().getTraslado() == null
                 || ConsultaSolicitudAtencionView.getSolicitudAtencionSeleccionada().getTraslado().trim().equals("")){
-            txtTraslado.setText(R.string.lbl_no_aplica);
+            txtTraslado.setText("");
         }else{
             txtTraslado.setText(ConsultaSolicitudAtencionView.getSolicitudAtencionSeleccionada().getTraslado().trim());
         }
 
-        if(ConsultaSolicitudAtencionView.getSolicitudAtencionSeleccionada().getFechaProgramadaRegreso() == null){
-            txtFechaProgramadaRegreso.setText(R.string.lbl_no_aplica);
+        if(ConsultaSolicitudAtencionView.getSolicitudAtencionSeleccionada().getFechaProgramadaRegresoString() == null){
+            txtFechaProgramadaRegreso.setText("");
         }else{
             txtFechaProgramadaRegreso.setText(ConsultaSolicitudAtencionView.getSolicitudAtencionSeleccionada().getFechaProgramadaRegresoString().trim());
         }
 
         if(ConsultaSolicitudAtencionView.getSolicitudAtencionSeleccionada().getEstado() == null
                 || ConsultaSolicitudAtencionView.getSolicitudAtencionSeleccionada().getEstado().trim().equals("")){
-            txtEstado.setText(R.string.lbl_no_aplica);
+            txtEstado.setText("");
         }else{
             txtEstado.setText(ConsultaSolicitudAtencionView.getSolicitudAtencionSeleccionada().getEstado().trim());
         }
 
-        if(ConsultaSolicitudAtencionView.getSolicitudAtencionSeleccionada().getFechaCreado() == null){
-            txtFechaCreado.setText(R.string.lbl_no_aplica);
+        if(ConsultaSolicitudAtencionView.getSolicitudAtencionSeleccionada().getFechaCreadoString() == null){
+            txtFechaCreado.setText("");
         }else{
             txtFechaCreado.setText(ConsultaSolicitudAtencionView.getSolicitudAtencionSeleccionada().getFechaCreadoString().trim());
         }

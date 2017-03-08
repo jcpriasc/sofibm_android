@@ -164,6 +164,8 @@ public class DetalleGiroFragment extends Fragment{
             }
         });
 
+        Toast.makeText(view.getContext(), getActivity().getResources().getString(R.string.toast_scroll), Toast.LENGTH_LONG).show();
+
         return view;
     }
 

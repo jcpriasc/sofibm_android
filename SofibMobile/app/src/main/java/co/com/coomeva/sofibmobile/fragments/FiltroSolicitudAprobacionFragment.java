@@ -35,7 +35,7 @@ import co.com.coomeva.sofibmobile.task.ConexionServicioTask;
 public class FiltroSolicitudAprobacionFragment extends Fragment {
 
     ImageView imgConsultarSolicitudes;
-    Spinner spinnerConvenio;
+    //Spinner spinnerConvenio;
     Spinner spinnerServicio;
     private static String convenio;
     private static String servicio;
@@ -48,20 +48,20 @@ public class FiltroSolicitudAprobacionFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_filtro_solicitud_aprobacion, container, false);
 
         imgConsultarSolicitudes = (ImageView) view.findViewById(R.id.search_action);
-        spinnerConvenio = (Spinner) view.findViewById(R.id.spinner_convenios);
+        //spinnerConvenio = (Spinner) view.findViewById(R.id.spinner_convenios);
         spinnerServicio = (Spinner) view.findViewById(R.id.spinner_servicios);
 
 
         try {
 
-            final SpinnerDTO resultMapConvenio = llenar_spinner(getActivity().getResources().getString(R.string.complement_convenios), "/SAC/ABCD1234/0", "CON");
+           // final SpinnerDTO resultMapConvenio = llenar_spinner(getActivity().getResources().getString(R.string.complement_convenios), "/SAC/ABCD1234/0", "CON");
             final SpinnerDTO resultMapServicio = llenar_spinner(getActivity().getResources().getString(R.string.complement_servicios), "/SAC/ABCD1234", "SERV");
 
-            if (resultMapConvenio != null) {
-                ArrayAdapter<String> adapter = new ArrayAdapter<String>(getActivity(), android.R.layout.simple_spinner_item, resultMapConvenio.getSpinnerArray());
-                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-                spinnerConvenio.setAdapter(adapter);
-            }
+//            if (resultMapConvenio != null) {
+//                ArrayAdapter<String> adapter = new ArrayAdapter<String>(getActivity(), android.R.layout.simple_spinner_item, resultMapConvenio.getSpinnerArray());
+//                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+//                spinnerConvenio.setAdapter(adapter);
+//            }
 
             if (resultMapServicio != null) {
                 ArrayAdapter<String> adapter = new ArrayAdapter<String>(getActivity(), android.R.layout.simple_spinner_item, resultMapServicio.getSpinnerArray());
@@ -75,15 +75,15 @@ public class FiltroSolicitudAprobacionFragment extends Fragment {
 
                     try {
 
-                        String nameConvenio = spinnerConvenio.getSelectedItem().toString();
-                        convenio = resultMapConvenio.getResultMap().get(nameConvenio);
+                        //String nameConvenio = spinnerConvenio.getSelectedItem().toString();
+                       // convenio = resultMapConvenio.getResultMap().get(nameConvenio);
 
                         String nameEstado = spinnerServicio.getSelectedItem().toString();
                         servicio = resultMapServicio.getResultMap().get(nameEstado);
 
 
                         String params = "/SAC/ABCD1234/0/" +
-                                convenio+"/"+
+                                "0/"+
                                 servicio+"/"
                                 + ConsultaSolicitudAtencionView.solicitudAtencionSeleccionada.getNumeroSolicitud() + "/" +tipoAprobacion;
                         if (consultarSolicitudAprobacion(getActivity().getResources().getString(R.string.complement_aprobacion), params, getActivity())) {

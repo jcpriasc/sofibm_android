@@ -218,12 +218,12 @@ public class DetalleNotaCreditoDebitoFragment extends Fragment{
                 for (int x = 0; x < jsonArrayServicios.length(); x++) {
                     JSONObject servicioItem = jsonArrayServicios.getJSONObject(x);
 
-                    String numeroOrdenServicio = (servicioItem.getString("orderServicio") != null && !servicioItem.getString("orderServicio").equals("null")) ? servicioItem.getString("orderServicio"):"";
+                    String numeroOrdenServicio = (servicioItem.getString("ordenServicio") != null && !servicioItem.getString("ordenServicio").equals("null")) ? servicioItem.getString("ordenServicio"):"";
                     String tipoImpuesto = (servicioItem.getString("tipoImpuesto") != null && !servicioItem.getString("tipoImpuesto").equals("null")) ? servicioItem.getString("tipoImpuesto"):"";
                     String servicioServicio = (servicioItem.getString("servicio") != null && !servicioItem.getString("servicio").equals("null")) ? servicioItem.getString("servicio"):"";
                     String porcentaje = (servicioItem.getString("porcentaje") != null && !servicioItem.getString("porcentaje").equals("null")) ? servicioItem.getString("porcentaje"):"";
                     String valorImpuesto = (servicioItem.getString("valorImpuesto") != null && !servicioItem.getString("valorImpuesto").equals("null")) ? servicioItem.getString("valorImpuesto"):"";
-                    String aplicaSeguroHotelero = (servicioItem.getString("aplicaSeguroHotelero") != null && !servicioItem.getString("aplicaSeguroHotelero").equals("null")) ? servicioItem.getString("aplicaSeguroHotelero"):"";
+                    String aplicaSeguroHotelero = (servicioItem.getString("aplicaSeguro") != null && !servicioItem.getString("aplicaSeguro").equals("null")) ? servicioItem.getString("aplicaSeguro"):"";
 
                     ServicioNotaCreditoDebitoDTO servicioDTO = new ServicioNotaCreditoDebitoDTO(numeroOrdenServicio,tipoImpuesto,servicioServicio,porcentaje+"%",Utilities.formatearNumeroTexto(valorImpuesto),aplicaSeguroHotelero);
                     lstsServicios.add(servicioDTO);

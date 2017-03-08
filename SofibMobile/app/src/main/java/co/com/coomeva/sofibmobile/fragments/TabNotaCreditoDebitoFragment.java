@@ -40,9 +40,14 @@ public class TabNotaCreditoDebitoFragment extends Fragment{
            // ((AppCompatActivity) getActivity()).setSupportActionBar(toolbar);
 
             TabLayout tabLayout = (TabLayout) view.findViewById(R.id.tab_layout);
-            tabLayout.addTab(tabLayout.newTab().setText(getResources().getString(R.string.lbl_tab_nota_credito)));
-            tabLayout.addTab(tabLayout.newTab().setText(getResources().getString(R.string.lbl_tab_impuesto)));
-            tabLayout.addTab(tabLayout.newTab().setText(getResources().getString(R.string.lbl_servicio)));
+//            tabLayout.addTab(tabLayout.newTab().setText(getResources().getString(R.string.lbl_tab_nota_credito)));
+//            tabLayout.addTab(tabLayout.newTab().setText(getResources().getString(R.string.lbl_tab_impuesto)));
+//            tabLayout.addTab(tabLayout.newTab().setText(getResources().getString(R.string.lbl_servicio)));
+
+            tabLayout.addTab(tabLayout.newTab().setIcon(R.mipmap.credito));
+            tabLayout.addTab(tabLayout.newTab().setIcon(R.mipmap.impuesto));
+            tabLayout.addTab(tabLayout.newTab().setIcon(R.mipmap.servicio));
+
             tabLayout.setTabGravity(TabLayout.GRAVITY_FILL);
 
             final ViewPager viewPager = (ViewPager) view.findViewById(R.id.pager);

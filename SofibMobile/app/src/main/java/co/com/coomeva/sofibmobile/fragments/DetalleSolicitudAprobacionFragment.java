@@ -77,6 +77,16 @@ public class DetalleSolicitudAprobacionFragment extends Fragment{
         txtNombrePaciente.setText(ConsultaSolicitudAprobacionView.getSolicitudAprobacionSeleccionada().getNombrePaciente());
         txtEstado.setText(ConsultaSolicitudAprobacionView.getSolicitudAprobacionSeleccionada().getEstado());
         txtFechaSolicitud.setText(ConsultaSolicitudAprobacionView.getSolicitudAprobacionSeleccionada().getFechaSolicitudString());
+        txtDescripcion.setText(ConsultaSolicitudAprobacionView.getSolicitudAprobacionSeleccionada().getDescripcion());
+        txtTipoAutorizacion.setText(ConsultaSolicitudAprobacionView.getSolicitudAprobacionSeleccionada().getTipoAutorizacion());
+        txtTipoEntidad.setText(ConsultaSolicitudAprobacionView.getSolicitudAprobacionSeleccionada().getTipoEntidad());
+        txtSolicitante.setText(ConsultaSolicitudAprobacionView.getSolicitudAprobacionSeleccionada().getSolicitante());
+        txtAutoriza.setText(ConsultaSolicitudAprobacionView.getSolicitudAprobacionSeleccionada().getAutoriza());
+        txtFechaAutorizacion.setText(ConsultaSolicitudAprobacionView.getSolicitudAprobacionSeleccionada().getFechaAutorizacionTexto());
+        txtServicio.setText(ConsultaSolicitudAprobacionView.getSolicitudAprobacionSeleccionada().getServicio());
+        txtProveedor.setText(ConsultaSolicitudAprobacionView.getSolicitudAprobacionSeleccionada().getProveedor());
+        txtPrestador.setText(ConsultaSolicitudAprobacionView.getSolicitudAprobacionSeleccionada().getPrestador());
+        txtJustificacion.setText(ConsultaSolicitudAprobacionView.getSolicitudAprobacionSeleccionada().getJustificacion());
 
         btnDetalle.setOnClickListener(new View.OnClickListener() {
             @Override
