@@ -720,9 +720,9 @@ public class OpcionesSecundariasFragment extends Fragment{
                 for (int j = 0; j < respJSONSpinner.length(); j++) {
                     JSONObject obj = respJSONSpinner.getJSONObject(j);
 
-                    String procedimientoSolicitado = obj.getString("procedimientoSolicitado");
-                    String ciudad = obj.getString("ciudad");
-                    String prestadorNombre = obj.getString("prestadorNombre");
+                    String procedimientoSolicitado = (obj.getString("procedimientoSolicitado") != null && !obj.getString("procedimientoSolicitado").equals("null")) ? obj.getString("procedimientoSolicitado"):"";
+                    String ciudad = (obj.getString("ciudad") != null && !obj.getString("ciudad").equals("null")) ? obj.getString("ciudad"):"";
+                    String prestadorNombre = (obj.getString("prestadorNombre") != null && !obj.getString("prestadorNombre").equals("null")) ? obj.getString("prestadorNombre"):"";
 
                     ProcedimientosAdicionalesDTO dto = new ProcedimientosAdicionalesDTO(procedimientoSolicitado, prestadorNombre, ciudad);
                     lstProcedimientosAdicionales.add(dto);
@@ -757,10 +757,10 @@ public class OpcionesSecundariasFragment extends Fragment{
                 for (int j = 0; j < respJSONSpinner.length(); j++) {
                     JSONObject obj = respJSONSpinner.getJSONObject(j);
 
-                    String fechaCita = obj.getString("fechaCita");
-                    String nombreMedico = obj.getString("nombreMedico");
-                    String especialidad = obj.getString("especialidad");
-                    String prestadorSolicitud = obj.getString("prestadorSolicitud");
+                    String fechaCita = (obj.getString("fechaCita") != null && !obj.getString("fechaCita").equals("null")) ? obj.getString("fechaCita"):"";
+                    String nombreMedico = (obj.getString("nombreMedico") != null && !obj.getString("nombreMedico").equals("null")) ? obj.getString("nombreMedico"):"";
+                    String especialidad = (obj.getString("especialidad") != null && !obj.getString("especialidad").equals("null")) ? obj.getString("especialidad"):"";
+                    String prestadorSolicitud = (obj.getString("prestadorSolicitud") != null && !obj.getString("prestadorSolicitud").equals("null")) ? obj.getString("prestadorSolicitud"):"";
 
                     FuncionariosExternosDTO dto = new FuncionariosExternosDTO(prestadorSolicitud,nombreMedico, especialidad, fechaCita);
                     lstFuncionariosExternos.add(dto);
