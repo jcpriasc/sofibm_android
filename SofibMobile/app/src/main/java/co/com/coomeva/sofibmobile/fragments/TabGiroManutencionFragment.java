@@ -38,14 +38,12 @@ public class TabGiroManutencionFragment extends Fragment{
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_tab_giro_manutencion, container, false);
         listViewManutencionAdapter = (ListView) view.findViewById(R.id.lstManutencion);
-        txtBeneficiario = (TextView) view.findViewById(R.id.txtBeneficiario);
         txtMontoDiario = (TextView) view.findViewById(R.id.txtMontoDiario);
 
         tabGiroManutencionAdapter = new TabGiroManutencionAdapter(view.getContext(), TabGiroFragment.giroSeleccionado.getLstManutencion());
         listViewManutencionAdapter.setAdapter(tabGiroManutencionAdapter);
         justifyListViewHeightBasedOnChildren(listViewManutencionAdapter);
 
-        txtBeneficiario.setText(TabGiroFragment.giroSeleccionado.getBeneficiario());
         txtMontoDiario.setText(TabGiroFragment.giroSeleccionado.getMontoDiarioAcompañanteTexto());
 
         return view;

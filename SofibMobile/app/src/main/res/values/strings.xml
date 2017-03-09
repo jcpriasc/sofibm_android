@@ -386,6 +386,7 @@
     <string name="lbl_aviso_cerrar_sesion">¿Estás seguro de que deseas cerrar sesión?</string>
 
     <string name="aviso_usuario">Ingrese el usuario</string>
+
     <string name="aviso_password">Ingrese la contraseña</string>
     <string name="error_autenticacion">No se encontró un usuario registrado con la información ingresada.</string>
 
@@ -396,6 +397,7 @@
 
     <string name="toast_scroll">Por favor, deslice hacia abajo para ver más información</string>
 
+    <string name="lbl_acompañante">Acompañante</string>
 
 
 </resources>

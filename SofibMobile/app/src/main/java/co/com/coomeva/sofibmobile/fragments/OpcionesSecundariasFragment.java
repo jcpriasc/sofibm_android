@@ -795,19 +795,19 @@ public class OpcionesSecundariasFragment extends Fragment{
                 for (int j = 0; j < respJSONSpinner.length(); j++) {
                     JSONObject obj = respJSONSpinner.getJSONObject(j);
 
-                    String facturaNro = obj.getString("facturaNro");
-                    String fechaExpedicion = obj.getString("fechaExpedicion");
-                    String ciudad = obj.getString("ciudad");
-                    String estado = obj.getString("estado");
-                    String fechaRadicacion = obj.getString("fechaRadicacion");
-                    String fechaAprobacion = obj.getString("fechaAprobacion");
-                    String fechaAnulacion = obj.getString("fechaAnulacion");
+                    String facturaNro = (obj.getString("facturaNro") != null && !obj.getString("facturaNro").equals("null")) ? obj.getString("facturaNro"):"";
+                    String fechaExpedicion = (obj.getString("fechaExpedicion") != null && !obj.getString("fechaExpedicion").equals("null")) ? obj.getString("fechaExpedicion"):"";
+                    String ciudad = (obj.getString("ciudad") != null && !obj.getString("ciudad").equals("null")) ? obj.getString("ciudad"):"";
+                    String estado = (obj.getString("estado") != null && !obj.getString("estado").equals("null")) ? obj.getString("estado"):"";
+                    String fechaRadicacion = (obj.getString("fechaRadicacion") != null && !obj.getString("fechaRadicacion").equals("null")) ? obj.getString("fechaRadicacion"):"";
+                    String fechaAprobacion = (obj.getString("fechaAprobacion") != null && !obj.getString("fechaAprobacion").equals("null")) ? obj.getString("fechaAprobacion"):"";
+                    String fechaAnulacion = (obj.getString("fechaAnulacion") != null && !obj.getString("fechaAnulacion").equals("null")) ? obj.getString("fechaAnulacion"):"";
                     String valorIva = (obj.getString("valorIva") != null && !obj.getString("valorIva").equals("null")) ? obj.getString("valorIva"):"";
                     String valorTotalFactura = (obj.getString("valorTotalFactura") != null && !obj.getString("valorTotalFactura").equals("null")) ? obj.getString("valorTotalFactura"):"";
                     String valorTotalPagar = (obj.getString("valorTotalPagar") != null && !obj.getString("valorTotalPagar").equals("null")) ? obj.getString("valorTotalPagar"):"";
-                    String proveedor = obj.getString("proveedor");
-                    String tipoSolicitud = obj.getString("tipoSolicitud");
-                    String consFactura = obj.getString("consFactura");
+                    String proveedor = (obj.getString("proveedor") != null && !obj.getString("proveedor").equals("null")) ? obj.getString("proveedor"):"";
+                    String tipoSolicitud = (obj.getString("tipoSolicitud") != null && !obj.getString("tipoSolicitud").equals("null")) ? obj.getString("tipoSolicitud"):"";
+                    String consFactura = (obj.getString("consFactura") != null && !obj.getString("consFactura").equals("null")) ? obj.getString("consFactura"):"";
 
                     FacturaDTO dto = new FacturaDTO(facturaNro, fechaExpedicion, estado, Utilities.formatearNumeroTexto(valorTotalFactura), ciudad, fechaRadicacion, fechaAprobacion, fechaAnulacion, Utilities.formatearNumeroTexto(valorIva), Utilities.formatearNumeroTexto(valorTotalPagar), proveedor, tipoSolicitud, consFactura);
                     lstFacturaDTO.add(dto);

@@ -135,8 +135,13 @@ public class DetalleNotaCreditoDebitoFragment extends Fragment{
                 String fechaEmision = (obj.getString("fechaEmision") != null && !obj.getString("fechaEmision").equals("null")) ? obj.getString("fechaEmision"):"";
                 String fechaVencimiento = (obj.getString("fechaVencimiento") != null && !obj.getString("fechaVencimiento").equals("null")) ? obj.getString("fechaVencimiento" ):"";
                 String fechaRecibido = (obj.getString("fechaRecibido") != null && !obj.getString("fechaRecibido").equals("null")) ? obj.getString("fechaRecibido"):"";
-                String valorTotalFactura = (obj.getString("valorTotalFactura") != null && !obj.getString("valorTotalFactura").equals("null")) ? obj.getString("valorTotalFactura"):"";
-                String valorTotalPagar = (obj.getString("valorTotalPagar") != null && !obj.getString("valorTotalPagar").equals("null")) ? obj.getString("valorTotalPagar"):"";
+
+                //String valorTotalFactura = (obj.getString("valorTotalFactura") != null && !obj.getString("valorTotalFactura").equals("null")) ? obj.getString("valorTotalFactura"):"";
+                //String valorTotalPagar = (obj.getString("valorTotalPagar") != null && !obj.getString("valorTotalPagar").equals("null")) ? obj.getString("valorTotalPagar"):"";
+
+                String valorTotalFactura = (obj.getString("valorTotalPagar") != null && !obj.getString("valorTotalPagar").equals("null")) ? obj.getString("valorTotalPagar"):"";
+                String valorTotalPagar = (obj.getString("valorTotalFactura") != null && !obj.getString("valorTotalFactura").equals("null")) ? obj.getString("valorTotalFactura"):"";
+
                 String proveedor = (obj.getString("proveedor") != null && !obj.getString("proveedor").equals("null")) ? obj.getString("proveedor" ):"";
                 String fechaExpedicionNota = (obj.getString("fechaExpedicionNota") != null && !obj.getString("fechaExpedicionNota").equals("null")) ? obj.getString("fechaExpedicionNota"):"";
                 String fechaRecibidoCoomevaNota = (obj.getString("fechaRecibidoCoomevaNota") != null && !obj.getString("fechaRecibidoCoomevaNota").equals("null")) ? obj.getString("fechaRecibidoCoomevaNota"):"";

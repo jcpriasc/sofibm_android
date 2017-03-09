@@ -176,6 +176,13 @@ public class GiroView extends AppCompatActivity {
                                     }
                                     break;
                                 case R.id.menu_nota_credito_giro:
+                                    params = "/SAC/ABCD1234/"+ ConsultaSolicitudAtencionView.solicitudAtencionSeleccionada.getNumeroSolicitud();
+                                    if (OpcionesSecundariasFragment.consultarNotasCreditoGiro(getApplicationContext().getResources().getString(R.string.complement_giro_notaCredito), params, GiroView.this)){
+                                        Intent intentNotaCreditoGiros = new Intent(getApplicationContext(), NotaCreditoGiroView.class);
+                                        startActivity(intentNotaCreditoGiros);
+                                    }else {
+                                        throw new Exception(getApplicationContext().getResources().getString(R.string.lbl_sin_resultados));
+                                    }
                                     break;
                                 case R.id.menu_lbl_titulo_facturafactura:
                                     params = "/SAC/ABCD1234/"+ ConsultaSolicitudAtencionView.solicitudAtencionSeleccionada.getNumeroSolicitud();

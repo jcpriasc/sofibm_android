@@ -386,4 +386,7 @@
 
     <string name="toast_scroll">Please scroll down to see more information</string>
 
+    <string name="lbl_acompañante">Companion</string>
+
+
 </resources>

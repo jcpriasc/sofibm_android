@@ -6,7 +6,6 @@
 
 
         <ScrollView
-            xmlns:android="http://schemas.android.com/apk/res/android"
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
             android:fillViewport="true">
@@ -33,22 +32,13 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="@string/lbl_beneficiario"
+                            android:text="@string/lbl_acompañante"
                             android:textStyle="bold"
                             android:textColor="@color/colorTextTitle"
                             android:textSize="@dimen/font_size_subtitle"
                             android:layout_marginTop="10dp"
                             android:layout_marginLeft="10dp"/>
 
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:textAppearance="?android:attr/textAppearanceMedium"
-                            android:text="@string/lbl_beneficiario"
-                            android:textSize="@dimen/font_size_text"
-                            android:id="@+id/txtBeneficiario"
-                            android:layout_marginLeft="10dp"
-                            android:layout_marginTop="10dp" />
                     </TableRow>
 
                     <TableRow
