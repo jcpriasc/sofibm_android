@@ -37,7 +37,7 @@ public class TabSolicitudAprobacionFragment extends Fragment{
 //            tabLayout.addTab(tabLayout.newTab().setText(getResources().getString(R.string.lbl_tipo_aprobacion)));
 
             tabLayout.addTab(tabLayout.newTab().setIcon(R.mipmap.info_general));
-            tabLayout.addTab(tabLayout.newTab().setIcon(R.mipmap.datosbasicos));
+            tabLayout.addTab(tabLayout.newTab().setIcon(R.mipmap.procedimiento));
             tabLayout.addTab(tabLayout.newTab().setIcon(R.mipmap.tipo_aprobacion));
 
             tabLayout.setTabGravity(TabLayout.GRAVITY_FILL);

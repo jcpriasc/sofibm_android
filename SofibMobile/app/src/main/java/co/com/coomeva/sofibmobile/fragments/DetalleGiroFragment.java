@@ -204,9 +204,9 @@ public class DetalleGiroFragment extends Fragment{
                 ///////////////////////////////////////////////////////////////////////////////
                 JSONArray jsonArraManutencios = obj.optJSONArray("manutencion");
 
-                if(lstManutencion == null){
+//                if(lstManutencion == null){
                     lstManutencion = new ArrayList<ManutencionDTO>();
-                }
+//                }
 
                 for (int x = 0; x < jsonArraManutencios.length(); x++) {
                     JSONObject manutencion = jsonArraManutencios.getJSONObject(x);
@@ -227,9 +227,9 @@ public class DetalleGiroFragment extends Fragment{
 
                 JSONArray jsonArrayConcepto = obj.optJSONArray("concepto");
 
-                if(lstConceptos == null){
+//                if(lstConceptos == null){
                     lstConceptos = new ArrayList<ConceptosDTO>();
-                }
+//                }
 
                 Double subTotalConcepto = 0d;
                 Double totalConcepto = 0d;
@@ -263,9 +263,9 @@ public class DetalleGiroFragment extends Fragment{
                // JSONArray jsonArrayHistorico = jsonHistorico.optJSONArray("concepto");
 
 
-                if(lstHistoricoGiro == null){
+//                if(lstHistoricoGiro == null){
                     lstHistoricoGiro = new ArrayList<HistoricoGirosDTO>();
-                }
+//                }
 
                 if(jsonHistorico != null) {
 

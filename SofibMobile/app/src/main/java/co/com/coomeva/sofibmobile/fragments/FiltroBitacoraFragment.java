@@ -270,7 +270,7 @@ public class FiltroBitacoraFragment extends Fragment{
 
 
         }catch (Exception e){
-            Toast.makeText(getActivity(),e.getMessage(), Toast.LENGTH_LONG).show();
+            //Toast.makeText(getActivity(),e.getMessage(), Toast.LENGTH_LONG).show();
         }
         return spinnerDTOs ;
     }

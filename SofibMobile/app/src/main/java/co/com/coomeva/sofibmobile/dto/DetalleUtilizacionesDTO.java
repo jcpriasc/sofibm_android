@@ -48,6 +48,16 @@ public class DetalleUtilizacionesDTO implements Serializable {
         this.fechaCreadoTexto = fechaCreadoTexto;
     }
 
+    public DetalleUtilizacionesDTO(String tipoSeguro, String numeroSeguro, String prestadorProveedor, String concepto, Double totalUtilizaciones, Double totalGlosa, String fechaCreadoTexto) {
+        this.tipoSeguro = tipoSeguro;
+        this.numeroSeguro = numeroSeguro;
+        this.prestadorProveedor = prestadorProveedor;
+        this.concepto = concepto;
+        this.totalUtilizaciones = totalUtilizaciones;
+        this.totalGlosa = totalGlosa;
+        this.fechaCreadoTexto = fechaCreadoTexto;
+    }
+
     public String getTipoSeguro() {
         return tipoSeguro;
     }

@@ -47,6 +47,15 @@ public class AdministracionesDTO implements Serializable {
         this.fechaCreadoAdministracionesTexto = fechaCreadoAdministracionesTexto;
     }
 
+    public AdministracionesDTO(Double totalAdministraciones, Double trm, Double subTotal, String porcentajeIvaTexto, String valorIvaTexto, String fechaCreadoAdministracionesTexto) {
+        this.totalAdministraciones = totalAdministraciones;
+        this.trm = trm;
+        this.subTotal = subTotal;
+        this.porcentajeIvaTexto = porcentajeIvaTexto;
+        this.valorIvaTexto = valorIvaTexto;
+        this.fechaCreadoAdministracionesTexto = fechaCreadoAdministracionesTexto;
+    }
+
     public Double getTotalAdministraciones() {
         return totalAdministraciones;
     }

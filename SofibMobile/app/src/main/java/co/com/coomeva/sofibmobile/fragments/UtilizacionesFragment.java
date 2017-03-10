@@ -125,8 +125,18 @@ public class UtilizacionesFragment extends Fragment{
                     String totalGlosa = (utilizaciones.getString("totalGlosa") != null && !utilizaciones.getString("totalGlosa").equals("null")) ? utilizaciones.getString("totalGlosa"):"";
                     String fechaCreado = (utilizaciones.getString("fechaCreado") != null && !utilizaciones.getString("fechaCreado").equals("null")) ? utilizaciones.getString("fechaCreado"):"";
 
+                    Double totalDouble = null;
+                    Double totalGlosaDouble = null;
+
+                    if (total!=null && !total.equals("")){
+                        totalDouble = new Double(total);
+                    }
+                    if (totalGlosa!=null && !totalGlosa.equals("")){
+                        totalGlosaDouble = new Double(totalGlosa);
+                    }
+
                     DetalleUtilizacionesDTO utilizacionesDTO = new DetalleUtilizacionesDTO(tipoSeguro,seguroNumero,prestador,concepto,
-                            total,totalGlosa,fechaCreado);
+                            totalDouble,totalGlosaDouble,fechaCreado);
                     lstDetalleUtilizacionesDTO.add(utilizacionesDTO);
                 }
 
@@ -148,7 +158,25 @@ public class UtilizacionesFragment extends Fragment{
                     String valorIva = (administracion.getString("valorIva") != null && !administracion.getString("valorIva").equals("null")) ? administracion.getString("valorIva"):"";
                     String fechaCreado = (administracion.getString("fechaCreado") != null && !administracion.getString("fechaCreado").equals("null")) ? administracion.getString("fechaCreado"):"";
 
-                    AdministracionesDTO administracionesDTO = new AdministracionesDTO(total,trm,subtotal,porcentaje+"%",Utilities.formatearNumeroTexto(valorIva),fechaCreado);
+
+
+                    Double totalAdministraciones=null;
+                    Double trmD=null;
+                    Double subTotalD=null;
+
+                    if (total!=null && !total.equals("")){
+                        totalAdministraciones = new Double(total);
+                    }
+
+                    if (trm!=null && !trm.equals("")){
+                        trmD = new Double(trm);
+                    }
+
+                    if (subtotal!=null && !subtotal.equals("")){
+                        subTotalD = new Double(subtotal);
+                    }
+
+                    AdministracionesDTO administracionesDTO = new AdministracionesDTO(totalAdministraciones,trmD,subTotalD,porcentaje+"%",Utilities.formatearNumeroTexto(valorIva),fechaCreado);
 
                     lstAdministraciones.add(administracionesDTO);
                 }

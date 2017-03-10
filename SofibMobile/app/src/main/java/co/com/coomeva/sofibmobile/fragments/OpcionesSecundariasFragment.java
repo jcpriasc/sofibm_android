@@ -806,7 +806,7 @@ public class OpcionesSecundariasFragment extends Fragment{
                     String valorTotalFactura = (obj.getString("valorTotalFactura") != null && !obj.getString("valorTotalFactura").equals("null")) ? obj.getString("valorTotalFactura"):"";
                     String valorTotalPagar = (obj.getString("valorTotalPagar") != null && !obj.getString("valorTotalPagar").equals("null")) ? obj.getString("valorTotalPagar"):"";
                     String proveedor = (obj.getString("proveedor") != null && !obj.getString("proveedor").equals("null")) ? obj.getString("proveedor"):"";
-                    String tipoSolicitud = (obj.getString("tipoSolicitud") != null && !obj.getString("tipoSolicitud").equals("null")) ? obj.getString("tipoSolicitud"):"";
+                    String tipoSolicitud = (obj.getString("tipoServicio") != null && !obj.getString("tipoServicio").equals("null")) ? obj.getString("tipoServicio"):"";
                     String consFactura = (obj.getString("consFactura") != null && !obj.getString("consFactura").equals("null")) ? obj.getString("consFactura"):"";
 
                     FacturaDTO dto = new FacturaDTO(facturaNro, fechaExpedicion, estado, Utilities.formatearNumeroTexto(valorTotalFactura), ciudad, fechaRadicacion, fechaAprobacion, fechaAnulacion, Utilities.formatearNumeroTexto(valorIva), Utilities.formatearNumeroTexto(valorTotalPagar), proveedor, tipoSolicitud, consFactura);
