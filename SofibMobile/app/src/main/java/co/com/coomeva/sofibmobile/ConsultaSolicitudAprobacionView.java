@@ -151,8 +151,11 @@ public class ConsultaSolicitudAprobacionView extends AppCompatActivity {
                                 case R.id.menu_consultar_solicitudes_aprobacion:
                                     if( LoginView.usuarioSesion != null && LoginView.usuarioSesion.getTipoUsuario().equals( getApplicationContext().getResources().getString(R.string.usuario_interno)) ){
                                         FiltroSolicitudAprobacionFragment.tipoAprobacion = "m";
-                                        Intent intentConsultarSolicitudesAprobacionNoAsistencial = new Intent(getApplicationContext(), ConsultaSolicitudAprobacionView.class);
-                                        startActivity(intentConsultarSolicitudesAprobacionNoAsistencial);
+                                        //Intent intentConsultarSolicitudesAprobacionNoAsistencial = new Intent(getApplicationContext(), ConsultaSolicitudAprobacionView.class);
+                                        //startActivity(intentConsultarSolicitudesAprobacionNoAsistencial);
+                                        getSupportFragmentManager().beginTransaction()
+                                                .add(R.id.fragment_container_consulta_solicitud_aprobacion, new FiltroSolicitudAprobacionFragment(), "FiltroSolicitudAprobacionFragment")
+                                                .commit();
 
                                     }else{
                                         params = "/SAC/ABCD1234/0/0/0/"+ ConsultaSolicitudAtencionView.solicitudAtencionSeleccionada.getNumeroSolicitud()+"/m";
@@ -235,9 +238,13 @@ public class ConsultaSolicitudAprobacionView extends AppCompatActivity {
                                     break;
                                 case R.id.menu_solicitudes_aprobacion_logistica:
                                     if( LoginView.usuarioSesion != null && LoginView.usuarioSesion.getTipoUsuario().equals( getApplicationContext().getResources().getString(R.string.usuario_interno)) ){
+
                                         FiltroSolicitudAprobacionFragment.tipoAprobacion = "l";
-                                        Intent intentConsultarSolicitudesAprobacionLogis= new Intent(getApplicationContext(), ConsultaSolicitudAprobacionView.class);
-                                        startActivity(intentConsultarSolicitudesAprobacionLogis);
+//                                        Intent intentConsultarSolicitudesAprobacionLogis= new Intent(getApplicationContext(), ConsultaSolicitudAprobacionView.class);
+//                                        startActivity(intentConsultarSolicitudesAprobacionLogis);
+                                        getSupportFragmentManager().beginTransaction()
+                                                .add(R.id.fragment_container_consulta_solicitud_aprobacion, new FiltroSolicitudAprobacionFragment(), "FiltroSolicitudAprobacionFragment")
+                                                .commit();
 
                                     }else{
                                         params = "/SAC/ABCD1234/0/0/0/"+ ConsultaSolicitudAtencionView.solicitudAtencionSeleccionada.getNumeroSolicitud()+"/l";
