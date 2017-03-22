@@ -53,6 +53,18 @@ public class InformacionFacturaDTO implements Serializable{
         this.tipoPago = tipoPago;
     }
 
+    public InformacionFacturaDTO(String proveedor, String numeroOrdenServicio, String servicio, String fechaInicioTexto, String fechaFinalizacionTexto, Double valorServicio, Double seguroHotelero, String tipoPago) {
+        this.proveedor = proveedor;
+        this.numeroOrdenServicio = numeroOrdenServicio;
+        this.servicio = servicio;
+        this.fechaInicioTexto = fechaInicioTexto;
+        this.fechaFinalizacionTexto = fechaFinalizacionTexto;
+        this.valorServicio = valorServicio;
+        this.seguroHotelero = seguroHotelero;
+        this.tipoPago = tipoPago;
+    }
+
+
     public String getProveedor() {
         return proveedor;
     }

@@ -161,7 +161,7 @@ public class DetalleFacturaFragment extends Fragment{
                     String seguroHotelero = (factura.getString("seguroHotelero") != null && !factura.getString("seguroHotelero").equals("null")) ? factura.getString("seguroHotelero"):"";
                     String tipoPago = (factura.getString("tipoPago") != null && !factura.getString("tipoPago").equals("null")) ? factura.getString("tipoPago"):"";
 
-                    InformacionFacturaDTO facturaDTO = new InformacionFacturaDTO(proveedor, ordenServicio, servicio, fechaInicio, fechaFinalizaServicio, Utilities.formatearNumeroTexto(valorServicio), seguroHotelero, tipoPago);
+                    InformacionFacturaDTO facturaDTO = new InformacionFacturaDTO(proveedor, ordenServicio, servicio, fechaInicio, fechaFinalizaServicio, Utilities.formatearNumeroTexto(valorServicio), Utilities.formatearNumeroTexto(seguroHotelero), tipoPago);
 
                     if (lstInformacionFactura==null){
                         lstInformacionFactura = new ArrayList<>();
@@ -183,7 +183,11 @@ public class DetalleFacturaFragment extends Fragment{
                     String valorImpuesto = (impuesto.getString("valorImpuesto") != null && !impuesto.getString("valorImpuesto").equals("null")) ? impuesto.getString("valorImpuesto"):"";
                     String aplicaSeguro = (impuesto.getString("aplicaSeguro") != null && !impuesto.getString("aplicaSeguro").equals("null")) ? impuesto.getString("aplicaSeguro"):"";
 
-                    ImpuestoFacturaDTO impuestoFacturaDTO = new ImpuestoFacturaDTO(ordenServicio, tipoImpuesto, servicio, porcentaje, valorImpuesto, aplicaSeguro);
+
+                    porcentaje+="%";
+
+
+                    ImpuestoFacturaDTO impuestoFacturaDTO = new ImpuestoFacturaDTO(ordenServicio, tipoImpuesto, servicio, porcentaje, Utilities.formatearNumeroTexto(valorImpuesto), aplicaSeguro);
 
                     if (lstImpuestoFactura==null){
                         lstImpuestoFactura = new ArrayList<>();
