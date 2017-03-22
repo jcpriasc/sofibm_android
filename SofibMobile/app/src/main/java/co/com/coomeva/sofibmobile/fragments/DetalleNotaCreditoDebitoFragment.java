@@ -172,9 +172,9 @@ public class DetalleNotaCreditoDebitoFragment extends Fragment{
                 ///////////////////////////////////////////////////////////////////////////////
                 JSONArray jsonArrayImpuestos = obj.optJSONArray("facturas");
 
-                if(lstImpuestos == null){
-                    lstImpuestos = new ArrayList<ImpuestoNotaCreditoDebitoDTO>();
-                }
+//                if(lstImpuestos == null){
+                lstImpuestos = new ArrayList<ImpuestoNotaCreditoDebitoDTO>();
+//                }
 
                 Double totalValorNota =0d;
                 Double totalServicio=0d;
@@ -215,9 +215,9 @@ public class DetalleNotaCreditoDebitoFragment extends Fragment{
 
                 JSONArray jsonArrayServicios = obj.optJSONArray("impuestos");
 
-                if(lstsServicios == null){
-                    lstsServicios = new ArrayList<ServicioNotaCreditoDebitoDTO>();
-                }
+//                if(lstsServicios == null){
+                lstsServicios = new ArrayList<ServicioNotaCreditoDebitoDTO>();
+//                }
 
 
                 for (int x = 0; x < jsonArrayServicios.length(); x++) {

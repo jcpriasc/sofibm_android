@@ -111,9 +111,10 @@ public class Utilities {
 
         if(numero!=null) {
 
-            if(numero < 0){
+            if(numero == 0d){
+                return "$0.00";
+            }else if(numero < 0){
                 numero = numero * -1;
-
                 return "($" + formatoMoneda.format(numero)+")";
             }else{
                 return "$" + formatoMoneda.format(numero);
@@ -121,7 +122,7 @@ public class Utilities {
 
 
         }else{
-            return "$0";
+            return "$0.00";
         }
     }
 

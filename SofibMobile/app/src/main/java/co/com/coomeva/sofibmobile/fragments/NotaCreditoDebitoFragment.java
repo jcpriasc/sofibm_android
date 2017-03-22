@@ -36,7 +36,6 @@ public class NotaCreditoDebitoFragment extends Fragment{
         View view = inflater.inflate(R.layout.fragment_nota_credito_debito, container, false);
 
         listViewNotaCreditoAdapter = (ListView) view.findViewById(R.id.lstNotaCreditoDebito);
-
         lstNotaCreditoDebitoDTO = OpcionesSecundariasFragment.lstNotaCreditoDebito;
 
         notaCreditoDebitoAdapter = new NotaCreditoDebitoAdapter(view.getContext(), lstNotaCreditoDebitoDTO);

@@ -351,7 +351,7 @@ public class OpcionesSecundariasFragment extends Fragment{
             String[] result = new String[respJSONSpinner.length()];
 
             if (result!=null && result.length>0){
-                lstNotaCreditoGiro = new ArrayList<>();
+                lstNotaCreditoDebito = new ArrayList<>();
                 respuesta = true;
                 for (int j = 0; j < respJSONSpinner.length(); j++) {
                     JSONObject obj = respJSONSpinner.getJSONObject(j);
