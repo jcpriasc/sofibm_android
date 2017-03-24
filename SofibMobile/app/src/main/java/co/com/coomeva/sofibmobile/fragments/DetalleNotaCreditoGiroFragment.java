@@ -52,7 +52,7 @@ public class DetalleNotaCreditoGiroFragment extends Fragment{
             txtIdGiroAsociado.setText(getResources().getString(R.string.lbl_id_giro_asociado) + ": "+NotaCreditoGiroFragment.notaCreditoGiroSeleccionado.getIdGiroAsociado());
             txtNombreBeneficiario.setText(NotaCreditoGiroFragment.notaCreditoGiroSeleccionado.getNombreBeneficiario());
             txtTipoGiro.setText(NotaCreditoGiroFragment.notaCreditoGiroSeleccionado.getTipoGiro());
-            txtCiudad.setText(NotaCreditoGiroFragment.notaCreditoGiroSeleccionado.getCiudad());
+            txtCiudad.setText(getResources().getString(R.string.lbl_ciudad) + ": "+NotaCreditoGiroFragment.notaCreditoGiroSeleccionado.getCiudad());
             txtTipoBeneficiario.setText(NotaCreditoGiroFragment.notaCreditoGiroSeleccionado.getTipoBeneficiario());
             txtEstado.setText(NotaCreditoGiroFragment.notaCreditoGiroSeleccionado.getEstado());
             txtValorNota.setText(NotaCreditoGiroFragment.notaCreditoGiroSeleccionado.getValorNotaTexto());
