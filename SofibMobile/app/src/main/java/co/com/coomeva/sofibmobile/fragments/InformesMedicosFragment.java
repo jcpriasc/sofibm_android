@@ -172,6 +172,7 @@ public class InformesMedicosFragment extends Fragment{
                         String dadoAlta = (obj.getString("dadoAlta") != null && !obj.getString("dadoAlta").equals("null")) ? obj.getString("dadoAlta") : "";
                         String fallecido = (obj.getString("fallecido") != null && !obj.getString("fallecido").equals("null")) ? obj.getString("fallecido") : "";
                         String fechaHospitalizacion = (obj.getString("fechaInicioHospitaliza") != null && !obj.getString("fechaInicioHospitaliza").equals("null")) ? obj.getString("fechaInicioHospitaliza") : "";
+                        String fechaFinHospitalizacion = (obj.getString("fechaFinHospitaliza") != null && !obj.getString("fechaFinHospitaliza").equals("null")) ? obj.getString("fechaFinHospitaliza") : "";
                         String id = (obj.getString("fechaInicioHospitaliza") != null && !obj.getString("fechaInicioHospitaliza").equals("null")) ? obj.getString("fechaInicioHospitaliza") : "";
 
 
@@ -181,6 +182,7 @@ public class InformesMedicosFragment extends Fragment{
                         detalleInformeMedicoSeleccionado.setDadoAlta(dadoAlta);
                         detalleInformeMedicoSeleccionado.setFallecido(fallecido);
                         detalleInformeMedicoSeleccionado.setFechaHospitalizacion(fechaHospitalizacion);
+                        detalleInformeMedicoSeleccionado.setFechaFinHospitalizacion(fechaFinHospitalizacion);
 
                         ///////////////////////////////////////////////////////////////////////////////
                         JSONArray jsonArrayMedicamentos = obj.optJSONArray("medicamentoNombre");

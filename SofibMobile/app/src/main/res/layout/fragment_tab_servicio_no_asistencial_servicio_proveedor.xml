@@ -4,7 +4,7 @@
         xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto">
 
-
+Fecha y Fecha Final (Tentativa)
         <ScrollView
             xmlns:android="http://schemas.android.com/apk/res/android"
             android:layout_width="fill_parent"
@@ -92,13 +92,59 @@
 
                     <TableRow
                         android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/lbl_ubicacion"
+                            android:textStyle="bold"
+                            android:textColor="@color/colorTextTitle"
+                            android:textSize="@dimen/font_size_subtitle"
+                            android:layout_marginLeft="10dp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?android:attr/textAppearanceMedium"
+                            android:text="@string/lbl_ubicacion"
+                            android:textSize="@dimen/font_size_text"
+                            android:id="@+id/txtUbicacion"
+                            android:layout_marginLeft="10dp" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/lbl_fecha"
+                            android:textStyle="bold"
+                            android:textColor="@color/colorTextTitle"
+                            android:textSize="@dimen/font_size_subtitle"
+                            android:layout_marginLeft="10dp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?android:attr/textAppearanceMedium"
+                            android:text="@string/lbl_fecha"
+                            android:textSize="@dimen/font_size_text"
+                            android:id="@+id/txtFecha"
+                            android:layout_marginLeft="10dp" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_marginBottom="15dp">
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="@string/lbl_fecha"
+                            android:text="@string/lbl_fecha_tentativa"
                             android:textStyle="bold"
                             android:textColor="@color/colorTextTitle"
                             android:textSize="@dimen/font_size_subtitle"
@@ -108,9 +154,9 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:textAppearance="?android:attr/textAppearanceMedium"
-                            android:text="@string/lbl_fecha"
+                            android:text="@string/lbl_fecha_tentativa"
                             android:textSize="@dimen/font_size_text"
-                            android:id="@+id/txtFecha"
+                            android:id="@+id/txtFechaTentativa"
                             android:layout_marginLeft="10dp"
                             android:layout_marginBottom="15dp" />
                     </TableRow>

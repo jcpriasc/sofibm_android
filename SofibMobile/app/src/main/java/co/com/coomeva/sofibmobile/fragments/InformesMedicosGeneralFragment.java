@@ -35,6 +35,7 @@ public class InformesMedicosGeneralFragment extends Fragment{
     private TextView textDadoAlta;
     private TextView textFallecio;
     private TextView textFechaHospitalizacion;
+    private TextView textFechaFinHospitalizacion;
 
     private DetalleInformeMedicoDTO detalleInformeMedicoSeleccionado;
 
@@ -50,6 +51,7 @@ public class InformesMedicosGeneralFragment extends Fragment{
         textDadoAlta = (TextView) view.findViewById(R.id.textDadoAlta);
         textFallecio = (TextView) view.findViewById(R.id.textFallecio);
         textFechaHospitalizacion = (TextView) view.findViewById(R.id.textFechaHospitalizacion);
+        textFechaFinHospitalizacion = (TextView) view.findViewById(R.id.textFechaFinHospitalizacion);
 
         detalleInformeMedicoSeleccionado = InformesMedicosFragment.detalleInformeMedicoSeleccionado;
 
@@ -76,6 +78,7 @@ public class InformesMedicosGeneralFragment extends Fragment{
         textDadoAlta.setText(detalleInformeMedicoSeleccionado.getDadoAlta());
         textFallecio.setText(detalleInformeMedicoSeleccionado.getFallecido());
         textFechaHospitalizacion.setText(detalleInformeMedicoSeleccionado.getFechaHospitalizacion());
+        textFechaFinHospitalizacion.setText(detalleInformeMedicoSeleccionado.getFechaFinHospitalizacion());
 
         documentosMedicosList = detalleInformeMedicoSeleccionado.getLstDocumentos();
 

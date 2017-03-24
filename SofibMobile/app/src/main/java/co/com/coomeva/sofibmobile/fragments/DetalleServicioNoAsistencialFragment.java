@@ -123,6 +123,8 @@ public class DetalleServicioNoAsistencialFragment extends Fragment{
                 String proveedor = (obj.getString("proveedor") != null && !obj.getString("proveedor").equals("null")) ? obj.getString("proveedor"):"";
                 String servicio = (obj.getString("servicio") != null && !obj.getString("servicio").equals("null")) ? obj.getString("servicio"):"";
                 String fecha = (obj.getString("fecha") != null && !obj.getString("fecha").equals("null")) ? obj.getString("fecha" ):"";
+                String ubicacion = (obj.getString("ubicacionDestino") != null && !obj.getString("ubicacionDestino").equals("null")) ? obj.getString("ubicacionDestino" ):"";
+                String fechaTentativa = (obj.getString("fechaFinTentativa") != null && !obj.getString("fechaFinTentativa").equals("null")) ? obj.getString("fechaFinTentativa" ):"";
                 String descripcionYRestricciones = (obj.getString("descripcionYRestricciones") != null && !obj.getString("descripcionYRestricciones").equals("null")) ? obj.getString("descripcionYRestricciones"):"";
 
                 JSONArray json_array = obj.optJSONArray("detalle");
@@ -142,7 +144,8 @@ public class DetalleServicioNoAsistencialFragment extends Fragment{
                 }
 
                 servicioSeleccionado = new DetalleServicioNoAsistencialDTO(proveedor,servicio,fecha,descripcionYRestricciones,lstServiciosAdicionales);
-
+                servicioSeleccionado.setFechaTentativaTexto(fechaTentativa);
+                servicioSeleccionado.setUbicacion(ubicacion);
 
             }
 

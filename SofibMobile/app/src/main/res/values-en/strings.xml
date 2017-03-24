@@ -123,6 +123,9 @@
     <string name="lbl_tab_documentacion_servicio">Documentation</string>
     <string name="lbl_tab_servicios_adicionados">Added Services</string>
     <string name="lbl_fecha">Date</string>
+    <string name="lbl_fecha_tentativa">Final Date(Tentative)</string>
+    <string name="lbl_ubicacion">Location Destination</string>
+
     <string name="lbl_descripcion_restriccion">Description and Restrictions</string>
     <string name="lbl_titulo_servicio_proveedor">Request and proviers information</string>
     <string name="lbl_titulo_documentacion_servicio">Documentation of the requested service</string>
@@ -262,6 +265,7 @@
     <string name="lbl_evolucion">Patient evolutions</string>
     <string name="lbl_tipo_paciente">Patient Type</string>
     <string name="lbl_fecha_hospitalizacion">Date</string>
+    <string name="lbl_fecha_fin_hospitalizacion">End Date</string>
 
     <!-- Strings Funcionarios Externos-->
     <string name="lbl_funcionarios_externos">External Functionary(Dating)</string>

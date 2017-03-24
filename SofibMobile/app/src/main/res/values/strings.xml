@@ -267,6 +267,7 @@
     <string name="lbl_evolucion">Evolución del paciente</string>
     <string name="lbl_tipo_paciente">Tipo de paciente</string>
     <string name="lbl_fecha_hospitalizacion">Fecha Inicio Hopitalización</string>
+    <string name="lbl_fecha_fin_hospitalizacion">Fecha Fin Hopitalización</string>
 
     <!-- Strings Procedimientos Adicionales-->
     <string name="lbl_procedimientos_adicionales">Procedimientos Adicionales</string>
@@ -312,6 +313,8 @@
     <string name="lbl_tab_nota_credito">Nota Crédito</string>
 
     <string name="lbl_fecha">Fecha</string>
+    <string name="lbl_fecha_tentativa">Fecha Final (Tentativa)</string>
+    <string name="lbl_ubicacion">Ubicación Destino</string>
     <string name="lbl_cargando">Un momento por favor...</string>
 
     <string name="lbl_informacion_general">Información General</string>

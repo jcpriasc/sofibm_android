@@ -15,6 +15,8 @@ public class DetalleServicioNoAsistencialDTO implements Serializable {
     private String servicio;
     private Date fecha;
     private String fechaTexto;
+    private String ubicacion;
+    private String fechaTentativaTexto;
     private String descripcionRestriccion;
     private List<ServicioAdicionalDTO> lstServiciosAdicionales;
 
@@ -78,5 +80,21 @@ public class DetalleServicioNoAsistencialDTO implements Serializable {
 
     public void setLstServiciosAdicionales(List<ServicioAdicionalDTO> lstServiciosAdicionales) {
         this.lstServiciosAdicionales = lstServiciosAdicionales;
+    }
+
+    public String getUbicacion() {
+        return ubicacion;
+    }
+
+    public void setUbicacion(String ubicacion) {
+        this.ubicacion = ubicacion;
+    }
+
+    public String getFechaTentativaTexto() {
+        return fechaTentativaTexto;
+    }
+
+    public void setFechaTentativaTexto(String fechaTentativaTexto) {
+        this.fechaTentativaTexto = fechaTentativaTexto;
     }
 }

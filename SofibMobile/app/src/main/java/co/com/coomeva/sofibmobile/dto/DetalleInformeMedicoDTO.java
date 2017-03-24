@@ -14,6 +14,7 @@ public class DetalleInformeMedicoDTO implements Serializable {
     private String dadoAlta;
     private String fallecido;
     private String fechaHospitalizacion;
+    private String fechaFinHospitalizacion;
     private List<DocumentosMedicosDTO> lstDocumentos;
     private List<DescipcionDTO> lstProcedimientos;
     private List<DescipcionDTO> lstMedicina;
@@ -104,5 +105,13 @@ public class DetalleInformeMedicoDTO implements Serializable {
 
     public void setLstMedicina(List<DescipcionDTO> lstMedicina) {
         this.lstMedicina = lstMedicina;
+    }
+
+    public String getFechaFinHospitalizacion() {
+        return fechaFinHospitalizacion;
+    }
+
+    public void setFechaFinHospitalizacion(String fechaFinHospitalizacion) {
+        this.fechaFinHospitalizacion = fechaFinHospitalizacion;
     }
 }

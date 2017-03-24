@@ -17,7 +17,9 @@ public class TabServicioProveedorServicioNoAsistencialFragment extends Fragment{
 
     private TextView txtProveedor;
     private TextView txtServicio;
+    private TextView txtUbicacion;
     private TextView txtFecha;
+    private TextView txtFechaTentativa;
 
     @Nullable
     @Override
@@ -26,11 +28,15 @@ public class TabServicioProveedorServicioNoAsistencialFragment extends Fragment{
 
         txtProveedor = (TextView) view.findViewById(R.id.txtProveedor);
         txtServicio = (TextView) view.findViewById(R.id.txtServicio);
+        txtUbicacion = (TextView) view.findViewById(R.id.txtUbicacion);
         txtFecha = (TextView) view.findViewById(R.id.txtFecha);
+        txtFechaTentativa = (TextView) view.findViewById(R.id.txtFechaTentativa);
 
         txtProveedor.setText(DetalleTabServicioNoAsistencialFragment.servicioSeleccionado.getProveedor());
         txtServicio.setText(DetalleTabServicioNoAsistencialFragment.servicioSeleccionado.getServicio());
         txtFecha.setText(DetalleTabServicioNoAsistencialFragment.servicioSeleccionado.getFechaTexto());
+        txtUbicacion.setText(DetalleTabServicioNoAsistencialFragment.servicioSeleccionado.getUbicacion());
+        txtFechaTentativa.setText(DetalleTabServicioNoAsistencialFragment.servicioSeleccionado.getFechaTentativaTexto());
         return view;
     }
 }
