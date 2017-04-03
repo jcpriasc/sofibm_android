@@ -14,6 +14,38 @@
     <string name="lbl_seleccionar_ciudad">Select City</string>
 
 
+    <!-- Roles Medico  -->
+    <string-array name="roles_medicos">
+        <item>SOFIB_COORDINADOR_MEDICO_NI</item>
+        <item>SOFIB_AUX_SERV_AMB</item>
+        <item>SOFIB_AUDITOR_MEDICO</item>
+        <item>SOFIB_AUX_CRAUH</item>
+        <item>SOFIB_FUN_EXT_MED</item>
+        <item>SOFIB_MED_ESP_ISLA</item>
+        <item>SOFIB_COL_MED_ASEG</item>
+        <item>SOFIB_ANA_MEDICO</item>
+
+    </string-array>
+
+    <!-- Roles Logistico  -->
+    <string-array name="roles_logistico">
+        <item>SOFIB_FUN_GIRO</item>
+        <item>SOFIB_ANALISTA_FINANCIERO</item>
+        <item>SOFIB_ANA_CUE_MED</item>
+        <item>SOFIB_ANALISTA_CARTERA</item>
+        <item>SOFIB_COL_ASEG</item>
+        <item>SOFIB_ANA_LOGISTICA</item>
+    </string-array>
+
+    <!-- Roles Administrador  -->
+    <string-array name="roles_administrador">
+        <item>SOFIB_SOPORTE</item>
+        <item>SOFIB_DIRECTOR_NACIONAL</item>
+        <item>SOFIB_COORDINADOR_NACIONAL</item>
+        <item>SOFIB_SOP_TEC</item>
+        <item>SOFIB_ADMIN</item>
+    </string-array>
+
     <string-array name="convenio_array">
         <item>Select Contract</item>
         <item>UTILITY SERVICES - Cali</item>
@@ -395,5 +427,6 @@
 
     <string name="lbl_acompañante">Companion</string>
 
+    <string name="error_rol">The entered user does not have an assigned role</string>
 
 </resources>

@@ -32,6 +32,13 @@ public class LoginView extends AppCompatActivity {
 
     public static Usuario usuarioSesion;
     private String nomUsuario;
+
+    private static String[] rolesUsuario = null;
+
+    private String[] arrayMedico = null;
+    private String[] arrayLogistico = null;
+    private String[] arrayAdministrador = null;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
@@ -44,8 +51,6 @@ public class LoginView extends AppCompatActivity {
             List<Usuario> usuariosEcontrados = datos.obtenerUsuarios();
             if (usuariosEcontrados!=null && !usuariosEcontrados.isEmpty()) {
                 usuarioSesion = usuariosEcontrados.get(0);
-                //TODO: Pendiente de quitar el rol quemado
-                usuarioSesion.setRol(Constantes.usuarioAdmin);
                 Intent intent = new Intent(this, ConsultaSolicitudAtencionView.class);
                 startActivity(intent);
             }
@@ -62,6 +67,10 @@ public class LoginView extends AppCompatActivity {
 
                     try {
 
+                        arrayMedico = getResources().getStringArray(R.array.roles_medicos);
+                        arrayLogistico = getResources().getStringArray(R.array.roles_logistico);
+                        arrayAdministrador = getResources().getStringArray(R.array.roles_administrador);
+
 //                   List<NameValuePair> listParams = new ArrayList<NameValuePair>();
 //                   listParams.add(new BasicNameValuePair("tipocredencial","UP"));
 //                   listParams.add(new BasicNameValuePair("documento","dnsepr07"));
@@ -73,6 +82,7 @@ public class LoginView extends AppCompatActivity {
                         //TODO: poner autenticacion
                         String usuario = txtUser.getText().toString();
                         String password = txtPass.getText().toString();
+                        String rol = "";
 
 
                         if (usuario == null || usuario.equals("")) {
@@ -99,9 +109,80 @@ public class LoginView extends AppCompatActivity {
                                     break;
                             }
 
-                            Usuario usuarioBD = new Usuario(null, tipoUsuario, usuario, password, "", nomUsuario);
-                            //TODO: Pendiente de quitar el rol quemado
-                            usuarioBD.setRol(Constantes.usuarioAdmin);
+                            boolean esAdministrador = false;
+                            boolean esLogistico = false;
+                            boolean esMedico = false;
+
+                            if(rolesUsuario != null && rolesUsuario.length>0){
+
+                                //Se recorre el array de administradores
+                                for(int i = 0; i < arrayAdministrador.length; i ++){
+
+                                    for(int j= 0; j<rolesUsuario.length; j++){
+
+                                        if(rolesUsuario[j].equals(arrayAdministrador[i])){
+                                            esAdministrador = true;
+                                            break;
+                                        }
+                                    }
+
+                                    if(esAdministrador == true){
+                                        break;
+                                    }
+
+                                }
+
+                                //Se recorre el array medicos
+                                for(int i = 0; i < arrayMedico.length; i ++){
+
+                                    for(int j= 0; j<rolesUsuario.length; j++){
+
+                                        if(rolesUsuario[j].equals(arrayMedico[i])){
+                                            esMedico = true;
+                                            break;
+                                        }
+                                    }
+
+                                    if(esMedico == true){
+                                        break;
+                                    }
+
+                                }
+
+                                //Se recorre el array logisticos
+                                for(int i = 0; i < arrayLogistico.length; i ++){
+
+                                    for(int j= 0; j<rolesUsuario.length; j++){
+
+                                        if(rolesUsuario[j].equals(arrayLogistico[i])){
+                                            esLogistico = true;
+                                            break;
+                                        }
+                                    }
+
+                                    if(esLogistico == true){
+                                        break;
+                                    }
+
+                                }
+
+                                if(esAdministrador == true || (esMedico == true && esLogistico == true)){
+                                    rol = Constantes.usuarioAdmin;
+                                }else  if(esMedico == true && esLogistico == false){
+                                    rol = Constantes.usuarioMedico;
+                                }else  if(esMedico == false && esLogistico == true){
+                                    rol = Constantes.usuarioLogistico;
+                                }
+
+
+
+                            }else{
+                                throw new Exception(getResources().getString(R.string.error_rol));
+
+                            }
+
+
+                            Usuario usuarioBD = new Usuario(null, tipoUsuario, usuario, password, rol, nomUsuario);
                             usuarioSesion = usuarioBD;
                             datos.insertarUsuario(usuarioBD);
                             Intent intent = new Intent(view.getContext(), ConsultaSolicitudAtencionView.class);
@@ -163,6 +244,23 @@ public class LoginView extends AppCompatActivity {
                     nombreUsuario += jsonArrayUsuario.getString("segundoApellido");
                 }
                 nomUsuario = nombreUsuario;
+
+
+                JSONArray jsonArrayRoles = jsonArrayUsuario.getJSONArray("roles");
+
+                String[] result = new String[jsonArrayRoles.length()];
+
+                if (result!=null && result.length>0){
+                    rolesUsuario = new String[jsonArrayRoles.length()];
+
+                    for (int j = 0; j < jsonArrayRoles.length(); j++) {
+                        JSONObject obj = jsonArrayRoles.getJSONObject(j);
+
+                        rolesUsuario[j] = (obj.getString("claveRol") != null && !obj.getString("claveRol").equals("null")) ? obj.getString("claveRol"):"";
+
+                    }
+                }
+
 
             }
 
