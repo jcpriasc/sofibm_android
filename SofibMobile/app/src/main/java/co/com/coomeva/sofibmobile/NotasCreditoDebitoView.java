@@ -75,7 +75,7 @@ public class NotasCreditoDebitoView extends AppCompatActivity {
 
                             switch (menuItem.getItemId()) {
                                 case R.id.menu_autorizaciones:
-                                    params = "/SAC/ABCD1234/"+ ConsultaSolicitudAtencionView.solicitudAtencionSeleccionada.getNumeroSolicitud();
+                                    params = getApplicationContext().getResources().getString(R.string.address_service_token)+ ConsultaSolicitudAtencionView.solicitudAtencionSeleccionada.getNumeroSolicitud();
                                     if (OpcionesSecundariasFragment.consultarAutorizaciones(getApplicationContext().getResources().getString(R.string.complement_Autorizaciones), params, NotasCreditoDebitoView.this)){
                                         Intent intentAutorizacion = new Intent(getApplicationContext(), AutorizacionesView.class);
                                         startActivity(intentAutorizacion);
@@ -92,7 +92,7 @@ public class NotasCreditoDebitoView extends AppCompatActivity {
                                     }
                                     break;
                                 case R.id.menu_informes_medicos:
-                                    params = "/SAC/ABCD1234/"+ ConsultaSolicitudAtencionView.solicitudAtencionSeleccionada.getNumeroSolicitud();
+                                    params = getApplicationContext().getResources().getString(R.string.address_service_token)+ ConsultaSolicitudAtencionView.solicitudAtencionSeleccionada.getNumeroSolicitud();
                                     if (OpcionesSecundariasFragment.consultarInformesMedicos(getApplicationContext().getResources().getString(R.string.complement_InformesMedicos), params, NotasCreditoDebitoView.this)) {
                                         Intent intentInformesMedicos = new Intent(getApplicationContext(), InformesMedicosView.class);
                                         startActivity(intentInformesMedicos);
@@ -101,7 +101,7 @@ public class NotasCreditoDebitoView extends AppCompatActivity {
                                     }
                                     break;
                                 case R.id.menu_documentos_medicos:
-                                    params = "/SAC/ABCD1234/"+ ConsultaSolicitudAtencionView.solicitudAtencionSeleccionada.getNumeroSolicitud();
+                                    params = getApplicationContext().getResources().getString(R.string.address_service_token)+ ConsultaSolicitudAtencionView.solicitudAtencionSeleccionada.getNumeroSolicitud();
                                     if (OpcionesSecundariasFragment.consultarDocumentosMedicos(getApplicationContext().getResources().getString(R.string.complement_DocumentosMedicos), params, NotasCreditoDebitoView.this)){
                                         Intent intentDocumentosMedicos = new Intent(getApplicationContext(), DocumentosMedicosView.class);
                                         startActivity(intentDocumentosMedicos);
@@ -114,7 +114,7 @@ public class NotasCreditoDebitoView extends AppCompatActivity {
                                     startActivity(intentBitacora);
                                     break;
                                 case R.id.menu_epicrisis:
-                                    params = "/SAC/ABCD1234/"+ ConsultaSolicitudAtencionView.solicitudAtencionSeleccionada.getNumeroSolicitud();
+                                    params = getApplicationContext().getResources().getString(R.string.address_service_token)+ ConsultaSolicitudAtencionView.solicitudAtencionSeleccionada.getNumeroSolicitud();
                                     if (OpcionesSecundariasFragment.consultarEpicrisis(getApplicationContext().getResources().getString(R.string.complement_Epicrisis), params, NotasCreditoDebitoView.this)){
                                         Intent intentEpicrisis = new Intent(getApplicationContext(), EpicrisisView.class);
                                         startActivity(intentEpicrisis);
@@ -123,7 +123,7 @@ public class NotasCreditoDebitoView extends AppCompatActivity {
                                     }
                                     break;
                                 case R.id.menu_procedimientos_adicionales:
-                                    params = "/SAC/ABCD1234/"+ ConsultaSolicitudAtencionView.solicitudAtencionSeleccionada.getNumeroSolicitud();
+                                    params = getApplicationContext().getResources().getString(R.string.address_service_token)+ ConsultaSolicitudAtencionView.solicitudAtencionSeleccionada.getNumeroSolicitud();
                                     if (OpcionesSecundariasFragment.consultarProcedimientosAdicionales(getApplicationContext().getResources().getString(R.string.complement_ProcedimientoAdicionales), params, NotasCreditoDebitoView.this)){
                                         Intent intentProcedimientosAdicionales = new Intent(getApplicationContext(), ProcedimientosAdicionalesView.class);
                                         startActivity(intentProcedimientosAdicionales);
@@ -132,7 +132,7 @@ public class NotasCreditoDebitoView extends AppCompatActivity {
                                     }
                                     break;
                                 case R.id.menu_funcionarios_externos:
-                                    params = "/SAC/ABCD1234/"+ ConsultaSolicitudAtencionView.solicitudAtencionSeleccionada.getNumeroSolicitud();
+                                    params = getApplicationContext().getResources().getString(R.string.address_service_token)+ ConsultaSolicitudAtencionView.solicitudAtencionSeleccionada.getNumeroSolicitud();
                                     if (OpcionesSecundariasFragment.consultarFuncionariosExternos(getApplicationContext().getResources().getString(R.string.complement_FuncionariosExternos), params, NotasCreditoDebitoView.this)){
                                         Intent intentFuncionariosExternos = new Intent(getApplicationContext(), FuncionariosExternosView.class);
                                         startActivity(intentFuncionariosExternos);
@@ -147,7 +147,7 @@ public class NotasCreditoDebitoView extends AppCompatActivity {
                                         startActivity(intentConsultarSolicitudesAprobacionNoAsistencial);
 
                                     }else{
-                                        params = "/SAC/ABCD1234/0/0/0/"+ ConsultaSolicitudAtencionView.solicitudAtencionSeleccionada.getNumeroSolicitud()+"/m";
+                                        params = getApplicationContext().getResources().getString(R.string.address_service_token)+"0/0/0/"+ ConsultaSolicitudAtencionView.solicitudAtencionSeleccionada.getNumeroSolicitud()+"/m";
                                         if (OpcionesSecundariasFragment.consultarSolicitudAprobacion(getApplicationContext().getResources().getString(R.string.complement_aprobacion), params, NotasCreditoDebitoView.this)){
                                             Intent intentConsultarSolicitudesAprobacionAsistencial = new Intent(getApplicationContext(), ConsultaSolicitudAprobacionView.class);
                                             startActivity(intentConsultarSolicitudesAprobacionAsistencial);
@@ -158,7 +158,7 @@ public class NotasCreditoDebitoView extends AppCompatActivity {
                                     }
                                     break;
                                 case R.id.menu_servicio_no_asistencial:
-                                    params = "/SAC/ABCD1234/"+ ConsultaSolicitudAtencionView.solicitudAtencionSeleccionada.getNumeroSolicitud();
+                                    params = getApplicationContext().getResources().getString(R.string.address_service_token)+ ConsultaSolicitudAtencionView.solicitudAtencionSeleccionada.getNumeroSolicitud();
                                     if (OpcionesSecundariasFragment.consultarServicioNoAsistencial(getApplicationContext().getResources().getString(R.string.complement_serviciosNoAsistenciales), params, NotasCreditoDebitoView.this)){
                                         Intent intentSolicitudNoAsistencial = new Intent(getApplicationContext(), SolicitudNoAsistencialView.class);
                                         startActivity(intentSolicitudNoAsistencial);
@@ -167,7 +167,7 @@ public class NotasCreditoDebitoView extends AppCompatActivity {
                                     }
                                     break;
                                 case R.id.menu_giro:
-                                    params = "/SAC/ABCD1234/"+ ConsultaSolicitudAtencionView.solicitudAtencionSeleccionada.getNumeroSolicitud();
+                                    params = getApplicationContext().getResources().getString(R.string.address_service_token)+ ConsultaSolicitudAtencionView.solicitudAtencionSeleccionada.getNumeroSolicitud();
                                     if (OpcionesSecundariasFragment.consultarGiros(getApplicationContext().getResources().getString(R.string.complement_giro), params, NotasCreditoDebitoView.this)){
                                         Intent intentGiros = new Intent(getApplicationContext(), GiroView.class);
                                         startActivity(intentGiros);
@@ -176,7 +176,7 @@ public class NotasCreditoDebitoView extends AppCompatActivity {
                                     }
                                     break;
                                 case R.id.menu_nota_credito_giro:
-                                    params = "/SAC/ABCD1234/"+ ConsultaSolicitudAtencionView.solicitudAtencionSeleccionada.getNumeroSolicitud();
+                                    params = getApplicationContext().getResources().getString(R.string.address_service_token)+ ConsultaSolicitudAtencionView.solicitudAtencionSeleccionada.getNumeroSolicitud();
                                     if (OpcionesSecundariasFragment.consultarNotasCreditoGiro(getApplicationContext().getResources().getString(R.string.complement_giro_notaCredito), params, NotasCreditoDebitoView.this)){
                                         Intent intentNotaCreditoGiros = new Intent(getApplicationContext(), NotaCreditoGiroView.class);
                                         startActivity(intentNotaCreditoGiros);
@@ -185,7 +185,7 @@ public class NotasCreditoDebitoView extends AppCompatActivity {
                                     }
                                     break;
                                 case R.id.menu_lbl_titulo_facturafactura:
-                                    params = "/SAC/ABCD1234/"+ ConsultaSolicitudAtencionView.solicitudAtencionSeleccionada.getNumeroSolicitud();
+                                    params = getApplicationContext().getResources().getString(R.string.address_service_token)+ ConsultaSolicitudAtencionView.solicitudAtencionSeleccionada.getNumeroSolicitud();
                                     if (OpcionesSecundariasFragment.consultarFactura(getApplicationContext().getResources().getString(R.string.complement_factura), params, NotasCreditoDebitoView.this)){
                                         Intent intentFacturas = new Intent(getApplicationContext(), FacturaView.class);
                                         startActivity(intentFacturas);
@@ -196,7 +196,7 @@ public class NotasCreditoDebitoView extends AppCompatActivity {
                                 case R.id.menu_notas_credito_debito:
                                     break;
                                 case R.id.menu_utilizaciones:
-                                    params = "/SAC/ABCD1234/"+ ConsultaSolicitudAtencionView.solicitudAtencionSeleccionada.getNumeroSolicitud();
+                                    params = getApplicationContext().getResources().getString(R.string.address_service_token)+ ConsultaSolicitudAtencionView.solicitudAtencionSeleccionada.getNumeroSolicitud();
                                     if (OpcionesSecundariasFragment.consultarUtilizaciones(getApplicationContext().getResources().getString(R.string.complement_utilizaciones), params, NotasCreditoDebitoView.this)){
                                         Intent intentUtilizaciones = new Intent(getApplicationContext(), UtilizacionesView.class);
                                         startActivity(intentUtilizaciones);
@@ -205,7 +205,7 @@ public class NotasCreditoDebitoView extends AppCompatActivity {
                                     }
                                     break;
                                 case R.id.menu_encuesta_satisfaccion:
-                                    params = "/SAC/ABCD1234/"+ ConsultaSolicitudAtencionView.solicitudAtencionSeleccionada.getNumeroSolicitud();
+                                    params = getApplicationContext().getResources().getString(R.string.address_service_token)+ ConsultaSolicitudAtencionView.solicitudAtencionSeleccionada.getNumeroSolicitud();
                                     if (OpcionesSecundariasFragment.consultarEncuesta(getApplicationContext().getResources().getString(R.string.complement_encuesta), params, NotasCreditoDebitoView.this)){
                                         Intent intentEncuesta= new Intent(getApplicationContext(), EncuestaView.class);
                                         startActivity(intentEncuesta);
@@ -224,7 +224,7 @@ public class NotasCreditoDebitoView extends AppCompatActivity {
                                         startActivity(intentConsultarSolicitudesAprobacionLogis);
 
                                     }else{
-                                        params = "/SAC/ABCD1234/0/0/0/"+ ConsultaSolicitudAtencionView.solicitudAtencionSeleccionada.getNumeroSolicitud()+"/l";
+                                        params = getApplicationContext().getResources().getString(R.string.address_service_token)+"0/0/0/"+ ConsultaSolicitudAtencionView.solicitudAtencionSeleccionada.getNumeroSolicitud()+"/l";
                                         if (OpcionesSecundariasFragment.consultarSolicitudAprobacion(getApplicationContext().getResources().getString(R.string.complement_aprobacion), params, NotasCreditoDebitoView.this)){
                                             Intent intentConsultarSolicitudesAprobacionAsistencial = new Intent(getApplicationContext(), ConsultaSolicitudAprobacionView.class);
                                             startActivity(intentConsultarSolicitudesAprobacionAsistencial);

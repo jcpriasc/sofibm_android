@@ -93,7 +93,7 @@ public class DetalleNotaCreditoDebitoFragment extends Fragment{
             public void onClick(View view) {
                 try {
 
-                        String params = "/SAC/ABCD1234/"+ NotaCreditoDebitoFragment.notaCreditoDebitoSeleccionado.getConsNota();
+                        String params = getActivity().getResources().getString(R.string.address_service_token)+ NotaCreditoDebitoFragment.notaCreditoDebitoSeleccionado.getConsNota();
                         if (consultarDetalleNotaCreditoDebito(getActivity().getResources().getString(R.string.complement_nota_detalle), params)){
 
                             FragmentTransaction ft = getActivity().getSupportFragmentManager().beginTransaction();

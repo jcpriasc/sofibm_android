@@ -54,8 +54,8 @@ public class FiltroSolicitudAprobacionFragment extends Fragment {
 
         try {
 
-           // final SpinnerDTO resultMapConvenio = llenar_spinner(getActivity().getResources().getString(R.string.complement_convenios), "/SAC/ABCD1234/0", "CON");
-            final SpinnerDTO resultMapServicio = llenar_spinner(getActivity().getResources().getString(R.string.complement_servicios), "/SAC/ABCD1234", "SERV");
+           // final SpinnerDTO resultMapConvenio = llenar_spinner(getActivity().getResources().getString(R.string.complement_convenios), getApplicationContext().getResources().getString(R.string.address_service_token)+"0", "CON");
+            final SpinnerDTO resultMapServicio = llenar_spinner(getActivity().getResources().getString(R.string.complement_servicios), getActivity().getResources().getString(R.string.address_service_token), "SERV");
 
 //            if (resultMapConvenio != null) {
 //                ArrayAdapter<String> adapter = new ArrayAdapter<String>(getActivity(), android.R.layout.simple_spinner_item, resultMapConvenio.getSpinnerArray());
@@ -82,7 +82,7 @@ public class FiltroSolicitudAprobacionFragment extends Fragment {
                         servicio = resultMapServicio.getResultMap().get(nameEstado);
 
 
-                        String params = "/SAC/ABCD1234/0/" +
+                        String params = getActivity().getResources().getString(R.string.address_service_token)+"0/" +
                                 "0/"+
                                 servicio+"/"
                                 + ConsultaSolicitudAtencionView.solicitudAtencionSeleccionada.getNumeroSolicitud() + "/" +tipoAprobacion;

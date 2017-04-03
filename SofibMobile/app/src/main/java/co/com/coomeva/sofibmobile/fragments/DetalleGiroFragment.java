@@ -127,7 +127,7 @@ public class DetalleGiroFragment extends Fragment{
             public void onClick(View view) {
                 try {
 
-                    String params = "/SAC/ABCD1234/"+ GiroFragment.giro.getCons();
+                    String params = getActivity().getResources().getString(R.string.address_service_token)+ GiroFragment.giro.getCons();
                     if (consultarDetalleGiro(getActivity().getResources().getString(R.string.complement_giro_detalle), params)){
 
                         FragmentTransaction ft = getActivity().getSupportFragmentManager().beginTransaction();

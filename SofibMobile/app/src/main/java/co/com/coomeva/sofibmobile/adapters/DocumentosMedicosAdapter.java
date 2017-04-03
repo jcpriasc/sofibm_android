@@ -98,7 +98,7 @@ public class DocumentosMedicosAdapter extends ArrayAdapter<DocumentosMedicosDTO>
 
                     try {
 
-                        String params = "SAC/ABCD1234/"+ OpcionesSecundariasFragment.documentosMedicosList.get((int)viewHolder.iconOpcion.getTag()).getId().toString();
+                        String params = getContext().getResources().getString(R.string.address_service_token_1)+ OpcionesSecundariasFragment.documentosMedicosList.get((int)viewHolder.iconOpcion.getTag()).getId().toString();
 
 
                         ConexionServicioListaTask task = new ConexionServicioListaTask(context, getContext().getResources().getString(R.string.complement_documento_documento_medico), params);

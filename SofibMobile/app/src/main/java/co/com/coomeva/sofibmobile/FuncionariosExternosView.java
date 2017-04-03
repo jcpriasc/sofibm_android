@@ -76,7 +76,7 @@ public class FuncionariosExternosView extends AppCompatActivity {
 
                             switch (menuItem.getItemId()) {
                                 case R.id.menu_autorizaciones:
-                                    params = "/SAC/ABCD1234/"+ ConsultaSolicitudAtencionView.solicitudAtencionSeleccionada.getNumeroSolicitud();
+                                    params = getApplicationContext().getResources().getString(R.string.address_service_token)+ ConsultaSolicitudAtencionView.solicitudAtencionSeleccionada.getNumeroSolicitud();
                                     if (OpcionesSecundariasFragment.consultarAutorizaciones(getApplicationContext().getResources().getString(R.string.complement_Autorizaciones), params, FuncionariosExternosView.this)){
                                         Intent intentAutorizacion = new Intent(getApplicationContext(), AutorizacionesView.class);
                                         startActivity(intentAutorizacion);
@@ -85,7 +85,7 @@ public class FuncionariosExternosView extends AppCompatActivity {
                                     }
                                     break;
                                 case R.id.menu_servicio_asistencial:
-                                    params = "/SAC/ABCD1234/"+ ConsultaSolicitudAtencionView.solicitudAtencionSeleccionada.getNumeroSolicitud();
+                                    params = getApplicationContext().getResources().getString(R.string.address_service_token)+ ConsultaSolicitudAtencionView.solicitudAtencionSeleccionada.getNumeroSolicitud();
                                     if (OpcionesSecundariasFragment.consultarServiciosAsistenciales(getApplicationContext().getResources().getString(R.string.complement_ServiciosAsistenciales), params, FuncionariosExternosView.this)) {
                                         Intent intentServiciosAsistenciales = new Intent(getApplicationContext(), ServiciosAsistencialesView.class);
                                         startActivity(intentServiciosAsistenciales);
@@ -94,7 +94,7 @@ public class FuncionariosExternosView extends AppCompatActivity {
                                     }
                                     break;
                                 case R.id.menu_informes_medicos:
-                                    params = "/SAC/ABCD1234/"+ ConsultaSolicitudAtencionView.solicitudAtencionSeleccionada.getNumeroSolicitud();
+                                    params = getApplicationContext().getResources().getString(R.string.address_service_token)+ ConsultaSolicitudAtencionView.solicitudAtencionSeleccionada.getNumeroSolicitud();
                                     if (OpcionesSecundariasFragment.consultarInformesMedicos(getApplicationContext().getResources().getString(R.string.complement_InformesMedicos), params, FuncionariosExternosView.this)) {
                                         Intent intentInformesMedicos = new Intent(getApplicationContext(), InformesMedicosView.class);
                                         startActivity(intentInformesMedicos);
@@ -103,7 +103,7 @@ public class FuncionariosExternosView extends AppCompatActivity {
                                     }
                                     break;
                                 case R.id.menu_documentos_medicos:
-                                    params = "/SAC/ABCD1234/"+ ConsultaSolicitudAtencionView.solicitudAtencionSeleccionada.getNumeroSolicitud();
+                                    params = getApplicationContext().getResources().getString(R.string.address_service_token)+ ConsultaSolicitudAtencionView.solicitudAtencionSeleccionada.getNumeroSolicitud();
                                     if (OpcionesSecundariasFragment.consultarDocumentosMedicos(getApplicationContext().getResources().getString(R.string.complement_DocumentosMedicos), params, FuncionariosExternosView.this)){
                                         Intent intentDocumentosMedicos = new Intent(getApplicationContext(), DocumentosMedicosView.class);
                                         startActivity(intentDocumentosMedicos);
@@ -116,7 +116,7 @@ public class FuncionariosExternosView extends AppCompatActivity {
                                     startActivity(intentBitacora);
                                     break;
                                 case R.id.menu_epicrisis:
-                                    params = "/SAC/ABCD1234/"+ ConsultaSolicitudAtencionView.solicitudAtencionSeleccionada.getNumeroSolicitud();
+                                    params = getApplicationContext().getResources().getString(R.string.address_service_token)+ ConsultaSolicitudAtencionView.solicitudAtencionSeleccionada.getNumeroSolicitud();
                                     if (OpcionesSecundariasFragment.consultarEpicrisis(getApplicationContext().getResources().getString(R.string.complement_Epicrisis), params, FuncionariosExternosView.this)){
                                         Intent intentEpicrisis = new Intent(getApplicationContext(), EpicrisisView.class);
                                         startActivity(intentEpicrisis);
@@ -125,7 +125,7 @@ public class FuncionariosExternosView extends AppCompatActivity {
                                     }
                                     break;
                                 case R.id.menu_procedimientos_adicionales:
-                                    params = "/SAC/ABCD1234/"+ ConsultaSolicitudAtencionView.solicitudAtencionSeleccionada.getNumeroSolicitud();
+                                    params = getApplicationContext().getResources().getString(R.string.address_service_token)+ ConsultaSolicitudAtencionView.solicitudAtencionSeleccionada.getNumeroSolicitud();
                                     if (OpcionesSecundariasFragment.consultarProcedimientosAdicionales(getApplicationContext().getResources().getString(R.string.complement_ProcedimientoAdicionales), params, FuncionariosExternosView.this)){
                                         Intent intentProcedimientosAdicionales = new Intent(getApplicationContext(), ProcedimientosAdicionalesView.class);
                                         startActivity(intentProcedimientosAdicionales);
@@ -142,7 +142,7 @@ public class FuncionariosExternosView extends AppCompatActivity {
                                         startActivity(intentConsultarSolicitudesAprobacionNoAsistencial);
 
                                     }else{
-                                        params = "/SAC/ABCD1234/0/0/0/"+ ConsultaSolicitudAtencionView.solicitudAtencionSeleccionada.getNumeroSolicitud()+"/m";
+                                        params = getApplicationContext().getResources().getString(R.string.address_service_token)+"0/0/0/"+ ConsultaSolicitudAtencionView.solicitudAtencionSeleccionada.getNumeroSolicitud()+"/m";
                                         if (OpcionesSecundariasFragment.consultarSolicitudAprobacion(getApplicationContext().getResources().getString(R.string.complement_aprobacion), params, FuncionariosExternosView.this)){
                                             Intent intentConsultarSolicitudesAprobacionAsistencial = new Intent(getApplicationContext(), ConsultaSolicitudAprobacionView.class);
                                             startActivity(intentConsultarSolicitudesAprobacionAsistencial);
@@ -153,7 +153,7 @@ public class FuncionariosExternosView extends AppCompatActivity {
                                     }
                                     break;
                                 case R.id.menu_servicio_no_asistencial:
-                                    params = "/SAC/ABCD1234/"+ ConsultaSolicitudAtencionView.solicitudAtencionSeleccionada.getNumeroSolicitud();
+                                    params = getApplicationContext().getResources().getString(R.string.address_service_token)+ ConsultaSolicitudAtencionView.solicitudAtencionSeleccionada.getNumeroSolicitud();
                                     if (OpcionesSecundariasFragment.consultarServicioNoAsistencial(getApplicationContext().getResources().getString(R.string.complement_serviciosNoAsistenciales), params, FuncionariosExternosView.this)){
                                         Intent intentSolicitudNoAsistencial = new Intent(getApplicationContext(), SolicitudNoAsistencialView.class);
                                         startActivity(intentSolicitudNoAsistencial);
@@ -162,7 +162,7 @@ public class FuncionariosExternosView extends AppCompatActivity {
                                     }
                                     break;
                                 case R.id.menu_giro:
-                                    params = "/SAC/ABCD1234/"+ ConsultaSolicitudAtencionView.solicitudAtencionSeleccionada.getNumeroSolicitud();
+                                    params = getApplicationContext().getResources().getString(R.string.address_service_token)+ ConsultaSolicitudAtencionView.solicitudAtencionSeleccionada.getNumeroSolicitud();
                                     if (OpcionesSecundariasFragment.consultarGiros(getApplicationContext().getResources().getString(R.string.complement_giro), params, FuncionariosExternosView.this)){
                                         Intent intentGiros = new Intent(getApplicationContext(), GiroView.class);
                                         startActivity(intentGiros);
@@ -171,7 +171,7 @@ public class FuncionariosExternosView extends AppCompatActivity {
                                     }
                                     break;
                                 case R.id.menu_nota_credito_giro:
-                                    params = "/SAC/ABCD1234/"+ ConsultaSolicitudAtencionView.solicitudAtencionSeleccionada.getNumeroSolicitud();
+                                    params = getApplicationContext().getResources().getString(R.string.address_service_token)+ ConsultaSolicitudAtencionView.solicitudAtencionSeleccionada.getNumeroSolicitud();
                                     if (OpcionesSecundariasFragment.consultarNotasCreditoGiro(getApplicationContext().getResources().getString(R.string.complement_giro_notaCredito), params, FuncionariosExternosView.this)){
                                         Intent intentNotaCreditoGiros = new Intent(getApplicationContext(), NotaCreditoGiroView.class);
                                         startActivity(intentNotaCreditoGiros);
@@ -180,7 +180,7 @@ public class FuncionariosExternosView extends AppCompatActivity {
                                     }
                                     break;
                                 case R.id.menu_lbl_titulo_facturafactura:
-                                    params = "/SAC/ABCD1234/"+ ConsultaSolicitudAtencionView.solicitudAtencionSeleccionada.getNumeroSolicitud();
+                                    params = getApplicationContext().getResources().getString(R.string.address_service_token)+ ConsultaSolicitudAtencionView.solicitudAtencionSeleccionada.getNumeroSolicitud();
                                     if (OpcionesSecundariasFragment.consultarFactura(getApplicationContext().getResources().getString(R.string.complement_factura), params, FuncionariosExternosView.this)){
                                         Intent intentFacturas = new Intent(getApplicationContext(), FacturaView.class);
                                         startActivity(intentFacturas);
@@ -189,7 +189,7 @@ public class FuncionariosExternosView extends AppCompatActivity {
                                     }
                                     break;
                                 case R.id.menu_notas_credito_debito:
-                                    params = "/SAC/ABCD1234/"+ ConsultaSolicitudAtencionView.solicitudAtencionSeleccionada.getNumeroSolicitud();
+                                    params = getApplicationContext().getResources().getString(R.string.address_service_token)+ ConsultaSolicitudAtencionView.solicitudAtencionSeleccionada.getNumeroSolicitud();
                                     if (OpcionesSecundariasFragment.consultarNotasCreditoDebito(getApplicationContext().getResources().getString(R.string.complement_nota), params, FuncionariosExternosView.this)){
                                         Intent intentNotaCreditoDebito = new Intent(getApplicationContext(), NotasCreditoDebitoView.class);
                                         startActivity(intentNotaCreditoDebito);
@@ -199,7 +199,7 @@ public class FuncionariosExternosView extends AppCompatActivity {
 
                                     break;
                                 case R.id.menu_utilizaciones:
-                                    params = "/SAC/ABCD1234/"+ ConsultaSolicitudAtencionView.solicitudAtencionSeleccionada.getNumeroSolicitud();
+                                    params = getApplicationContext().getResources().getString(R.string.address_service_token)+ ConsultaSolicitudAtencionView.solicitudAtencionSeleccionada.getNumeroSolicitud();
                                     if (OpcionesSecundariasFragment.consultarUtilizaciones(getApplicationContext().getResources().getString(R.string.complement_utilizaciones), params, FuncionariosExternosView.this)){
                                         Intent intentUtilizaciones = new Intent(getApplicationContext(), UtilizacionesView.class);
                                         startActivity(intentUtilizaciones);
@@ -208,7 +208,7 @@ public class FuncionariosExternosView extends AppCompatActivity {
                                     }
                                     break;
                                 case R.id.menu_encuesta_satisfaccion:
-                                    params = "/SAC/ABCD1234/"+ ConsultaSolicitudAtencionView.solicitudAtencionSeleccionada.getNumeroSolicitud();
+                                    params = getApplicationContext().getResources().getString(R.string.address_service_token)+ ConsultaSolicitudAtencionView.solicitudAtencionSeleccionada.getNumeroSolicitud();
                                     if (OpcionesSecundariasFragment.consultarEncuesta(getApplicationContext().getResources().getString(R.string.complement_encuesta), params, FuncionariosExternosView.this)){
                                         Intent intentEncuesta= new Intent(getApplicationContext(), EncuestaView.class);
                                         startActivity(intentEncuesta);
@@ -227,7 +227,7 @@ public class FuncionariosExternosView extends AppCompatActivity {
                                         startActivity(intentConsultarSolicitudesAprobacionLogis);
 
                                     }else{
-                                        params = "/SAC/ABCD1234/0/0/0/"+ ConsultaSolicitudAtencionView.solicitudAtencionSeleccionada.getNumeroSolicitud()+"/l";
+                                        params = getApplicationContext().getResources().getString(R.string.address_service_token)+"0/0/0/"+ ConsultaSolicitudAtencionView.solicitudAtencionSeleccionada.getNumeroSolicitud()+"/l";
                                         if (OpcionesSecundariasFragment.consultarSolicitudAprobacion(getApplicationContext().getResources().getString(R.string.complement_aprobacion), params, FuncionariosExternosView.this)){
                                             Intent intentConsultarSolicitudesAprobacionAsistencial = new Intent(getApplicationContext(), ConsultaSolicitudAprobacionView.class);
                                             startActivity(intentConsultarSolicitudesAprobacionAsistencial);

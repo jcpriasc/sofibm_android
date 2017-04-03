@@ -68,9 +68,9 @@ public class FiltroBitacoraFragment extends Fragment{
 
         try{
 
-            final SpinnerDTO resultMapTipoServicio = llenar_spinner(getActivity().getResources().getString(R.string.complement_servicios), "/SAC/ABCD1234", "SER");
-            final SpinnerDTO resultMapTipoRegistro = llenar_spinner(getActivity().getResources().getString(R.string.complement_tipo_registros), "/SAC/ABCD1234", "REG");
-            final SpinnerDTO resultMapCiudad = llenar_spinner(getActivity().getResources().getString(R.string.complement_ciudades), "/SAC/ABCD1234", "CIU");
+            final SpinnerDTO resultMapTipoServicio = llenar_spinner(getActivity().getResources().getString(R.string.complement_servicios), getActivity().getResources().getString(R.string.address_service_token_2), "SER");
+            final SpinnerDTO resultMapTipoRegistro = llenar_spinner(getActivity().getResources().getString(R.string.complement_tipo_registros), getActivity().getResources().getString(R.string.address_service_token_2), "REG");
+            final SpinnerDTO resultMapCiudad = llenar_spinner(getActivity().getResources().getString(R.string.complement_ciudades), getActivity().getResources().getString(R.string.address_service_token_2), "CIU");
 
             if (resultMapTipoServicio!=null){
                 ArrayAdapter<String> adapter =new ArrayAdapter<String>(getActivity(),android.R.layout.simple_spinner_item, resultMapTipoServicio.getSpinnerArray());
@@ -94,7 +94,7 @@ public class FiltroBitacoraFragment extends Fragment{
                     tipoRegistro = resultMapTipoRegistro.getResultMap().get(nameTipoRegistro);
 
                     nameTipoRegistro =nameTipoRegistro.replaceAll(" ","%20").toUpperCase();
-                    final SpinnerDTO resultMapTipoServicio = llenar_spinner(getActivity().getResources().getString(R.string.complement_tipo_servicios), "SAC/ABCD1234/"+tipoRegistro, "SER");
+                    final SpinnerDTO resultMapTipoServicio = llenar_spinner(getActivity().getResources().getString(R.string.complement_tipo_servicios), getActivity().getResources().getString(R.string.address_service_token_1)+tipoRegistro, "SER");
 
                     if (resultMapTipoServicio!=null){
                         ArrayAdapter<String> adapter =new ArrayAdapter<String>(getActivity(),android.R.layout.simple_spinner_item, resultMapTipoServicio.getSpinnerArray());
@@ -155,7 +155,7 @@ public class FiltroBitacoraFragment extends Fragment{
                         nombrePaciente = "0";
                         ciudad = "0";
 
-                        String listParams="/SAC/ABCD1234/"+ ConsultaSolicitudAtencionView.solicitudAtencionSeleccionada.getNumeroSolicitud();
+                        String listParams=getActivity().getResources().getString(R.string.address_service_token)+ ConsultaSolicitudAtencionView.solicitudAtencionSeleccionada.getNumeroSolicitud();
                         listParams+="/"+nombrePaciente;
                         listParams+="/"+ciudad;
                         listParams+="/"+tipoRegistro;

@@ -82,7 +82,7 @@ public class DetalleServicioNoAsistencialFragment extends Fragment{
             public void onClick(View view) {
                 try {
 
-                    String params = "/SAC/ABCD1234/"+ ServicioNoAsistencialFragment.servicio.getConsservicio();
+                    String params = getActivity().getResources().getString(R.string.address_service_token)+ ServicioNoAsistencialFragment.servicio.getConsservicio();
                     if (consultarServicioNoAsistencial(getActivity().getResources().getString(R.string.complement_serviciosNoAsistenciales_detalle), params)){
 
                         FragmentTransaction ft = getActivity().getSupportFragmentManager().beginTransaction();

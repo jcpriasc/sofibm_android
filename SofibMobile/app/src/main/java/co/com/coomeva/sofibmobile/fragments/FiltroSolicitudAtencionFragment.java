@@ -78,10 +78,10 @@ public class FiltroSolicitudAtencionFragment extends Fragment{
 
         try{
 
-            final SpinnerDTO resultMapConvenio = llenar_spinner(getActivity().getResources().getString(R.string.complement_convenios), "/SAC/ABCD1234/0", "CON");
-            final SpinnerDTO resultMapEstado = llenar_spinner(getActivity().getResources().getString(R.string.complement_estados), "/SAC/ABCD1234", "EST");
-            final SpinnerDTO resultMapCiudadInicial = llenar_spinner(getActivity().getResources().getString(R.string.complement_ciudades), "/SAC/ABCD1234", "CIU_INI");
-            final SpinnerDTO resultMapCiudadActual = llenar_spinner(getActivity().getResources().getString(R.string.complement_ciudades), "/SAC/ABCD1234", "CIU_ACT");
+            final SpinnerDTO resultMapConvenio = llenar_spinner(getActivity().getResources().getString(R.string.complement_convenios), getActivity().getResources().getString(R.string.address_service_token)+"0", "CON");
+            final SpinnerDTO resultMapEstado = llenar_spinner(getActivity().getResources().getString(R.string.complement_estados), getActivity().getResources().getString(R.string.address_service_token_2), "EST");
+            final SpinnerDTO resultMapCiudadInicial = llenar_spinner(getActivity().getResources().getString(R.string.complement_ciudades), getActivity().getResources().getString(R.string.address_service_token_2), "CIU_INI");
+            final SpinnerDTO resultMapCiudadActual = llenar_spinner(getActivity().getResources().getString(R.string.complement_ciudades), getActivity().getResources().getString(R.string.address_service_token_2), "CIU_ACT");
 
             if (resultMapConvenio!=null){
                 ArrayAdapter<String> adapter =new ArrayAdapter<String>(getActivity(),android.R.layout.simple_spinner_item, resultMapConvenio.getSpinnerArray());
@@ -178,7 +178,7 @@ public class FiltroSolicitudAtencionFragment extends Fragment{
                             nombre = "0";
                         }
                         nombre = nombre.toUpperCase();
-                        String listParams="/SAC/ABCD1234";
+                        String listParams=getActivity().getResources().getString(R.string.address_service_token_2);
                         listParams+="/"+identificacion;
                         listParams+="/"+solAtencion;
                         listParams+="/"+nombre;

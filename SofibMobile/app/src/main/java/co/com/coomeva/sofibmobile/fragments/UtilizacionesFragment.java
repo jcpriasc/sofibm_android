@@ -69,7 +69,7 @@ public class UtilizacionesFragment extends Fragment{
                     utilizacionesSeleccionado = lstUtilizacionesDTO.get(i);
 
 
-                    String params = "/SAC/ABCD1234/"+ ConsultaSolicitudAtencionView.solicitudAtencionSeleccionada.getNumeroSolicitud() +"/"+utilizacionesSeleccionado.getConsConvenio()+"/"+(utilizacionesSeleccionado.getDesdeTexto().replaceAll("/","-"))+"/"+utilizacionesSeleccionado.getHastaTexto().replaceAll("/","-");
+                    String params = getActivity().getResources().getString(R.string.address_service_token)+ ConsultaSolicitudAtencionView.solicitudAtencionSeleccionada.getNumeroSolicitud() +"/"+utilizacionesSeleccionado.getConsConvenio()+"/"+(utilizacionesSeleccionado.getDesdeTexto().replaceAll("/","-"))+"/"+utilizacionesSeleccionado.getHastaTexto().replaceAll("/","-");
                     if (consultarDetalleUtlizaciones(getActivity().getResources().getString(R.string.complement_utilizaciones_detalle), params)){
 
                         FragmentTransaction ft = getActivity().getSupportFragmentManager().beginTransaction();

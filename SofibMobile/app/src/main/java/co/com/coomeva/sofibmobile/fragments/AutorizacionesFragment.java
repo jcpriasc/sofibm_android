@@ -65,7 +65,7 @@ public class  AutorizacionesFragment extends Fragment{
                     lstDetalleAutorizaciones = new ArrayList<DetalleAutorizacionesDTO>();
 
 
-                    String params = "/SAC/ABCD1234/" +AutorizacionesView.autorizacionSeleccionada.getConsDetAutorizacion();
+                    String params = getActivity().getResources().getString(R.string.address_service_token) +AutorizacionesView.autorizacionSeleccionada.getConsDetAutorizacion();
                     consultarDetalleAutorizaciones(getActivity().getResources().getString(R.string.complement_detalle_autorizaciones), params);
 
                     FragmentTransaction ft = getActivity().getSupportFragmentManager().beginTransaction();

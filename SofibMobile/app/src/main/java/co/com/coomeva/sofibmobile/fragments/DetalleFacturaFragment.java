@@ -92,7 +92,7 @@ public class DetalleFacturaFragment extends Fragment{
             @Override
             public void onClick(View view) {
                 try {
-                    String params = "/SAC/ABCD1234/"+FacturaFragment.facturaSeleccionado.getConsFactura();
+                    String params = getActivity().getResources().getString(R.string.address_service_token)+FacturaFragment.facturaSeleccionado.getConsFactura();
                     if (consultarDetalleFacturas(getActivity().getResources().getString(R.string.complement_factura_detalle), params)){
                         FragmentTransaction ft = getActivity().getSupportFragmentManager().beginTransaction();
                         Fragment fragment = new TabFacturaFragment();

@@ -130,7 +130,7 @@ public class OpcionesSecundariasFragment extends Fragment{
                 try {
 
                     if(opcionesList.get(i).getId().equals("1")) {
-                        String params = "/SAC/ABCD1234/"+ ConsultaSolicitudAtencionView.solicitudAtencionSeleccionada.getNumeroSolicitud();
+                        String params = getActivity().getResources().getString(R.string.address_service_token)+ ConsultaSolicitudAtencionView.solicitudAtencionSeleccionada.getNumeroSolicitud();
                         if (consultarAutorizaciones(getActivity().getResources().getString(R.string.complement_Autorizaciones), params, getActivity())){
                             Intent intentAutorizacion = new Intent(view.getContext(), AutorizacionesView.class);
                             startActivity(intentAutorizacion);
@@ -138,7 +138,7 @@ public class OpcionesSecundariasFragment extends Fragment{
                             throw new Exception(getActivity().getResources().getString(R.string.lbl_sin_resultados));
                         }
                     }else if(opcionesList.get(i).getId().equals("2")) {
-                        String params = "/SAC/ABCD1234/"+ ConsultaSolicitudAtencionView.solicitudAtencionSeleccionada.getNumeroSolicitud();
+                        String params = getActivity().getResources().getString(R.string.address_service_token)+ ConsultaSolicitudAtencionView.solicitudAtencionSeleccionada.getNumeroSolicitud();
                         if (consultarServiciosAsistenciales(getActivity().getResources().getString(R.string.complement_ServiciosAsistenciales), params, getActivity())) {
                             Intent intentServiciosAsistenciales = new Intent(view.getContext(), ServiciosAsistencialesView.class);
                             startActivity(intentServiciosAsistenciales);
@@ -146,7 +146,7 @@ public class OpcionesSecundariasFragment extends Fragment{
                             throw new Exception(getActivity().getResources().getString(R.string.lbl_sin_resultados));
                         }
                     }else if(opcionesList.get(i).getId().equals("3")) {
-                        String params = "/SAC/ABCD1234/"+ ConsultaSolicitudAtencionView.solicitudAtencionSeleccionada.getNumeroSolicitud();
+                        String params = getActivity().getResources().getString(R.string.address_service_token)+ ConsultaSolicitudAtencionView.solicitudAtencionSeleccionada.getNumeroSolicitud();
                         if (consultarInformesMedicos(getActivity().getResources().getString(R.string.complement_InformesMedicos), params, getActivity())) {
                             Intent intentInformesMedicos = new Intent(view.getContext(), InformesMedicosView.class);
                             startActivity(intentInformesMedicos);
@@ -154,7 +154,7 @@ public class OpcionesSecundariasFragment extends Fragment{
                             throw new Exception(getActivity().getResources().getString(R.string.lbl_sin_resultados));
                         }
                     }else if(opcionesList.get(i).getId().equals("4")) {
-                        String params = "/SAC/ABCD1234/"+ ConsultaSolicitudAtencionView.solicitudAtencionSeleccionada.getNumeroSolicitud();
+                        String params = getActivity().getResources().getString(R.string.address_service_token)+ ConsultaSolicitudAtencionView.solicitudAtencionSeleccionada.getNumeroSolicitud();
                         if (consultarDocumentosMedicos(getActivity().getResources().getString(R.string.complement_DocumentosMedicos), params, getActivity())){
                             Intent intentDocumentosMedicos = new Intent(view.getContext(), DocumentosMedicosView.class);
                             startActivity(intentDocumentosMedicos);
@@ -165,7 +165,7 @@ public class OpcionesSecundariasFragment extends Fragment{
                         Intent intentBitacora = new Intent(view.getContext(), BitacoraView.class);
                         startActivity(intentBitacora);
                     }else if(opcionesList.get(i).getId().equals("6")) {
-                        String params = "/SAC/ABCD1234/"+ ConsultaSolicitudAtencionView.solicitudAtencionSeleccionada.getNumeroSolicitud();
+                        String params = getActivity().getResources().getString(R.string.address_service_token)+ ConsultaSolicitudAtencionView.solicitudAtencionSeleccionada.getNumeroSolicitud();
                         if (consultarEpicrisis(getActivity().getResources().getString(R.string.complement_Epicrisis), params, getActivity())){
                             Intent intentEpicrisis = new Intent(view.getContext(), EpicrisisView.class);
                             startActivity(intentEpicrisis);
@@ -173,7 +173,7 @@ public class OpcionesSecundariasFragment extends Fragment{
                             throw new Exception(getActivity().getResources().getString(R.string.lbl_sin_resultados));
                         }
                     }else if(opcionesList.get(i).getId().equals("7")) {
-                        String params = "/SAC/ABCD1234/"+ ConsultaSolicitudAtencionView.solicitudAtencionSeleccionada.getNumeroSolicitud();
+                        String params = getActivity().getResources().getString(R.string.address_service_token)+ ConsultaSolicitudAtencionView.solicitudAtencionSeleccionada.getNumeroSolicitud();
                         if (consultarProcedimientosAdicionales(getActivity().getResources().getString(R.string.complement_ProcedimientoAdicionales), params, getActivity())){
                             Intent intentProcedimientosAdicionales = new Intent(view.getContext(), ProcedimientosAdicionalesView.class);
                             startActivity(intentProcedimientosAdicionales);
@@ -181,7 +181,7 @@ public class OpcionesSecundariasFragment extends Fragment{
                             throw new Exception(getActivity().getResources().getString(R.string.lbl_sin_resultados));
                         }
                     }else if(opcionesList.get(i).getId().equals("8")) {
-                        String params = "/SAC/ABCD1234/"+ ConsultaSolicitudAtencionView.solicitudAtencionSeleccionada.getNumeroSolicitud();
+                        String params = getActivity().getResources().getString(R.string.address_service_token)+ ConsultaSolicitudAtencionView.solicitudAtencionSeleccionada.getNumeroSolicitud();
                         if (consultarFuncionariosExternos(getActivity().getResources().getString(R.string.complement_FuncionariosExternos), params, getActivity())){
                             Intent intentFuncionariosExternos = new Intent(view.getContext(), FuncionariosExternosView.class);
                             startActivity(intentFuncionariosExternos);
@@ -196,7 +196,7 @@ public class OpcionesSecundariasFragment extends Fragment{
                             startActivity(intentConsultarSolicitudesAprobacionNoAsistencial);
                         }else{
 
-                            String params = "/SAC/ABCD1234/0/0/0/"+ ConsultaSolicitudAtencionView.solicitudAtencionSeleccionada.getNumeroSolicitud()+"/m";
+                            String params = getActivity().getResources().getString(R.string.address_service_token)+"0/0/0/"+ ConsultaSolicitudAtencionView.solicitudAtencionSeleccionada.getNumeroSolicitud()+"/m";
                             if (consultarSolicitudAprobacion(getActivity().getResources().getString(R.string.complement_aprobacion), params, getActivity())){
                                 Intent intentConsultarSolicitudesAprobacionAsistencial = new Intent(view.getContext(), ConsultaSolicitudAprobacionView.class);
                                 startActivity(intentConsultarSolicitudesAprobacionAsistencial);
@@ -206,7 +206,7 @@ public class OpcionesSecundariasFragment extends Fragment{
                         }
 
                     }else if(opcionesList.get(i).getId().equals("10")) {
-                        String params = "/SAC/ABCD1234/"+ ConsultaSolicitudAtencionView.solicitudAtencionSeleccionada.getNumeroSolicitud();
+                        String params = getActivity().getResources().getString(R.string.address_service_token)+ ConsultaSolicitudAtencionView.solicitudAtencionSeleccionada.getNumeroSolicitud();
                         if (consultarServicioNoAsistencial(getActivity().getResources().getString(R.string.complement_serviciosNoAsistenciales), params, getActivity())){
                             Intent intentSolicitudNoAsistencial = new Intent(view.getContext(), SolicitudNoAsistencialView.class);
                             startActivity(intentSolicitudNoAsistencial);
@@ -214,7 +214,7 @@ public class OpcionesSecundariasFragment extends Fragment{
                             throw new Exception(getActivity().getResources().getString(R.string.lbl_sin_resultados));
                         }
                     }else if(opcionesList.get(i).getId().equals("11")) {
-                        String params = "/SAC/ABCD1234/"+ ConsultaSolicitudAtencionView.solicitudAtencionSeleccionada.getNumeroSolicitud();
+                        String params = getActivity().getResources().getString(R.string.address_service_token)+ ConsultaSolicitudAtencionView.solicitudAtencionSeleccionada.getNumeroSolicitud();
                         if (consultarGiros(getActivity().getResources().getString(R.string.complement_giro), params, getActivity())){
                             Intent intentGiros = new Intent(view.getContext(), GiroView.class);
                             startActivity(intentGiros);
@@ -222,7 +222,7 @@ public class OpcionesSecundariasFragment extends Fragment{
                             throw new Exception(getActivity().getResources().getString(R.string.lbl_sin_resultados));
                         }
                     }else if(opcionesList.get(i).getId().equals("12")) {
-                        String params = "/SAC/ABCD1234/"+ ConsultaSolicitudAtencionView.solicitudAtencionSeleccionada.getNumeroSolicitud();
+                        String params = getActivity().getResources().getString(R.string.address_service_token)+ ConsultaSolicitudAtencionView.solicitudAtencionSeleccionada.getNumeroSolicitud();
                         if (consultarNotasCreditoGiro(getActivity().getResources().getString(R.string.complement_giro_notaCredito), params, getActivity())){
                             Intent intentNotaCreditoGiros = new Intent(view.getContext(), NotaCreditoGiroView.class);
                             startActivity(intentNotaCreditoGiros);
@@ -230,7 +230,7 @@ public class OpcionesSecundariasFragment extends Fragment{
                             throw new Exception(getActivity().getResources().getString(R.string.lbl_sin_resultados));
                         }
                     }else if(opcionesList.get(i).getId().equals("13")) {
-                        String params = "/SAC/ABCD1234/"+ ConsultaSolicitudAtencionView.solicitudAtencionSeleccionada.getNumeroSolicitud();
+                        String params = getActivity().getResources().getString(R.string.address_service_token)+ ConsultaSolicitudAtencionView.solicitudAtencionSeleccionada.getNumeroSolicitud();
                         if (consultarFactura(getActivity().getResources().getString(R.string.complement_factura), params, getActivity())){
                             Intent intentFacturas = new Intent(view.getContext(), FacturaView.class);
                             startActivity(intentFacturas);
@@ -238,7 +238,7 @@ public class OpcionesSecundariasFragment extends Fragment{
                             throw new Exception(getActivity().getResources().getString(R.string.lbl_sin_resultados));
                         }
                     }else if(opcionesList.get(i).getId().equals("14")) {
-                        String params = "/SAC/ABCD1234/"+ ConsultaSolicitudAtencionView.solicitudAtencionSeleccionada.getNumeroSolicitud();
+                        String params = getActivity().getResources().getString(R.string.address_service_token)+ ConsultaSolicitudAtencionView.solicitudAtencionSeleccionada.getNumeroSolicitud();
                         if (consultarNotasCreditoDebito(getActivity().getResources().getString(R.string.complement_nota), params, getActivity())){
                             Intent intentNotaCreditoDebito = new Intent(view.getContext(), NotasCreditoDebitoView.class);
                             startActivity(intentNotaCreditoDebito);
@@ -247,7 +247,7 @@ public class OpcionesSecundariasFragment extends Fragment{
                         }
 
                     }else if(opcionesList.get(i).getId().equals("15")) {
-                        String params = "/SAC/ABCD1234/"+ ConsultaSolicitudAtencionView.solicitudAtencionSeleccionada.getNumeroSolicitud();
+                        String params = getActivity().getResources().getString(R.string.address_service_token)+ ConsultaSolicitudAtencionView.solicitudAtencionSeleccionada.getNumeroSolicitud();
                         if (consultarUtilizaciones(getActivity().getResources().getString(R.string.complement_utilizaciones), params, getActivity())){
                             Intent intentUtilizaciones = new Intent(view.getContext(), UtilizacionesView.class);
                             startActivity(intentUtilizaciones);
@@ -256,7 +256,7 @@ public class OpcionesSecundariasFragment extends Fragment{
                         }
 
                     }else if(opcionesList.get(i).getId().equals("16")) {
-                        String params = "/SAC/ABCD1234/"+ ConsultaSolicitudAtencionView.solicitudAtencionSeleccionada.getNumeroSolicitud();
+                        String params = getActivity().getResources().getString(R.string.address_service_token)+ ConsultaSolicitudAtencionView.solicitudAtencionSeleccionada.getNumeroSolicitud();
                         if (consultarEncuesta(getActivity().getResources().getString(R.string.complement_encuesta), params, getActivity())){
                             Intent intentEncuesta= new Intent(view.getContext(), EncuestaView.class);
                             startActivity(intentEncuesta);
@@ -271,7 +271,7 @@ public class OpcionesSecundariasFragment extends Fragment{
                             startActivity(intentConsultarSolicitudesAprobacionNoAsistencial);
                         }else{
 
-                            String params = "/SAC/ABCD1234/0/0/0/"+ ConsultaSolicitudAtencionView.solicitudAtencionSeleccionada.getNumeroSolicitud()+"/l";
+                            String params = getActivity().getResources().getString(R.string.address_service_token)+"0/0/0/"+ ConsultaSolicitudAtencionView.solicitudAtencionSeleccionada.getNumeroSolicitud()+"/l";
                             if (consultarSolicitudAprobacion(getActivity().getResources().getString(R.string.complement_aprobacion), params, getActivity())){
                                 Intent intentConsultarSolicitudesAprobacionNoAsistencial = new Intent(view.getContext(), ConsultaSolicitudAprobacionView.class);
                                 startActivity(intentConsultarSolicitudesAprobacionNoAsistencial);

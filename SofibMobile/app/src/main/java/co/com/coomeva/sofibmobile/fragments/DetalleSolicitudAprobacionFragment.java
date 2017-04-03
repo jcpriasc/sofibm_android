@@ -92,7 +92,7 @@ public class DetalleSolicitudAprobacionFragment extends Fragment{
             @Override
             public void onClick(View view) {
                 try {
-                    String params = "SAC/ABCD1234/"+ConsultaSolicitudAprobacionView.solicitudAprobacionSeleccionada.getIdAprobacion();
+                    String params = getActivity().getResources().getString(R.string.address_service_token_1)+ConsultaSolicitudAprobacionView.solicitudAprobacionSeleccionada.getIdAprobacion();
 
                     if (consultarDetalleSolicitudAprobacion(getActivity().getResources().getString(R.string.complement_detalle_aprobacion), params)){
 

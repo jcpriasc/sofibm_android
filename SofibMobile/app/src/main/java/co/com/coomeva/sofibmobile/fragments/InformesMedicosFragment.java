@@ -84,7 +84,7 @@ public class InformesMedicosFragment extends Fragment{
 
 
 
-                                String params = "/SAC/ABCD1234/"+ informeMedico.getConsInformeMedico();
+                                String params = getActivity().getResources().getString(R.string.address_service_token)+ informeMedico.getConsInformeMedico();
                                 if (consultarDetalleInformesmedicos(getActivity().getResources().getString(R.string.complement_InformesMedicos_detalle), params)){
 
                                     FragmentTransaction ft = getActivity().getSupportFragmentManager().beginTransaction();

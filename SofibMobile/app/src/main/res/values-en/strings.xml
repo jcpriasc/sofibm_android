@@ -330,6 +330,9 @@
     <string name="lbl_aprobado">Approved</string>
 
     <string name="address_service_aut">http://pruebas-sectorsalud.coomeva.com.co/saludmp-ws/jax-rs/saludmp-sofibmobile</string>
+    <string name="address_service_token">/SAC/ABCD1234/</string>
+    <string name="address_service_token_1">SAC/ABCD1234/</string>
+    <string name="address_service_token_2">/SAC/ABCD1234</string>
     <!--<string name="address_service_profile">http://pruebas-sectorsalud.coomeva.com.co/saludmp-ws/jax-rs/saludmp-autOficinaVirtual/informacion</string>-->
     <string name="address_service_profile">http://pruebas-sectorsalud.coomeva.com.co/saludmp-ws/jax-rs/saludmp-autOficinaVirtual</string>
     <string name="complement_aprobacion">/aprobacion</string>

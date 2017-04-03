@@ -86,7 +86,7 @@ public class DocumentosInformesMedicosAdapter extends ArrayAdapter<DocumentosMed
 
                     try {
 
-                        String params = "SAC/ABCD1234/"+ InformesMedicosFragment.detalleInformeMedicoSeleccionado.getLstDocumentos().get((int)viewHolder.iconOpcion.getTag()).getId();
+                        String params = getContext().getResources().getString(R.string.address_service_token_1)+ InformesMedicosFragment.detalleInformeMedicoSeleccionado.getLstDocumentos().get((int)viewHolder.iconOpcion.getTag()).getId();
 
 
                         ConexionServicioListaTask task = new ConexionServicioListaTask(context, getContext().getResources().getString(R.string.complement_documento_informes_medico), params);

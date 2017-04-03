@@ -68,7 +68,7 @@ public class ServicioAsistencialFragment extends Fragment{
 
                     servicio = lstServicioAsistencialDTO.get(i);
 
-                    String params = "/SAC/ABCD1234/"+ servicio.getId();
+                    String params = getActivity().getResources().getString(R.string.address_service_token)+ servicio.getId();
                     consultarDetalleServicioAsistencial(getActivity().getResources().getString(R.string.complement_ServiciosAsistenciales_detalle),params,getActivity());
 
                     FragmentTransaction ft = getActivity().getSupportFragmentManager().beginTransaction();
