@@ -83,22 +83,26 @@ public class LoginView extends AppCompatActivity {
                             throw new Exception(getResources().getString(R.string.aviso_password));
                         }
 
-                        String listParams = "/UP/" + usuario + "/" + password + "/50/PROFILE_MANAGER/sofib";
+
+                        String parametroURL = "";
+                        int selectedId = radioGroupTipoUsuario.getCheckedRadioButtonId();
+                        String tipoUsuario = "";
+                        switch (selectedId) {
+                            case R.id.radioButton:
+                                tipoUsuario = "INTERNO";
+                                parametroURL = "UP";
+                                break;
+                            case R.id.radioButton2:
+                                tipoUsuario = "EXTERNO";
+                                parametroURL = "UI";
+                                break;
+                        }
+
+//                         String listParams = "/UP/" + usuario + "/" + password + "/50/PROFILE_MANAGER/sofib";
+                        String listParams = "/"+parametroURL+"/" + usuario + "/" + password + "/50/PROFILE_MANAGER/sofib";
 
                         if (autenticarProfile(listParams)) {
                             datos.getDb().beginTransaction();
-
-                            int selectedId = radioGroupTipoUsuario.getCheckedRadioButtonId();
-                            String tipoUsuario = "";
-                            switch (selectedId) {
-                                case R.id.radioButton:
-                                    tipoUsuario = "INTERNO";
-                                    break;
-                                case R.id.radioButton2:
-                                    tipoUsuario = "EXTERNO";
-                                    break;
-                            }
-
                             Usuario usuarioBD = new Usuario(null, tipoUsuario, usuario, password, "", nomUsuario);
                             //TODO: Pendiente de quitar el rol quemado
                             usuarioBD.setRol(Constantes.usuarioAdmin);

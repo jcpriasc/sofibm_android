@@ -100,7 +100,7 @@ public class InformesMedicosFragment extends Fragment{
 
                                 try {
 
-                                    String params = "http://pruebas-sofib.coomeva.com.co/cni-web/exportDocument?format=pdf&reportName=informe_medico&CONS_INFORME_MEDICO="+informeMedico.getConsInformeMedico()+"&CONS_SOLICITUD_ATENCION="+ ConsultaSolicitudAtencionView.solicitudAtencionSeleccionada.getNumeroSolicitud()+"&nocache=15416516316";
+                                    String params = "http://sofib.coomeva.com.co/cni-web/exportDocument?format=pdf&reportName=informe_medico&CONS_INFORME_MEDICO="+informeMedico.getConsInformeMedico()+"&CONS_SOLICITUD_ATENCION="+ ConsultaSolicitudAtencionView.solicitudAtencionSeleccionada.getNumeroSolicitud()+"&nocache=15416516316";
 
                                     ConexionDescargaArchivoTask task = new ConexionDescargaArchivoTask(getActivity(),params, "");
 
@@ -115,7 +115,7 @@ public class InformesMedicosFragment extends Fragment{
                             }else if (which == 2) {
                                 try {
 
-                                    String params = "http://pruebas-sofib.coomeva.com.co/cni-web/exportDocument?format=pdf&reportName=informe_medico&CONS_INFORME_MEDICO="+informeMedico.getConsInformeMedico()+"&CONS_SOLICITUD_ATENCION="+ ConsultaSolicitudAtencionView.solicitudAtencionSeleccionada.getNumeroSolicitud()+"&nocache=15416516316&REPORT_LOCALE=USD";
+                                    String params = "http://sofib.coomeva.com.co/cni-web/exportDocument?format=pdf&reportName=informe_medico&CONS_INFORME_MEDICO="+informeMedico.getConsInformeMedico()+"&CONS_SOLICITUD_ATENCION="+ ConsultaSolicitudAtencionView.solicitudAtencionSeleccionada.getNumeroSolicitud()+"&nocache=15416516316&REPORT_LOCALE=USD";
 
                                     ConexionDescargaArchivoTask task = new ConexionDescargaArchivoTask(getActivity(),params, "");
 

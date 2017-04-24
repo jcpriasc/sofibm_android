@@ -150,7 +150,8 @@ public class DetalleGiroFragment extends Fragment{
             public void onClick(View view) {
                 try {
 
-                    String params = "http://pruebas-sofib.coomeva.com.co/cni-web/exportDocument?format=pdf&useDataSource=true&reportName=reporteGiro&ID_GIRO="+GiroFragment.giro.getCons()+"&NOMBRE_ROL="+ LoginView.usuarioSesion.getRol();
+//                    String params = "http://pruebas-sofib.coomeva.com.co/cni-web/exportDocument?format=pdf&useDataSource=true&reportName=reporteGiro&ID_GIRO="+GiroFragment.giro.getCons()+"&NOMBRE_ROL="+ LoginView.usuarioSesion.getRol();
+                    String params = "http://sofib.coomeva.com.co/cni-web/exportDocument?format=pdf&useDataSource=true&reportName=reporteGiro&ID_GIRO="+GiroFragment.giro.getCons()+"&NOMBRE_ROL="+ LoginView.usuarioSesion.getRol();
 
                     ConexionDescargaArchivoTask task = new ConexionDescargaArchivoTask(getActivity(),params, "");
 

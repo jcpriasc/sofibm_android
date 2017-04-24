@@ -8,8 +8,8 @@ android {
         applicationId "co.com.coomeva.sofibmobile"
         minSdkVersion 19
         targetSdkVersion 22
-        versionCode 8
-        versionName "1.7"
+        versionCode 11
+        versionName "1.9.1"
     }
     buildTypes {
         release {

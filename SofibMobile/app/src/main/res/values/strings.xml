@@ -339,11 +339,11 @@
     <string name="action_settings">Ajustes</string>
 
 
-    <string name="address_service_aut">http://oficinavirtualmp.coomeva.com.co/saludmp-ws/jax-rs/saludmp-sofibmobile</string>
+    <string name="address_service_aut">https://oficinavirtualmp.coomeva.com.co/saludmp-ws/jax-rs/saludmp-sofibmobile</string>
     <string name="address_service_token">/SAC/0c9a9a03a6c518c7e2c27d9b81336a26294f8cc4/</string>
     <string name="address_service_token_1">SAC/0c9a9a03a6c518c7e2c27d9b81336a26294f8cc4/</string>
     <string name="address_service_token_2">/SAC/0c9a9a03a6c518c7e2c27d9b81336a26294f8cc4</string>
-    <string name="address_service_profile">http://oficinavirtualmp.coomeva.com.co/saludmp-ws/jax-rs/saludmp-autOficinaVirtual</string>
+    <string name="address_service_profile">https://oficinavirtualmp.coomeva.com.co/saludmp-ws/jax-rs/saludmp-autOficinaVirtual</string>
 
     <!--<string name="address_service_aut">http://pruebas-sectorsalud.coomeva.com.co/saludmp-ws/jax-rs/saludmp-sofibmobile</string>
     <string name="address_service_token">/SAC/ABCD1234/</string>
