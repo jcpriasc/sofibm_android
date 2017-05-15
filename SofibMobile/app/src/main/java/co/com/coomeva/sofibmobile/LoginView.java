@@ -99,11 +99,11 @@ public class LoginView extends AppCompatActivity {
                         String tipoUsuario = "";
                         switch (selectedId) {
                             case R.id.radioButton:
-                                tipoUsuario = "INTERNO";
+                                tipoUsuario = Constantes.tipoUsuarioInterno;
                                 parametroURL = "UP";
                                 break;
                             case R.id.radioButton2:
-                                tipoUsuario = "EXTERNO";
+                                tipoUsuario = Constantes.tipoUsuarioExterno;
                                 parametroURL = "UI";
                                 break;
                         }
@@ -252,7 +252,6 @@ public class LoginView extends AppCompatActivity {
                     nombreUsuario += jsonArrayUsuario.getString("segundoApellido");
                 }
                 nomUsuario = nombreUsuario;
-
 
                 JSONArray jsonArrayRoles = jsonArrayUsuario.getJSONArray("roles");
 

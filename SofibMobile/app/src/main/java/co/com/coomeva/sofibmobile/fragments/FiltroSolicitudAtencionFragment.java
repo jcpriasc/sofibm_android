@@ -21,10 +21,12 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import co.com.coomeva.sofibmobile.LoginView;
 import co.com.coomeva.sofibmobile.R;
 import co.com.coomeva.sofibmobile.dto.ConsultaSolicitudDTO;
 import co.com.coomeva.sofibmobile.dto.SpinnerDTO;
 import co.com.coomeva.sofibmobile.task.ConexionServicioTask;
+import co.com.coomeva.sofibmobile.utils.Constantes;
 import cz.msebera.android.httpclient.NameValuePair;
 import cz.msebera.android.httpclient.message.BasicNameValuePair;
 
@@ -44,6 +46,7 @@ public class FiltroSolicitudAtencionFragment extends Fragment{
     EditText editTextSolAtencion;
     EditText editTextNombre;
 
+    private static String usuario;
     private static String convenio;
     private static String estado;
     private static String ciudadInicial;
@@ -75,10 +78,14 @@ public class FiltroSolicitudAtencionFragment extends Fragment{
 
         List<NameValuePair> lst = new ArrayList<NameValuePair>();
         lst.add(new BasicNameValuePair("",""));
-
+        String codigoUsuario = "0";
         try{
 
-            final SpinnerDTO resultMapConvenio = llenar_spinner(getActivity().getResources().getString(R.string.complement_convenios), getActivity().getResources().getString(R.string.address_service_token)+"0", "CON");
+            if(LoginView.usuarioSesion != null && LoginView.usuarioSesion.getTipoUsuario().equals(Constantes.tipoUsuarioExterno)){
+                codigoUsuario = LoginView.usuarioSesion.getUsuario();
+            }
+
+            final SpinnerDTO resultMapConvenio = llenar_spinner(getActivity().getResources().getString(R.string.complement_convenios), getActivity().getResources().getString(R.string.address_service_token)+codigoUsuario, "CON");
             final SpinnerDTO resultMapEstado = llenar_spinner(getActivity().getResources().getString(R.string.complement_estados), getActivity().getResources().getString(R.string.address_service_token_2), "EST");
             final SpinnerDTO resultMapCiudadInicial = llenar_spinner(getActivity().getResources().getString(R.string.complement_ciudades), getActivity().getResources().getString(R.string.address_service_token_2), "CIU_INI");
             final SpinnerDTO resultMapCiudadActual = llenar_spinner(getActivity().getResources().getString(R.string.complement_ciudades), getActivity().getResources().getString(R.string.address_service_token_2), "CIU_ACT");
@@ -178,6 +185,11 @@ public class FiltroSolicitudAtencionFragment extends Fragment{
                             nombre = "0";
                         }
                         nombre = nombre.toUpperCase();
+
+                        if(LoginView.usuarioSesion != null && LoginView.usuarioSesion.getTipoUsuario().equals(Constantes.tipoUsuarioExterno)){
+                            usuario = LoginView.usuarioSesion.getUsuario();
+                        }
+
                         String listParams=getActivity().getResources().getString(R.string.address_service_token_2);
                         listParams+="/"+identificacion;
                         listParams+="/"+solAtencion;
@@ -187,6 +199,7 @@ public class FiltroSolicitudAtencionFragment extends Fragment{
                         listParams+="/"+ciudadInicial;
                         listParams+="/"+ciudadActual;
                         listParams+="/"+traslado;
+                        listParams+="/"+usuario;
 
                         ConexionServicioTask task = new ConexionServicioTask(getActivity(), getActivity().getResources().getString(R.string.complement_solicitudes), listParams);
 

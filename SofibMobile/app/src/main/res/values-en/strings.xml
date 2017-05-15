@@ -361,23 +361,23 @@
     <string name="lbl_pendiente">Pending</string>
     <string name="lbl_aprobado">Approved</string>
 
-    <string name="address_service_aut">https://oficinavirtualmp.coomeva.com.co/saludmp-ws/jax-rs/saludmp-sofibmobile</string>
+    <!--<string name="address_service_aut">http://pruebas-sectorsalud.coomeva.com.co/saludmp-ws/jax-rs/saludmp-sofibmobile</string>
+    <string name="address_service_token">/SAC/0c9a9a03a6c518c7e2c27d9b81336a26294f8cc4/</string>
+    <string name="address_service_token_1">SAC/0c9a9a03a6c518c7e2c27d9b81336a26294f8cc4/</string>
+    <string name="address_service_token_2">/SAC/0c9a9a03a6c518c7e2c27d9b81336a26294f8cc4</string>
+    <string name="address_service_profile">https://oficinavirtualmp.coomeva.com.co/saludmp-ws/jax-rs/saludmp-autOficinaVirtual</string>
+-->
+    <string name="address_service_aut">http://pruebas-sectorsalud.coomeva.com.co/saludmp-ws/jax-rs/saludmp-sofibmobile</string>
     <string name="address_service_token">/SAC/0c9a9a03a6c518c7e2c27d9b81336a26294f8cc4/</string>
     <string name="address_service_token_1">SAC/0c9a9a03a6c518c7e2c27d9b81336a26294f8cc4/</string>
     <string name="address_service_token_2">/SAC/0c9a9a03a6c518c7e2c27d9b81336a26294f8cc4</string>
     <string name="address_service_profile">https://oficinavirtualmp.coomeva.com.co/saludmp-ws/jax-rs/saludmp-autOficinaVirtual</string>
 
-    <!--<string name="address_service_aut">http://pruebas-sectorsalud.coomeva.com.co/saludmp-ws/jax-rs/saludmp-sofibmobile</string>
-    <string name="address_service_token">/SAC/ABCD1234/</string>
-    <string name="address_service_token_1">SAC/ABCD1234/</string>
-    <string name="address_service_token_2">/SAC/ABCD1234</string>
-    <string name="address_service_profile">http://pruebas-sectorsalud.coomeva.com.co/saludmp-ws/jax-rs/saludmp-autOficinaVirtual</string>
-    -->
 
     <!--<string name="address_service_profile">http://pruebas-sectorsalud.coomeva.com.co/saludmp-ws/jax-rs/saludmp-autOficinaVirtual/informacion</string>-->
 
     <string name="complement_aprobacion">/aprobacion</string>
-    <string name="complement_solicitudes">/solicitudes</string>
+    <string name="complement_solicitudes">/solicitudes/usuario</string>
     <string name="complement_servicios">/servicios</string>
     <string name="complement_tipo_registros">/tipoRegistros</string>
     <string name="complement_serviciosNoAsistenciales">/serviciosNoAsistenciales</string>

@@ -13,4 +13,7 @@ public class Constantes implements Serializable {
     public static String usuarioMedico = "MEDICO";
     public static String usuarioAdmin = "ADMIN";
 
+    public static String tipoUsuarioInterno = "INTERNO";
+    public static String tipoUsuarioExterno = "EXTERNO";
+
 }
