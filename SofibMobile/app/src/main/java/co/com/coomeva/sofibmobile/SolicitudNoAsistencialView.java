@@ -38,6 +38,7 @@ public class SolicitudNoAsistencialView extends AppCompatActivity {
         //Se cargan los valores para el header del menu
         TextView txtNumeroSolicitudMenu;
         TextView txtUsuarioMenu;
+
         View view = this.findViewById(R.id.menu_lateral_id);
         txtNumeroSolicitudMenu = (TextView)view.findViewById(R.id.txtNumeroSolicitudMenu);
         txtUsuarioMenu = (TextView)view.findViewById(R.id.txtUsuarioMenu);
